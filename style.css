@@ -454,7 +454,7 @@
 
 .main-categories hr {
   width: 210px !important;
-  margin-left: 8%;
+  margin-left: 7% !important;
 }
 
 .sub-categories-container {
@@ -972,6 +972,7 @@
   background-color: #ffffff;
   text-align: center;
   border-radius: 15px;
+  display: inline-block;
 }
 
 .trendingItem img {
@@ -1028,4 +1029,217 @@
   font-size: 14px !important;
   padding-left: 2%;
   padding-top: 2%;
+}
+
+/* Top Selling Products */
+.sellingTitle {
+  display: flex;
+  justify-content: space-between;
+  margin: 3% 0px 1% 0px;
+}
+
+.sellingTitle h5 {
+  font-size: 26px;
+  font-weight: 600 !important;
+}
+
+.sellingTitle a {
+  text-decoration: none;
+  color: #999999;
+  font-size: 14px;
+}
+
+.sellingTitle img {
+  vertical-align: baseline;
+}
+
+.sellingProduct {
+  display: flex;
+  justify-content: space-between;
+}
+
+.promotion {
+  display: flex;
+  width: 504px;
+  height: 350px;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+.promotionBackground img {
+  position: absolute;
+  width: 148px;
+  height: 333px;
+  opacity: 0.9;
+}
+.imgArea img {
+  position: inherit;
+  width: 280px;
+  height: 350px;
+  left: -20px;
+  border-radius: 15px;
+}
+.promotionIn {
+  position: absolute;
+  text-align: end;
+  margin-left: 13%;
+  margin-top: 5%;
+}
+
+.promotionIn p {
+  color: #dd3327;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.promotion .h3Top {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.promotion .h3Bot {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.promotionIn .promotionValue {
+  display: flex;
+  margin-left: 54%;
+  padding-top: 6%;
+}
+
+.promotionIn .promotionValue .from {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111111;
+  padding-right: 3%;
+}
+
+.promotionIn .promotionValue .price {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: -6%;
+}
+
+.promotionIn .salient-button {
+  margin-top: 2%;
+  width: 160px;
+  height: 50px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 0px 0px 45px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  background: #0d53bb;
+  border: 2px solid #0d53bb;
+  overflow: hidden;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 1;
+  border-radius: 50px;
+}
+
+.promotionIn .salient-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #f2cedf;
+  z-index: -1;
+  transition: width 0.4s ease;
+}
+
+.promotionIn .salient-button:hover::before {
+  width: 100%;
+}
+
+.promotionIn .salient-button:hover {
+  color: #000;
+}
+
+.promotionIn .salient-button i {
+  transition: transform 0.3s ease;
+}
+
+.promotionIn .salient-button:hover i {
+  transform: translateX(5px);
+}
+
+.sellingItem {
+  width: 240px;
+  height: 350px;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.sellingImg {
+  position: relative;
+  display: inline-block;
+}
+
+.sellingImg img {
+  margin-top: 6%;
+  width: 206px;
+  height: 206px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.sellingImg:hover img {
+  transform: scale(1.1);
+}
+
+.sellingProductImg img {
+  margin-top: 6%;
+  width: 206px;
+  height: 206px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.sellingProductImg:hover img {
+  transform: scale(1.1);
+}
+
+.sale {
+  width: 48px;
+  height: 23px;
+  background-color: #0d53bb;
+  color: #ffffff;
+  border-radius: 20px;
+  position: absolute;
+  top: 6%;
+  left: 6%;
+}
+
+.sale p {
+  font-size: 12px;
+  padding-top: 6%;
+}
+
+.sellingIn {
+  text-align: start;
+  margin: 4% 6%;
+  display: grid;
+}
+
+.sellingIn a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #111111;
+}
+
+.sellingIn span {
+  font-size: 12px;
+  color: #999999;
+}
+
+.sellingIn p {
+  font-size: 18px;
+  margin-bottom: 0 !important;
 }

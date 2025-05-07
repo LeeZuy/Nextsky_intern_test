@@ -208,4 +208,20 @@
     flex-shrink: 0;
     scroll-snap-align: start;
   }
+
+  /* Top Selling Products */
+  .sellingProductIn {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .sellingProduct {
+    display: flex;
+    gap: 16px;
+  }
+  .sellingItem {
+    min-width: 80%;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
 }
