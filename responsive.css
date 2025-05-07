@@ -14,8 +14,7 @@
 }
 
 /* Tablet nhỏ: từ 576px đến 767px */
-@media (min-width: 576px) and (max-width: 767px) {
-  /* header menu */
+/* @media (min-width: 576px) and (max-width: 767px) {
   .headerMenuTop {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -42,28 +41,7 @@
     grid-row-start: 1;
   }
 
-  /* banner */
-  /* .banner {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 8px;
-  }
-  .surface {
-    grid-column-start: 2;
-    width: auto;
-  }
-  .gamepad {
-    grid-column-start: 2;
-    grid-row-start: 2;
-    width: auto;
-  }
-  .camera {
-    grid-column-start: 2;
-    grid-row-start: 3;
-    width: auto;
-  } */
-}
+} */
 
 /* Mobile: dưới 576px */
 @media (max-width: 575px) {
@@ -137,6 +115,7 @@
     grid-column-start: 2;
     grid-row-start: 2;
     width: auto;
+    margin: 5% 0px;
   }
 
   .gamepad img {
