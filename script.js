@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const mainCategories = document.querySelectorAll(".main-category");
     const allSubCategories = document.querySelectorAll(".sub-categories");
 
-    const topSellingHeader = document.getElementById("top-selling-header");
-    const topSellingContent = document.getElementById(
-        "top-selling-content"
+    const allCategory = document.getElementById("allCategory");
+    const allCategoryContent = document.getElementById(
+        "allCategoryContent"
     );
 
     function hideAllSubCategories() {
@@ -62,21 +62,21 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Toggle top selling products
-    topSellingHeader.classList.add("collapsed");
-    topSellingContent.style.display = "none";
-    topSellingHeader.querySelector("i").className = "fas fa-plus";
+    // Toggle all category content
+    allCategory.classList.add("collapsed");
+    allCategoryContent.style.display = "none";
+    allCategory.querySelector("i").className = "fas fa-plus";
 
-    topSellingHeader.addEventListener("click", function () {
+    allCategory.addEventListener("click", function () {
         this.classList.toggle("collapsed");
         const icon = this.querySelector("i");
 
         if (this.classList.contains("collapsed")) {
             icon.className = "fas fa-plus";
-            topSellingContent.style.display = "none";
+            allCategoryContent.style.display = "none";
         } else {
             icon.className = "fas fa-minus";
-            topSellingContent.style.display = "block";
+            allCategoryContent.style.display = "block";
         }
     });
 

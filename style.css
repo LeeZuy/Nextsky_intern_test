@@ -611,30 +611,30 @@
   cursor: pointer;
 }
 
-.top-selling-header span {
+.allCategory span {
   font-weight: bold;
   color: #333;
 }
 
-.top-selling-header i {
+.allCategory i {
   font-size: 12px;
   color: #888;
   transition: all 0.2s;
 }
 
-.top-selling-header.collapsed i {
+.allCategory.collapsed i {
   transform: rotate(0deg);
 }
 
-.top-selling-header:not(.collapsed) i {
+.allCategory:not(.collapsed) i {
   transform: rotate(0deg);
 }
 
-.top-selling-header:not(.collapsed) i::before {
+.allCategory:not(.collapsed) i::before {
   content: "\f068";
 }
 
-.top-selling-header.collapsed i::before {
+.allCategory.collapsed i::before {
   content: "\f067";
 }
 
