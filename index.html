@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./boostrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./responsive.css" />
+    <link
+      rel="stylesheet"
+      href="./GeneralSans_Complete 2/Fonts/WEB/css/general-sans.css"
+    />
+    <!-- <link href="https://fonts.cdnfonts.com/css/general-sans" rel="stylesheet"> -->
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>UMILUX</title>
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header">
+      <div
+        class="alert alert-dismissible d-lg-block d-none"
+        role="alert"
+        style="position: relative"
+      >
+        <div class="alert-carousel">
+          <button class="carousel-btn prev-btn"><</button>
+          <div class="alert-content">
+            <div class="alert-slide active">
+              <p class="alertP">
+                Sale 50% Off — Auto Applied at Checkout — Limited Time Only
+              </p>
+            </div>
+            <div class="alert-slide">
+              <p class="alertP">Free Ship — Orders Now !</p>
+            </div>
+          </div>
+          <button class="carousel-btn next-btn">></button>
+          <button
+            type="button"
+            class="alertBtn btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+
+      <div class="headerMenu container-fluid">
+        <div class="headerMenuTop container">
+          <!-- mobile -->
+          <div class="mobileHeaderMenu d-block d-md-none">
+            <!-- Nút mở menu -->
+            <button class="menuBtn btn btn-primary" onclick="toggleMenu()">
+              ☰
+            </button>
+
+            <!-- Menu chính -->
+            <div class="menu-overlay" id="menuOverlay">
+              <div class="menu-header">
+                <div class="menu-title">
+                  <span>MENU</span>
+                  <span class="categories-btn" onclick="toggleSubMenu()"
+                    >CATEGORIES</span
+                  >
+                </div>
+                <span class="close-btn" onclick="toggleMenu()">×</span>
+              </div>
+              <ul class="menu-list">
+                <li>Home</li>
+                <li>Shop</li>
+                <li>Product</li>
+                <li>Page</li>
+                <li>Blog</li>
+                <li>Sale</li>
+                <li>Buy Umino!</li>
+                <li>
+                  <img class="navItemImg" src="./assets/icon (3).svg" alt="" />
+                  Recently Viewed
+                </li>
+              </ul>
+            </div>
+
+            <!-- Menu con (Categories) -->
+            <div class="sub-menu" id="subMenu">
+              <div class="sub-menu-header">
+                <span class="back-btn" onclick="toggleSubMenu()">←</span>
+                <span>CATEGORIES</span>
+                <span class="close-btn" onclick="closeAll()">×</span>
+              </div>
+              <ul class="menu-list">
+                <li>
+                  <img src="./assets/computer.svg" alt="" /> Computer & Laptop
+                </li>
+                <li>
+                  <img src="./assets/tablets.svg" alt="" /> Tablets & iPad
+                </li>
+                <li>
+                  <img src="./assets/printer.svg" alt="" /> Printer & Cameras
+                </li>
+                <li><img src="./assets/phone.svg" alt="" /> Smart Phones</li>
+                <li>
+                  <img src="./assets/keyboard .svg" alt="" /> Keyboard & Mouse
+                </li>
+                <li><img src="./assets/video.svg" alt="" /> Video Games</li>
+                <li>
+                  <img src="./assets/Sports.svg" alt="" /> Sports & Outdoors
+                </li>
+                <li><img src="./assets/Headphone.svg" alt="" /> Smart Watch</li>
+                <li>
+                  <img src="./assets/Smart.svg" alt="" /> Headphone & Audios
+                </li>
+                <li><img src="./assets/all.svg" alt="" /> All Categories</li>
+              </ul>
+            </div>
+
+            <!-- Backdrop -->
+            <div class="backdrop" id="backdrop" onclick="closeAll()"></div>
+          </div>
+
+          <!-- header logo -->
+          <div class="headerLogo">
+            <img src="./assets/Logo.svg" alt="" />
+          </div>
+          <div class="search">
+            <img src="./assets/icon.svg" alt="" />
+            <input placeholder="I'm looking for…" type="text" />
+            <button type="submit">Search</button>
+          </div>
+          <div class="profile">
+            <div class="account">
+              <div class="accountIcon">
+                <img src="./assets/icon (1).svg" alt="" />
+              </div>
+              <div class="accountTitle">
+                <p class="titleTop">Login</p>
+                <p class="titleBot">Account</p>
+              </div>
+            </div>
+            <div class="wishlist d-md-block d-none">
+              <img src="./assets/Vector.svg" alt="" />
+              <div class="wishlishAdd">
+                <p>5</p>
+              </div>
+            </div>
+            <div class="cart d-md-flex d-none">
+              <div class="cartIcon">
+                <img src="./assets/icon (2).svg" alt="" />
+                <div class="cartAdd">
+                  <p>5</p>
+                </div>
+              </div>
+              <div class="cartTitle">
+                <p class="titleTop">Cart</p>
+                <p class="titleBot">$590.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="divider d-md-block d-none"></div>
+
+        <!-- header menu -->
+        <div class="headerMenuBot container">
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid d-md-flex d-none">
+              <a class="navbar-brand" href="#"
+                ><img src="./assets/menu.svg" alt="" /> All Departments</a
+              >
+              <button
+                class="menuBotBtn navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon d-flex"
+                  ><img src="./assets/menu.svg" alt=""
+                /></span>
+              </button>
+              <div class="vertical-line d-md-block d-none"></div>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Home
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li><hr class="dropdown-divider" /></li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Shop
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li><hr class="dropdown-divider" /></li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Product
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li><hr class="dropdown-divider" /></li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Page
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li><hr class="dropdown-divider" /></li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Blog
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li><hr class="dropdown-divider" /></li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-disabled="true">Sale</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-disabled="true">Buy Umino!</a>
+                  </li>
+                </ul>
+                <div>
+                  <a class="nav-link" aria-disabled="true"
+                    ><img
+                      class="navItemImg"
+                      src="./assets/icon (3).svg"
+                      alt=""
+                    />Recently Viewed Products</a
+                  >
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- body -->
+    <div class="mainBody container-fluid">
+      <!-- menu-slider -->
+      <div class="menuSlider container d-flex">
+        <div class="menu-container d-md-flex d-none">
+          <div class="main-categories">
+            <div class="main-category" data-category="computer">
+              <div class="main-title">
+                <img src="./assets/computer.svg" alt="" />
+                <span>Computer & Laptop</span>
+              </div>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <hr />
+
+            <div class="main-category" data-category="tablet">
+              <div class="main-title">
+                <img src="./assets/tablets.svg" alt="" />
+                <span>Tablets & iPad</span>
+              </div>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <hr />
+
+            <div class="main-category" data-category="printer">
+              <div class="main-title">
+                <img src="./assets/printer.svg" alt="" />
+                <span>Printer & Cameras</span>
+              </div>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <hr />
+
+            <div class="main-category" data-category="phone">
+              <div class="main-title">
+                <img src="./assets/phone.svg" alt="" />
+                <span>Smart Phones</span>
+              </div>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <hr />
+
+            <div class="main-category" data-category="keyboard">
+              <div class="main-title">
+                <img src="./assets/keyboard .svg" alt="" />
+                <span>Keyboard & Mouse</span>
+              </div>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <hr />
+
+            <div class="main-category" data-category="game">
+              <div class="main-title">
+                <img src="./assets/video.svg" alt="" />
+                <span>Video Games</span>
+              </div>
+            </div>
+            <hr />
+
+            <div class="main-category" data-category="sports">
+              <div class="main-title">
+                <img src="./assets/Sports.svg" alt="" />
+                <span>Sports & Outdoors</span>
+              </div>
+            </div>
+            <hr />
+
+            <div class="main-category" data-category="watch">
+              <div class="main-title">
+                <img src="./assets/Smart.svg" alt="" />
+                <span>Smart Watch</span>
+              </div>
+            </div>
+            <hr />
+
+            <div class="main-category" data-category="audio">
+              <div class="main-title">
+                <img src="./assets/Headphone.svg" alt="" />
+                <span>Headphone & Audios</span>
+              </div>
+            </div>
+
+            <div class="top-selling-header" id="top-selling-header">
+              <div class="allCategory">
+                <img src="/assets/all.svg" alt="" />
+                <span>All Categories</span>
+              </div>
+              <i class="fas fa-minus"></i>
+            </div>
+            <div
+              class="hidden-content"
+              id="top-selling-content"
+              style="display: block"
+            >
+              <div class="sub-category-item">Product 1</div>
+              <div class="sub-category-item">Product 2</div>
+              <div class="sub-category-item">Product 3</div>
+            </div>
+          </div>
+
+          <div class="sub-categories-container">
+            <!-- Computer & Laptop Content -->
+            <div class="sub-categories" data-category-content="computer">
+              <div class="sub-category-column">
+                <div class="sub-category-title">Laptop & Computers</div>
+                <div class="sub-category-item">Computers</div>
+                <div class="sub-category-item">Desktops & Monitors</div>
+                <div class="sub-category-item">Hard Drives & Memory Cards</div>
+                <div class="sub-category-item">Printers & Ink</div>
+                <div class="sub-category-item">
+                  Networking & Internet Devices
+                </div>
+                <div class="sub-category-item">Computer Accessories</div>
+                <div class="sub-category-item">Software Computers</div>
+              </div>
+            </div>
+
+            <!-- Tablets & iPad Content -->
+            <div class="sub-categories" data-category-content="tablet">
+              <div class="sub-category-column">
+                <div class="sub-category-title">Tablets</div>
+                <div class="sub-category-item">iPad</div>
+                <div class="sub-category-item">Android Tablets</div>
+                <div class="sub-category-item">Tablet Accessories</div>
+              </div>
+            </div>
+
+            <!-- Printer & Cameras Content -->
+            <div class="sub-categories" data-category-content="printer">
+              <div class="sub-category-column">
+                <div class="sub-category-title">Cameras</div>
+                <div class="sub-category-item">Digital Cameras</div>
+                <div class="sub-category-item">Professional & SLR Cameras</div>
+                <div class="sub-category-item">Camcorders & Video Cameras</div>
+                <div class="sub-category-item">Camera Lenses & Accessories</div>
+                <div class="sub-category-item">CCTV Cameras</div>
+                <div class="sub-category-item">Other Accessories</div>
+              </div>
+            </div>
+
+            <!-- Smart Phones Content -->
+            <div class="sub-categories" data-category-content="phone">
+              <div class="sub-category-column">
+                <div class="sub-category-title">Smartphone</div>
+                <div class="sub-category-item">Carrier Phones</div>
+                <div class="sub-category-item">Unlocked Phones</div>
+                <div class="sub-category-item">Phone & Cellphone</div>
+                <div class="sub-category-item">Cellphone Charges</div>
+              </div>
+
+              <div class="sub-category-column">
+                <div class="sub-category-title">Your Video Library</div>
+                <div class="sub-category-item">Watch Anywhere</div>
+              </div>
+            </div>
+
+            <!-- Headphone & Audios Content -->
+            <div class="sub-categories" data-category-content="keyboard">
+              <div class="sub-category-column">
+                <div class="sub-category-title">Home Audio</div>
+                <div class="sub-category-item">Wireless Audio</div>
+                <div class="sub-category-item">Premium Audio</div>
+                <div class="sub-category-item">Stereo systems components</div>
+                <div class="sub-category-item">Headphones</div>
+                <div class="sub-category-item">Speakers</div>
+                <div class="sub-category-item">Projectors and Screens</div>
+                <div class="sub-category-item">Turntables</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider -->
+        <div class="slider">
+          <section id="Slider">
+            <div class="aspect-ratio-169">
+              <!-- Slide 1 -->
+              <div class="sliderIn">
+                <div class="sliderImg">
+                  <img src="./assets/slider.jpg" alt="Slider Image 1" />
+                </div>
+                <div class="silderTitle">
+                  <p>BEST SELLING</p>
+                  <h1>Top Quality</h1>
+                  <h1>Of Entertainment Devices</h1>
+                  <button class="salient-button">
+                    <span>Shop Now</span>
+                  </button>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="sliderIn">
+                <div class="sliderImg">
+                  <img src="./assets/slider.jpg" alt="Slider Image 2" />
+                </div>
+                <div class="silderTitle">
+                  <p>BEST SELLING</p>
+                  <h1>Top Quality</h1>
+                  <h1>Of Entertainment Devices</h1>
+                  <button class="salient-button">
+                    <span>Shop Now</span>
+                  </button>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="sliderIn">
+                <div class="sliderImg">
+                  <img src="./assets/slider.jpg" alt="Slider Image 3" />
+                </div>
+                <div class="silderTitle">
+                  <p>BEST SELLING</p>
+                  <h1>Top Quality</h1>
+                  <h1>Of Entertainment Devices</h1>
+                  <button class="salient-button">
+                    <span>Shop Now</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="dot-container">
+              <div class="dot active" data-index="0"></div>
+              <div class="dot" data-index="1"></div>
+              <div class="dot" data-index="2"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!-- banner -->
+      <div class="banner container">
+        <div class="surface">
+          <div class="surfaceTitle">
+            <p>Surface</p>
+            <p>Save Up To $569</p>
+            <a href="" class="underline-out-reverse">Shop Surface</a>
+          </div>
+          <img src="./assets/slider/surface.png" alt="" />
+        </div>
+        <div class="gamepad">
+          <div class="gamepadTitle">
+            <p>Gamepad</p>
+            <p>Save Up To $69</p>
+            <a href="" class="underline-out-reverse">Shop Deals</a>
+          </div>
+          <img src="./assets/slider/game.png" alt="" />
+        </div>
+        <div class="camera">
+          <div class="cameraTitle">
+            <p>Cameras</p>
+            <p>Save Up To $159</p>
+            <a href="" class="underline-out-reverse">Shop Camera</a>
+          </div>
+          <img src="./assets/slider/camera.png" alt="" />
+        </div>
+      </div>
+      <!-- product -->
+      <!-- Trending This Week -->
+      <div class="Trending container">
+        <div class="trendingTitle">
+          <h5>Trending This Week</h5>
+          <a href="#"
+            >View All <img src="./assets/sgv/DoubleLeft.svg" alt=""
+          /></a>
+        </div>
+        <div class="trendingProductIn">
+          <div class="trendingProduct">
+            <!-- product 1 -->
+            <div class="trendingItem">
+              <img src="./assets/product/Trending1.png" alt="" />
+              <div class="trendingIn">
+                <span>TOSHIBA</span>
+                <a href="#"
+                  >Skytech Blaze Gaming PC Intel Core i5 15700F 5.1 GHz</a
+                >
+                <div class="voteIcon">
+                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="" />
+                </div>
+                <p>$569.00</p>
+              </div>
+            </div>
+            <!-- product 2 -->
+            <div class="trendingItem">
+              <img src="./assets/product/Trending2.png" alt="" />
+              <div class="trendingIn">
+                <span>TOSHIBA</span>
+                <a href="#"
+                  >Skytech Blaze Gaming PC Intel Core i5 15700F 5.1 GHz</a
+                >
+                <div class="voteIcon">
+                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="" />
+                </div>
+                <div class="price">
+                  <p class="newPrice">$569.00</p>
+                  <p class="oldPrice">$156.00</p>
+                </div>
+              </div>
+            </div>
+            <!-- product 3 -->
+            <div class="trendingItem">
+              <img src="./assets/product/Trending3.png" alt="" />
+              <div class="trendingIn">
+                <span>TOSHIBA</span>
+                <a href="#"
+                  >Skytech Blaze Gaming PC Intel Core i5 15700F 5.1 GHz</a
+                >
+                <div class="voteIcon">
+                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="" />
+                </div>
+                <p>$569.00</p>
+              </div>
+            </div>
+            <!-- product 4 -->
+            <div class="trendingItem">
+              <img src="./assets/product/Trending4.png" alt="" />
+              <div class="trendingIn">
+                <span>TOSHIBA</span>
+                <a href="#"
+                  >Skytech Blaze Gaming PC Intel Core i5 15700F 5.1 GHz</a
+                >
+                <div class="voteIcon">
+                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="" />
+                </div>
+                <div class="price">
+                  <p class="newPrice">$569.00</p>
+                  <p class="oldPrice">$156.00</p>
+                </div>
+              </div>
+            </div>
+            <!-- product 5 -->
+            <div class="trendingItem">
+              <img src="./assets/product/Trending5.png" alt="" />
+              <div class="trendingIn">
+                <span>TOSHIBA</span>
+                <a href="#"
+                  >Skytech Blaze Gaming PC Intel Core i5 15700F 5.1 GHz</a
+                >
+                <div class="voteIcon">
+                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="" />
+                </div>
+                <p>$569.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Top Selling Products -->
+      <div class="selling container">
+        <div class="sellingTitle">
+          <h5>Top Selling Products</h5>
+        </div>
+        <a href="#" class="underline-out-reverse">Dịch vụ</a>
+      </div>
+    </div>
+
+    <!-- js -->
+    <script src="./boostrap/bootstrap.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

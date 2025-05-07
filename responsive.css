@@ -1,0 +1,211 @@
+/* Desktop lớn: > 1200px */
+@media (min-width: 1201px) {
+  /* CSS cho desktop lớn */
+}
+
+/* Desktop nhỏ: > 1025px */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  /* CSS cho desktop nhỏ */
+}
+
+/* Tablet: từ 768px đến 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* CSS cho tablet */
+}
+
+/* Tablet nhỏ: từ 576px đến 767px */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* header menu */
+  .headerMenuTop {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+  }
+
+  .mobileHeaderMenu {
+    grid-column-start: 2;
+  }
+
+  .headerLogo {
+    grid-column-start: 3;
+  }
+
+  .search {
+    grid-column: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+
+  .profile {
+    grid-column-start: 4;
+    grid-row-start: 1;
+  }
+
+  /* banner */
+  /* .banner {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+  }
+  .surface {
+    grid-column-start: 2;
+    width: auto;
+  }
+  .gamepad {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    width: auto;
+  }
+  .camera {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    width: auto;
+  } */
+}
+
+/* Mobile: dưới 576px */
+@media (max-width: 575px) {
+  /* header menu */
+  .headerMenuTop {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0px;
+  }
+
+  .mobileHeaderMenu {
+    grid-column-start: 2;
+  }
+
+  .btn-menu {
+    /* margin: 1%;
+    position: fixed; */
+    /* display: block; */
+    position: fixed;
+    top: 10px;
+    left: 10px; /* hoặc right: 10px; tùy bạn muốn nằm bên nào */
+    z-index: 9999;
+  }
+
+  .headerLogo {
+    grid-column-start: 3;
+    margin-left: 12%;
+  }
+
+  .search {
+    grid-column: span 3 / span 3;
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+
+  .search input[type="text"] {
+    width: 159%;
+  }
+
+  .search button[type="submit"] {
+    left: 122%;
+  }
+
+  .profile {
+    grid-column-start: 4;
+    grid-row-start: 1;
+    margin-left: 55%;
+  }
+
+  /* banner */
+  .banner {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+  }
+  .surface {
+    grid-column-start: 2;
+    width: auto;
+  }
+
+  .surface img {
+    margin-left: 26%;
+    margin-top: 7%;
+    width: 48%;
+    height: 23%;
+  }
+
+  .gamepad {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    width: auto;
+  }
+
+  .gamepad img {
+    margin-left: 0%;
+    margin-top: 4%;
+    width: 46%;
+    height: 27%;
+  }
+
+  .camera {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    width: auto;
+  }
+
+  .camera img {
+    left: 51%;
+    top: 72%;
+    width: 45%;
+    height: 25%;
+  }
+
+  /* main body */
+  body,
+  html {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .mainBody.container-fluid {
+    display: block;
+    height: auto !important;
+    overflow: visible !important;
+    padding: 0 15px;
+  }
+
+  .banner.container,
+  .content.container,
+  .footer.container {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    position: relative !important;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  [class*="col-"] {
+    float: none;
+    width: 100% !important;
+  }
+
+  /* Trending This Week */
+  .trendingProductIn {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .trendingProduct {
+    display: flex;
+    gap: 16px;
+  }
+  .trendingItem {
+    min-width: 80%;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+}
