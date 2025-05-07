@@ -1182,7 +1182,7 @@
   display: inline-block;
 }
 
-.sellingImg img {
+.sellingItem img {
   margin-top: 6%;
   width: 206px;
   height: 206px;
@@ -1190,7 +1190,7 @@
   cursor: pointer;
 }
 
-.sellingImg:hover img {
+.sellingItem:hover img {
   transform: scale(1.1);
 }
 
@@ -1242,4 +1242,87 @@
 .sellingIn p {
   font-size: 18px;
   margin-bottom: 0 !important;
+}
+
+.sellingIn .voteIcon img {
+  width: 11px;
+  height: 12px;
+  vertical-align: middle !important;
+  margin: -2px !important;
+}
+
+/* banner introduction */
+
+.bannerIntroduction {
+  display: flex;
+  justify-content: space-between;
+  padding: 4% 0px;
+}
+
+.bannerIntroduction h4{
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 100%;
+  color: #FFFFFF;
+}
+
+.superSale {
+  background-image: url(./assets/slider/banner1.png);
+  background-size: cover;
+  background-position: center;
+  width: 635px;
+  height: 145px;
+  border-radius: 15px;
+}
+
+.superSaleTitle,
+.dealsGoodTitle {
+  padding-left: 5%;
+  padding-top: 5%;
+  
+}
+
+
+.dealsGood {
+  background-image: url(./assets/slider/banner2.png);
+  background-size: cover;
+  background-position: center;
+  width: 635px;
+  height: 145px;
+  border-radius: 15px;
+}
+
+.bannerIntroduction .underline-out-reverse {
+  margin-top: 2%;
+  position: relative;
+  display: inline-block;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  padding-bottom: 4px;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.bannerIntroduction .underline-out-reverse::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+
+.bannerIntroduction .underline-out-reverse:hover {
+  color: #ffffff !important;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.bannerIntroduction .underline-out-reverse:hover::after {
+  transform: scaleX(0);
 }
