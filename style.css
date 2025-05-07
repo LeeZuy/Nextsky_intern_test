@@ -1259,15 +1259,15 @@
   padding: 4% 0px;
 }
 
-.bannerIntroduction h4{
+.bannerIntroduction h4 {
   font-size: 20px;
   font-weight: 600;
   line-height: 100%;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .superSale {
-  background-image: url(./assets/slider/banner1.png);
+  background-image: url(/assets/slider/banner1.png);
   background-size: cover;
   background-position: center;
   width: 635px;
@@ -1279,12 +1279,10 @@
 .dealsGoodTitle {
   padding-left: 5%;
   padding-top: 5%;
-  
 }
 
-
 .dealsGood {
-  background-image: url(./assets/slider/banner2.png);
+  background-image: url(/assets/slider/banner2.png);
   background-size: cover;
   background-position: center;
   width: 635px;
