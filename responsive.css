@@ -58,12 +58,9 @@
   }
 
   .btn-menu {
-    /* margin: 1%;
-    position: fixed; */
-    /* display: block; */
     position: fixed;
     top: 10px;
-    left: 10px; /* hoặc right: 10px; tùy bạn muốn nằm bên nào */
+    left: 10px;
     z-index: 9999;
   }
 
@@ -90,6 +87,18 @@
     grid-column-start: 4;
     grid-row-start: 1;
     margin-left: 55%;
+  }
+  /* slider */
+  .silderTitle h1 {
+    font-size: 24px;
+  }
+
+  .silderTitle p {
+    font-size: 14px;
+  }
+
+  .silderTitle .salient-button {
+    width: 48%;
   }
 
   /* banner */
@@ -173,6 +182,14 @@
   }
 
   /* Trending This Week */
+  .Trending {
+    margin: 15% 0px;
+  }
+
+  .trendingTitle h5 {
+    font-size: 122%;
+  }
+
   .trendingProductIn {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -189,6 +206,13 @@
   }
 
   /* Top Selling Products */
+  /* .selling{
+    margin-bottom: 10%;
+  } */
+  .sellingTitle h5 {
+    font-size: 122%;
+  }
+
   .sellingProductIn {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -202,5 +226,38 @@
     min-width: 80%;
     flex-shrink: 0;
     scroll-snap-align: start;
+  }
+
+  /* banner introduction */
+  .bannerIntroduction {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    margin: 10% 0px -140% 0px;
+    /* gap: 8px; */
+  }
+  .bannerIntroduction h4 {
+    font-size: 16px;
+  }
+
+  .bannerIntroduction .underline-out-reverse {
+    font-size: 12px;
+  }
+
+  .superSale {
+    grid-column: span 2 / span 2;
+    width: 252%;
+    margin-bottom: 18%;
+  }
+
+  .superSaleTitle,
+  .dealsGoodTitle {
+    padding-top: 9%;
+  }
+
+  .dealsGood {
+    grid-column: span 2 / span 2;
+    grid-row-start: 2;
+    width: 252%;
   }
 }
