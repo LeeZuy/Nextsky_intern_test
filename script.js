@@ -154,3 +154,20 @@ function closeAll() {
     subMenu.classList.remove("active");
     backdrop.classList.remove("active");
 }
+
+// footer bot
+// lenguage & currency
+function setupSelector(selectorId) {
+    const select = document.getElementById(selectorId);
+    const labelSpan = select.querySelector(".label");
+    const radios = select.querySelectorAll('input[type="radio"]');
+    radios.forEach((radio) => {
+        radio.addEventListener("change", () => {
+            const lbl = select.querySelector(`label[for="${radio.id}"]`);
+            labelSpan.textContent = lbl.getAttribute("data-txt");
+        });
+    });
+}
+
+setupSelector("lang-select");
+setupSelector("cur-select");

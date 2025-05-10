@@ -72,7 +72,12 @@
   }
 
   .silderTitle .salient-button {
-    width: 48%;
+    width: 170px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .silderTitle .salient-button span {
   }
 
   /* banner */
@@ -88,10 +93,11 @@
   }
 
   .surface img {
-    margin-left: 26%;
+    margin-left: 44%;
     margin-top: 7%;
-    width: 48%;
-    height: 23%;
+    width: 47%;
+    height: 21%;
+    position: absolute;
   }
 
   .gamepad {
@@ -105,7 +111,7 @@
     margin-left: 0%;
     margin-top: 4%;
     width: 46%;
-    height: 27%;
+    height: 25%;
   }
 
   .camera {
@@ -116,9 +122,9 @@
 
   .camera img {
     left: 51%;
-    top: 72%;
+    top: 73%;
     width: 45%;
-    height: 25%;
+    height: 24%;
   }
 
   /* main body */
@@ -275,5 +281,68 @@
     flex-shrink: 0;
     scroll-snap-align: start;
     padding-top: 9%;
+  }
+
+  /* Deals & Promotions */
+  .dealsProduct {
+    display: grid;
+  }
+  .saleOff {
+    grid-row-start: 2;
+    margin: 8% 0px;
+  }
+  .hurry {
+    grid-row-start: 3;
+  }
+  .dealsItem {
+    width: 100%;
+    height: 100%;
+  }
+  .dealsItem img {
+    width: 100%;
+  }
+
+  /* footer */
+  .shipping {
+    display: grid;
+    /* justify-content: space-around;
+    text-align: center; */
+    padding-top: 40px;
+  }
+  /* contact */
+  .contact {
+    padding-top: 10%;
+  }
+
+  .aboutIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .accordion {
+    padding-top: 5%;
+  }
+  .accordion .emailIn {
+    width: 122%;
+    height: auto;
+  }
+  .accordion .Subscribe-btn {
+    width: 31%;
+    height: auto;
+  }
+  /* footer bot */
+  .footerBot.container {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 5%;
+  }
+  .country {
+    margin-left: 3%;
   }
 }
