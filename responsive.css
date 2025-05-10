@@ -314,14 +314,22 @@
     padding-top: 10%;
   }
 
-  .aboutIcon {
+  .contact.container {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* .aboutIcon {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-  }
+  } */
 
   .accordion {
     padding-top: 5%;

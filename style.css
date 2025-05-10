@@ -1692,14 +1692,6 @@ footer {
   justify-content: space-between;
 }
 
-.contact.container {
-  display: grid;
-  justify-content: center;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* about */
 .about {
   width: 316px;
