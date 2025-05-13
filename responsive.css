@@ -6,10 +6,69 @@
 }
 
 /* Desktop nhỏ: > 1025px */
-@media (min-width: surfacesurface) and (max-width: 1200px) {
-  /* CSS cho desktop nhỏ */
-}
+@media (max-width: 1200px) {
+  .headerMenuTop {
+    max-width: 100%;
+  }
 
+  .headerLogo {
+    width: fit-content;
+    height: 36.92px;
+    margin-right: 1%;
+    margin-left: 0%;
+  }
+
+  .hrMenuTop {
+    height: 1px;
+    margin: 2% 1%;
+  }
+
+  .search input[type="text"] {
+    width: 222%;
+  }
+
+  .search button[type="submit"] {
+    left: 185%;
+  }
+
+  .profile {
+    margin-left: 36%;
+  }
+
+  .wishlist {
+    padding: 2% 7%;
+  }
+
+  .headerMenuBot {
+    max-width: 100% !important;
+  }
+
+  .vertical-line {
+    margin: 0px 10px 0px 25px;
+  }
+
+  /* menuSlider */
+
+  .main-categories {
+    width: 365px;
+  }
+
+  /* @media (max-width: 1038px) {
+    .sub-categories-container {
+      position: absolute;
+      left: 8%;
+      top: 23px;
+    }
+  }
+
+  @media (max-width: 1010px) {
+    .sub-categories-container {
+      position: absolute;
+      left: 7%;
+      top: 22px;
+    }
+  } */
+}
 /* Tablet ngang / Laptop nhỏ */
 @media (min-width: 992px) and (max-width: 1199px) {
 }
@@ -219,7 +278,7 @@
     gap: 16px;
   }
   .trendingItem {
-    min-width: 42%;
+    min-width: 32%;
     flex-shrink: 0;
     scroll-snap-align: start;
     height: fit-content;
@@ -232,11 +291,11 @@
   }
 
   .trendingIn span {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .trendingIn a {
-    font-size: 22px;
+    font-size: 16px;
   }
 
   .voteIcon img {
@@ -250,6 +309,10 @@
   }
 
   /* Top Selling Products */
+
+  .selling {
+    max-width: 100% !important;
+  }
 
   .sellingTitle h5 {
     font-size: 122%;
@@ -265,43 +328,73 @@
     gap: 16px;
   }
   .sellingItem {
-    min-width: 80%;
+    min-width: 42%;
     flex-shrink: 0;
     scroll-snap-align: start;
+    height: fit-content;
+  }
+
+  .sellingIn span {
+    font-size: 15px;
+  }
+
+  .sellingIn a {
+    font-size: 22px;
+  }
+
+  .sellingIn .voteIcon img {
+    font-size: 22px;
+    margin-top: 2%;
+  }
+
+  .sellingIn p {
+    font-size: 18px;
+    margin-bottom: 0 !important;
+  }
+
+  .sellingProductIn .noSale .sellingIn {
+    margin: 2% 6% 4% 6%;
   }
 
   /* banner introduction */
   .bannerIntroduction {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    margin: 10% 0px 30px 0%;
+    margin: 1% 0px 30px 0%;
+    max-width: 100% !important;
   }
   .bannerIntroduction h4 {
-    font-size: 16px;
+    font-size: 25px;
   }
 
   .bannerIntroduction .underline-out-reverse {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   .superSale {
     grid-column: span 2 / span 2;
     width: 252%;
-    margin-bottom: 18%;
+    margin-bottom: 11%;
+    height: 222px;
   }
 
   .superSaleTitle,
   .dealsGoodTitle {
-    padding-top: 13%;
+    padding-top: 6%;
   }
 
   .dealsGood {
     grid-column: span 2 / span 2;
     grid-row-start: 2;
     width: 252%;
+    height: 222px;
   }
 
   /* Top Rated Products */
+  .rated {
+    max-width: 100% !important;
+  }
+
   .ratedTitle h5 {
     font-size: 122%;
   }
@@ -316,13 +409,36 @@
     gap: 16px;
   }
   .ratedItem {
-    min-width: 80%;
+    min-width: 32%;
     flex-shrink: 0;
     scroll-snap-align: start;
+    height: fit-content;
+  }
+
+  .ratedIn span {
+    font-size: 12px;
+  }
+
+  .ratedIn a {
+    font-size: 16px;
+  }
+
+  .ratedIn .voteIcon img {
+    font-size: 22px;
+    margin-top: 2%;
+  }
+
+  .ratedIn p {
+    font-size: 18px;
+    margin-bottom: 0 !important;
+  }
+
+  .ratedProductIn .noSale .ratedIn {
+    margin: 2% 6% 4% 6%;
   }
 
   /* Our Collections */
-  .collections {
+  /* .collections {
     padding-top: 10%;
     padding-bottom: 10%;
   }
@@ -345,18 +461,92 @@
     flex-shrink: 0;
     scroll-snap-align: start;
     padding-top: 9%;
+  } */
+
+  .collections {
+    max-width: 100% !important;
+    margin-bottom: 4%;
+  }
+
+  .collectionsTitle h5 {
+    font-size: 122%;
+  }
+
+  .collectionsItem {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+  }
+
+  .smartPhones {
+    grid-column-start: 2;
+  }
+
+  .tabletsIpads {
+    grid-column-start: 3;
+  }
+
+  .collectionsItem .smartWatch {
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+
+  .collectionsItem .accessories {
+    grid-column-start: 3;
+    grid-row-start: 2;
+  }
+
+  .collectionsProduct {
+    width: 348px;
+    height: 222px;
+  }
+
+  .collectionsTitle {
+    margin: 4% 0px 2% 0px;
+  }
+
+  .collectionsProductTitle {
+    margin-top: 5%;
+  }
+
+  .collectionsProduct img {
+    margin-top: 13%;
+    width: 130px;
+    height: 115px;
   }
 
   /* Deals & Promotions */
+  .deals {
+    max-width: 100% !important;
+  }
+
   .dealsProduct {
     display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 22px;
   }
+
+  .cyber {
+    grid-column: span 3 / span 3;
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+  }
+
   .saleOff {
-    grid-row-start: 2;
-    margin: 8% 0px;
+    /* grid-row-start: 2;
+    margin: 8% 0px; */
+    grid-column: span 3 / span 3;
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 3;
   }
   .hurry {
-    grid-row-start: 3;
+    /* grid-row-start: 3; */
+    grid-column: span 3 / span 3;
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 5;
   }
   .dealsItem {
     width: 100%;
@@ -366,13 +556,22 @@
     width: 100%;
   }
 
+  .dealsTitle h5 {
+    font-size: 122%;
+  }
+
+  .dealsTitle {
+    margin: 2% 0px 2% 0px;
+  }
+
   /* footer */
   .shipping {
-    display: grid;
-    /* justify-content: space-around;
-    text-align: center; */
-    padding-top: 40px;
+    display: flex;
+    padding-top: 7%;
+    justify-content: space-between;
+    max-width: 90%;
   }
+
   /* contact */
   .contact {
     padding-top: 10%;
@@ -384,26 +583,44 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    margin-top: -5%;
   }
 
-  .aboutIcon {
+  .about {
+    margin-top: 2%;
+    margin-bottom: -5%;
+  }
+
+  .about h6 {
+    font-size: 20px;
+  }
+
+  .about p {
+    font-size: 14px;
+  }
+
+  /* .aboutIcon {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+  } */
+
+  .email {
+    justify-content: space-around;
   }
 
   .accordion {
     padding-top: 5%;
   }
   .accordion .emailIn {
-    width: 122%;
+    width: 210%;
     height: auto;
   }
   .accordion .Subscribe-btn {
-    width: 31%;
+    width: 16%;
     height: auto;
   }
   /* footer bot */
@@ -411,7 +628,7 @@
     display: grid;
     justify-content: center;
     text-align: center;
-    padding-top: 10%;
+    padding-top: 5%;
     padding-bottom: 5%;
   }
   .country {
@@ -873,24 +1090,29 @@
     margin-bottom: 8%;
   }
 
-  .aboutIcon {
+  .about {
+    margin-top: 2%;
+    margin-bottom: -5%;
+  }
+
+  /* .aboutIcon {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-  }
+  } */
 
   .accordion {
     padding-top: 5%;
   }
   .accordion .emailIn {
-    width: 122%;
+    width: 160%;
     height: auto;
   }
   .accordion .Subscribe-btn {
-    width: 31%;
+    width: 22%;
     height: auto;
   }
   /* footer bot */
@@ -922,11 +1144,15 @@
   }
 
   .about p {
-    font-size: 20px;
+    font-size: 14px;
   }
 
   .about h3 {
-    font-size: 42px;
+    font-size: 30px;
+  }
+
+  .email {
+    justify-content: space-around;
   }
 
   .country {
@@ -970,11 +1196,11 @@
   }
 
   .search input[type="text"] {
-    width: 159%;
+    width: 153%;
   }
 
   .search button[type="submit"] {
-    left: 131%;
+    left: 117%;
   }
 
   .profile {
@@ -983,6 +1209,10 @@
     margin-left: 55%;
   }
   /* slider */
+  .slider {
+    margin: 0px;
+  }
+
   .silderTitle h1 {
     font-size: 24px;
   }
@@ -995,9 +1225,6 @@
     width: 170px;
     text-align: center;
     align-items: center;
-  }
-
-  .silderTitle .salient-button span {
   }
 
   /* banner */
@@ -1029,9 +1256,9 @@
 
   .gamepad img {
     margin-left: 0%;
-    margin-top: 4%;
+    margin-top: 5%;
     width: 46%;
-    height: 25%;
+    height: 24%;
   }
 
   .camera {
@@ -1242,14 +1469,19 @@
     margin-right: auto;
   }
 
-  .aboutIcon {
+  .about {
+    margin-top: 2%;
+    margin-bottom: -5%;
+  }
+
+  /* .aboutIcon {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-  }
+  } */
 
   .accordion {
     padding-top: 5%;

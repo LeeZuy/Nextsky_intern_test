@@ -1033,6 +1033,7 @@
 }
 
 /* Top Selling Products */
+
 .sellingTitle {
   display: flex;
   justify-content: space-between;
@@ -1069,23 +1070,23 @@
   background-color: #ffffff;
   border-radius: 15px;
 }
-.promotionBackground img {
+.promotion img {
   position: absolute;
-  width: 148px;
-  height: 333px;
+  width: 434px;
+  height: 350px;
   opacity: 0.9;
 }
-.imgArea img {
+/* .imgArea img {
   position: inherit;
   width: 280px;
   height: 350px;
   left: -20px;
   border-radius: 15px;
-}
+} */
 .promotionIn {
   position: absolute;
   text-align: end;
-  margin-left: 13%;
+  margin-left: 12%;
   margin-top: 5%;
 }
 
