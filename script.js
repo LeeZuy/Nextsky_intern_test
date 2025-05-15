@@ -155,6 +155,73 @@ function closeAll() {
     backdrop.classList.remove("active");
 }
 
+// Our Collections
+
+// .collectionsItem
+//     .collectionsProduct
+
+
+// let current = 0;
+// const slider = document.querySelector('.collectionsItem');
+// const products = document.querySelectorAll('.collectionsProduct');
+// const productsPerView = 2;
+// const total = products.length;
+
+// function slide(direction) {
+//     const productWidth = products[0].offsetWidth + 16; // 16 là khoảng cách gap giữa các sản phẩm
+
+//     if (direction === 'next') {
+//         current = (current + 1) % total;
+//     } else {
+//         current = (current - 1 + total) % total;
+//     }
+
+// Nếu currentIndex vượt quá chỉ số trượt hợp lệ thì cần điều chỉnh:
+// VD: với 4 sản phẩm, mỗi lần hiển thị 2 -> max chỉ số hợp lệ là 2 (0, 1, 2)
+//     const maxIndex = total - productsPerView;
+//     const adjustedIndex = current > maxIndex ? 0 : current;
+
+//     slider.style.transform = `translateX(-${adjustedIndex * productWidth}px)`;
+// }
+
+const slider = document.querySelector('.collectionsItem');
+const products = document.querySelectorAll('.collectionsProduct');
+const total = products.length;
+let current = 0;
+
+function getProductWidth() {
+    return products[0].offsetWidth + 16; // 16px là khoảng cách giữa các sản phẩm (gap)
+}
+
+function getProductsPerView() {
+    const containerWidth = document.querySelector('collectionsItemIn').offsetWidth;
+    const itemWidth = getProductWidth();
+    return Math.floor(containerWidth / itemWidth);
+}
+
+function slide(direction) {
+    const productWidth = getProductWidth();
+    const perView = getProductsPerView();
+    const maxIndex = total - perView;
+
+    if (direction === 'next') {
+        current = current >= maxIndex ? 0 : current + 1;
+    } else {
+        current = current <= 0 ? maxIndex : current - 1;
+    }
+
+    slider.style.transform = `translateX(-${current * productWidth}px)`;
+}
+
+window.addEventListener('resize', () => {
+    const productWidth = getProductWidth();
+    slider.style.transform = `translateX(-${current * productWidth}px)`;
+});
+
+
+
+
+
 // footer bot
 // lenguage & currency
 function setupSelector(selectorId) {
@@ -171,3 +238,71 @@ function setupSelector(selectorId) {
 
 setupSelector("lang-select");
 setupSelector("cur-select");
+
+
+// Smooth Scrolling
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+        link.addEventListener("click", function (e) {
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+});
+
+// Fade-in effect on scroll
+document.addEventListener("DOMContentLoaded", function () {
+    const faders = document.querySelectorAll(".fade-in");
+
+    const appearOptions = {
+        threshold: 0.2,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+});
+
+// lazy img
+
+document.addEventListener("DOMContentLoaded", function () {
+    const lazyImages = document.querySelectorAll('img.lazyload');
+
+    const lazyLoad = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                const srcset = img.getAttribute('data-srcset');
+                if (srcset) {
+                    img.setAttribute('src', srcset);
+                }
+                img.classList.remove('lazyload');
+                observer.unobserve(img);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(lazyLoad, {
+        rootMargin: '100px',
+        threshold: 0.1
+    });
+
+    lazyImages.forEach(img => {
+        observer.observe(img);
+    });
+});
