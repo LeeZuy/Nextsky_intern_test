@@ -26,43 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
         showSlide(currentSlide);
     }, 5000);
 });
+
 // menu-slider
-// document.addEventListener("DOMContentLoaded", function () {
-//     const mainCategories = document.querySelectorAll(".main-category");
-//     const allSubCategories = document.querySelectorAll(".sub-categories");
-
-//     const allCategory = document.getElementById("allCategory");
-//     const allCategoryContent = document.getElementById(
-//         "allCategoryContent"
-//     );
-
-//     function hideAllSubCategories() {
-//         allSubCategories.forEach((subCategory) => {
-//             subCategory.classList.remove("active");
-//         });
-
-//         mainCategories.forEach((category) => {
-//             category.classList.remove("active");
-//         });
-//     }
-
-//     mainCategories.forEach((category) => {
-//         category.addEventListener("mouseenter", function () {
-//             const categoryType = this.getAttribute("data-category");
-
-//             hideAllSubCategories();
-
-//             const targetContent = document.querySelector(
-//                 `.sub-categories[data-category-content="${categoryType}"]`
-//             );
-//             if (targetContent) {
-//                 targetContent.classList.add("active");
-//                 this.classList.add("active");
-//             }
-//         });
-//     });
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const mainCategories = document.querySelectorAll(".main-category");
     const subCategoriesContainer = document.querySelector(".sub-categories-container");
@@ -187,13 +152,6 @@ window.addEventListener("resize", () => {
     }
 });
 
-
-
-
-
-
-
-
 // slider
 const imgContainer = document.querySelector(".aspect-ratio-169");
 const dots = document.querySelectorAll(".dot");
@@ -265,35 +223,6 @@ function closeAll() {
     subMenu.classList.remove("active");
     backdrop.classList.remove("active");
 }
-
-// Our Collections
-
-// .collectionsItem
-//     .collectionsProduct
-
-
-// let current = 0;
-// const slider = document.querySelector('.collectionsItem');
-// const products = document.querySelectorAll('.collectionsProduct');
-// const productsPerView = 2;
-// const total = products.length;
-
-// function slide(direction) {
-//     const productWidth = products[0].offsetWidth + 16; // 16 là khoảng cách gap giữa các sản phẩm
-
-//     if (direction === 'next') {
-//         current = (current + 1) % total;
-//     } else {
-//         current = (current - 1 + total) % total;
-//     }
-
-// Nếu currentIndex vượt quá chỉ số trượt hợp lệ thì cần điều chỉnh:
-// VD: với 4 sản phẩm, mỗi lần hiển thị 2 -> max chỉ số hợp lệ là 2 (0, 1, 2)
-//     const maxIndex = total - productsPerView;
-//     const adjustedIndex = current > maxIndex ? 0 : current;
-
-//     slider.style.transform = `translateX(-${adjustedIndex * productWidth}px)`;
-// }
 
 const slider = document.querySelector('.collectionsItem');
 const products = document.querySelectorAll('.collectionsProduct');
@@ -368,63 +297,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Fade-in effect on scroll
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     const faders = document.querySelectorAll(".fade-in");
-
-//     if ("IntersectionObserver" in window) {
-//         const appearOptions = {
-//             threshold: 0.2,
-//             rootMargin: "0px 0px -50px 0px"
-//         };
-
-//         const appearOnScroll = new IntersectionObserver(function (entries, observer) {
-//             entries.forEach(entry => {
-//                 if (!entry.isIntersecting) return;
-//                 entry.target.classList.add("visible");
-//                 observer.unobserve(entry.target);
-//             });
-//         }, appearOptions);
-
-//         faders.forEach(fader => {
-//             appearOnScroll.observe(fader);
-//         });
-
-//         setTimeout(() => {
-//             faders.forEach(fader => {
-//                 if (!fader.classList.contains('visible')) {
-//                     fader.classList.add('visible');
-//                 }
-//             });
-//         }, 1000);
-//     } else {
-
-//         faders.forEach(fader => {
-//             fader.classList.add("visible");
-//         });
-//     }
-// });
-// document.addEventListener("DOMContentLoaded", function () {
-//   const faders = document.querySelectorAll(".fade-in");
-
-//   const appearOptions = {
-//     threshold: 0.1,
-//     rootMargin: "0px 0px -50px 0px"
-//   };
-
-//   const appearOnScroll = new IntersectionObserver(function (entries, observer) {
-//     entries.forEach(entry => {
-//       if (!entry.isIntersecting) return;
-//       entry.target.classList.add("visible");
-//       observer.unobserve(entry.target);
-//     });
-//   }, appearOptions);
-
-//   faders.forEach(fader => {
-//     appearOnScroll.observe(fader);
-//   });
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
     const faders = document.querySelectorAll(".fade-in");
 

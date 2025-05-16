@@ -444,23 +444,11 @@
 }
 
 .menu-container {
-  /* max-width: 1200px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden; */
   position: relative;
   display: flex;
 }
 
 .main-categories {
-  /* width: 270px;
-  height: auto;
-  background-color: white;
-  padding: 10px 0;
-  border-right: 1px solid #eee;
-  display: flex;
-  flex-direction: column; */
   padding: 10px 0;
   border-radius: 15px;
   border-right: 1px solid #eee;
@@ -532,20 +520,12 @@
 }
 
 .sub-categories {
-  /* width: 100%;
-  height: 100%;
-  padding: 20px;
-  display: none;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-content: flex-start; */
   display: none;
 }
 
 .sub-categories.active {
   display: flex;
   flex-direction: column;
-  /* animation: fadeIn 0.3s ease; */
 }
 
 @keyframes fadeIn {
@@ -751,7 +731,6 @@
 .silderTitle {
   position: absolute;
   bottom: 25%;
-  /* left: 50%; */
   transform: translateX(-50%);
   text-align: center;
   color: #ffffff;
@@ -862,7 +841,6 @@
 }
 
 .surface {
-  /* grid-column-start: 2; */
   width: 406px;
   height: 180px;
   background-color: #d73459;
@@ -873,7 +851,6 @@
 }
 
 .gamepad {
-  /* grid-column-start: 3; */
   width: 407px;
   height: 180px;
   background-color: #8853d3;
@@ -884,7 +861,6 @@
 }
 
 .camera {
-  /* grid-column-start: 4; */
   width: 407px;
   height: 180px;
   background-color: #2ca586;
@@ -1170,13 +1146,7 @@
   height: 350px;
   opacity: 0.9;
 }
-/* .imgArea img {
-  position: inherit;
-  width: 280px;
-  height: 350px;
-  left: -20px;
-  border-radius: 15px;
-} */
+
 .promotionIn {
   position: absolute;
   text-align: end;
@@ -1687,7 +1657,6 @@
 .collectionsItem {
   display: flex;
   justify-content: space-between;
-  /* transform: none !important; */
 }
 
 .collectionsProduct {
@@ -1766,9 +1735,6 @@
   font-weight: 400;
 }
 
-/* .collectionsProduct {
-  flex: 0 0 25%;
-} */
 .nav {
   display: none;
 }
@@ -1876,6 +1842,7 @@
 footer {
   background-color: #ffffff;
 }
+
 /* shipping */
 .shipping {
   display: flex;
@@ -1883,6 +1850,7 @@ footer {
   text-align: center;
   padding-top: 40px;
 }
+
 .shipping p {
   font-size: 15px;
   font-weight: 500;
@@ -1934,12 +1902,14 @@ footer {
   color: #111111;
   padding-bottom: 4%;
 }
+
 .about p {
   font-size: 14px;
   font-weight: 500;
   line-height: 100%;
   color: #555555;
 }
+
 .about h3 {
   color: #0d53bb;
   font-size: 30px;
@@ -2177,8 +2147,8 @@ footer {
   margin-bottom: 1%;
   width: 100%;
 }
-/* country*/
 
+/* country*/
 .language-wrapper,
 .currency-wrapper {
   display: flex;
@@ -2195,13 +2165,10 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background-color: #f0f0f0; */
   color: #333;
   padding: 6px 10px;
-  /* border-radius: 6px; */
   cursor: pointer;
   width: 99px;
-  /* box-sizing: border-box; */
   position: relative;
   z-index: 1;
 }
@@ -2210,13 +2177,10 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background-color: #f0f0f0; */
   color: #333;
   padding: 6px 10px;
-  /* border-radius: 6px; */
   cursor: pointer;
   width: 206px;
-  /* box-sizing: border-box; */
   position: relative;
   z-index: 1;
 }
@@ -2307,12 +2271,6 @@ footer {
 }
 
 /* fade in effect */
-
-/* .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-} */
 
 .fade-in {
   opacity: 0;

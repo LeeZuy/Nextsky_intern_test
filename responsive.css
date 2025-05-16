@@ -46,7 +46,6 @@ html {
   }
 }
 
-/* Desktop lớn: > 1200px */
 @media (max-width: 1400px) and (min-width: 1200px) {
   .divider {
     max-width: 1282px;
@@ -185,11 +184,6 @@ html {
     width: 24%;
   }
 
-  /* contact */
-  /* .contact{
-    width: fit-content;
-  } */
-
   /* deals */
 
   .dealsItem {
@@ -213,7 +207,6 @@ html {
   }
 }
 
-/* Desktop nhỏ: > 1025px */
 @media (max-width: 1200px) {
   .headerMenuTop,
   .headerMenuBot,
@@ -267,34 +260,6 @@ html {
   .vertical-line {
     margin: 0px 10px 0px 25px;
   }
-
-  /* menuSlider */
-
-  /* .main-categories {
-    width: 365px;
-  }
-
-  .sub-categories-container {
-    position: absolute;
-    left: 9%;
-    top: 28px;
-  } */
-
-  /* @media (max-width: 1038px) {
-    .sub-categories-container {
-      position: absolute;
-      left: 8%;
-      top: 23px;
-    }
-  }
-
-  @media (max-width: 1010px) {
-    .sub-categories-container {
-      position: absolute;
-      left: 7%;
-      top: 22px;
-    }
-  } */
 
   /* banner */
 
@@ -523,7 +488,6 @@ html {
   .contact {
     display: grid !important;
     grid-template-columns: repeat(4, 1fr);
-    /* grid-template-rows: repeat(5, 1fr); */
     gap: 50px;
   }
 
@@ -552,10 +516,7 @@ html {
     display: none !important;
   }
 }
-/* Tablet ngang / Laptop nhỏ */
-/* @media (min-width: 992px) and (max-width: 1199px) {
-} */
-/* Tablet dọc */
+
 @media (min-width: 768px) and (max-width: 991px) {
   /* header menu */
   .headerMenuTop {
@@ -955,8 +916,6 @@ html {
   }
 
   .saleOff {
-    /* grid-row-start: 2;
-    margin: 8% 0px; */
     grid-column: span 3 / span 3;
     grid-row: span 2 / span 2;
     grid-column-start: 2;
@@ -964,7 +923,6 @@ html {
     width: auto;
   }
   .hurry {
-    /* grid-row-start: 3; */
     grid-column: span 3 / span 3;
     grid-row: span 2 / span 2;
     grid-column-start: 2;
@@ -997,7 +955,6 @@ html {
 
   /* contact */
   .contact {
-    /* padding-top: 10%; */
     display: none !important;
   }
 
@@ -1022,15 +979,6 @@ html {
   .about p {
     font-size: 14px;
   }
-
-  /* .aboutIcon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  } */
 
   .email {
     justify-content: space-around;
@@ -1060,7 +1008,6 @@ html {
   }
 }
 
-/* Tablet nhỏ: từ 576px đến 767px */
 @media (min-width: 576px) and (max-width: 767px) {
   .mainBody,
   .menuSlider,
@@ -1081,10 +1028,6 @@ html {
     opacity: 1 !important;
     overflow: visible !important;
   }
-
-  /* .d-none {
-    display: block !important;
-  } */
 
   .menuSlider,
   .banner,
@@ -1501,12 +1444,6 @@ html {
   }
 
   /* Our Collections */
-  /* .collections {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    max-width: 100% !important;
-  } */
-
   .collectionsTitle h5 {
     font-size: 155%;
   }
@@ -1514,23 +1451,6 @@ html {
   .collectionsProduct {
     --collectionsProduct-width: 66.666%; /* 1.5 sản phẩm */
   }
-
-  /* .collectionsIn {
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  } */
-  /* .collectionsItem {
-    display: flex;
-    gap: 16px;
-  } */
-  /* .collectionsProduct {
-    min-width: 58%;
-    flex-shrink: 0;
-    scroll-snap-align: start;
-    padding-top: 9%;
-    height: 295px;
-  } */
 
   .productInfo p {
     font-size: 18px;
@@ -1589,8 +1509,6 @@ html {
   /* footer */
   .shipping {
     display: grid;
-    /* justify-content: space-around;
-    text-align: center; */
     padding-top: 40px;
   }
   /* contact */
@@ -1611,15 +1529,6 @@ html {
     margin-top: 2%;
     margin-bottom: -5%;
   }
-
-  /* .aboutIcon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  } */
 
   .accordion {
     padding-top: 5%;
@@ -1683,7 +1592,6 @@ html {
 
 /* Mobile: dưới 576px */
 @media (max-width: 575px) {
-  /* header menu */
   .headerMenuTop {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -1935,19 +1843,7 @@ html {
     font-size: 122%;
   }
 
-  /* .collectionsIn {
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  } */
-  /* .collectionsItem {
-    display: flex;
-    gap: 16px;
-  } */
   .collectionsProduct {
-    /* min-width: 80%;
-    flex-shrink: 0;
-    scroll-snap-align: start; */
     padding-top: 6%;
     --collectionsProduct-width: 100%;
     min-width: 100%;
@@ -1975,10 +1871,9 @@ html {
   /* footer */
   .shipping {
     display: grid;
-    /* justify-content: space-around;
-    text-align: center; */
     padding-top: 40px;
   }
+
   /* contact */
   .contact {
     display: none !important;
@@ -1997,15 +1892,6 @@ html {
     margin-bottom: -5%;
   }
 
-  /* .aboutIcon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  } */
-
   .accordion {
     padding-top: 5%;
   }
@@ -2017,6 +1903,7 @@ html {
     width: 31%;
     height: auto;
   }
+  
   /* footer bot */
   .footerBot.container {
     display: grid;
