@@ -23,7 +23,7 @@
     <!-- header -->
     <div class="header">
       <div
-        class="alert alert-dismissible d-lg-block d-none"
+        class="alert alert-dismissible d-none d-lg-block"
         role="alert"
         style="position: relative"
       >
@@ -56,7 +56,18 @@
             <div class="mobileHeaderMenu d-block d-lg-none">
               <!-- Nút mở menu -->
               <button class="menuBtn btn btn-primary" onclick="toggleMenu()">
-                ☰
+                <svg
+                  width="20"
+                  height="21"
+                  viewBox="0 0 20 21"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.5 12C2.26562 12 2.0638 11.9219 1.89453 11.7656C1.73828 11.5964 1.66016 11.3945 1.66016 11.1602C1.66016 10.9388 1.73828 10.75 1.89453 10.5938C2.0638 10.4245 2.26562 10.3398 2.5 10.3398H17.5C17.7344 10.3398 17.9297 10.4245 18.0859 10.5938C18.2552 10.75 18.3398 10.9388 18.3398 11.1602C18.3398 11.3945 18.2552 11.5964 18.0859 11.7656C17.9297 11.9219 17.7344 12 17.5 12H2.5ZM2.5 7C2.26562 7 2.0638 6.92188 1.89453 6.76562C1.73828 6.59635 1.66016 6.39453 1.66016 6.16016C1.66016 5.9388 1.73828 5.75 1.89453 5.59375C2.0638 5.42448 2.26562 5.33984 2.5 5.33984H17.5C17.7344 5.33984 17.9297 5.42448 18.0859 5.59375C18.2552 5.75 18.3398 5.9388 18.3398 6.16016C18.3398 6.39453 18.2552 6.59635 18.0859 6.76562C17.9297 6.92188 17.7344 7 17.5 7H2.5ZM2.5 17C2.26562 17 2.0638 16.9219 1.89453 16.7656C1.73828 16.5964 1.66016 16.3945 1.66016 16.1602C1.66016 15.9388 1.73828 15.75 1.89453 15.5938C2.0638 15.4245 2.26562 15.3398 2.5 15.3398H17.5C17.7344 15.3398 17.9297 15.4245 18.0859 15.5938C18.2552 15.75 18.3398 15.9388 18.3398 16.1602C18.3398 16.3945 18.2552 16.5964 18.0859 16.7656C17.9297 16.9219 17.7344 17 17.5 17H2.5Z"
+                    fill="currentColor"
+                  />
+                </svg>
               </button>
 
               <!-- Menu chính -->
@@ -68,7 +79,21 @@
                       >CATEGORIES</span
                     >
                   </div>
-                  <span class="close-btn" onclick="toggleMenu()">×</span>
+                  <span class="close-btn" onclick="toggleMenu()"
+                    ><svg
+                      width="12"
+                      height="11"
+                      viewBox="0 0 12 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.5"
+                        d="M0.972656 1.52148C0.820312 1.38085 0.744141 1.21093 0.744141 1.01171C0.744141 0.800776 0.820312 0.619135 0.972656 0.466791C1.11328 0.326166 1.28906 0.255854 1.5 0.255854C1.71094 0.255854 1.88672 0.326166 2.02734 0.466791L6 4.43945L9.97266 0.466791C10.1133 0.326166 10.2891 0.255854 10.5 0.255854C10.7109 0.255854 10.8867 0.326166 11.0273 0.466791C11.1797 0.619135 11.2559 0.800776 11.2559 1.01171C11.2559 1.21093 11.1797 1.38085 11.0273 1.52148L7.05469 5.49413L11.0273 9.46679C11.1797 9.61913 11.2559 9.80078 11.2559 10.0117C11.2559 10.2109 11.1797 10.3809 11.0273 10.5215C10.8867 10.6738 10.7109 10.75 10.5 10.75C10.2891 10.75 10.1133 10.6738 9.97266 10.5215L6 6.5664L2.02734 10.5215C1.88672 10.6738 1.71094 10.75 1.5 10.75C1.28906 10.75 1.11328 10.6738 0.972656 10.5215C0.820312 10.3809 0.744141 10.2109 0.744141 10.0117C0.744141 9.80078 0.820312 9.61913 0.972656 9.46679L4.94531 5.49413L0.972656 1.52148Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
                 </div>
                 <ul class="menu-list">
                   <li>Home</li>
@@ -99,9 +124,38 @@
               <!-- Menu con (Categories) -->
               <div class="sub-menu" id="subMenu">
                 <div class="sub-menu-header">
-                  <span class="back-btn" onclick="toggleSubMenu()">←</span>
+                  <span class="back-btn" onclick="toggleSubMenu()"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
+                      />
+                    </svg>
+                  </span>
                   <span>CATEGORIES</span>
-                  <span class="close-btn" onclick="closeAll()">×</span>
+                  <span class="close-btn" onclick="closeAll()"
+                    ><svg
+                      width="12"
+                      height="11"
+                      viewBox="0 0 12 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.5"
+                        d="M0.972656 1.52148C0.820312 1.38085 0.744141 1.21093 0.744141 1.01171C0.744141 0.800776 0.820312 0.619135 0.972656 0.466791C1.11328 0.326166 1.28906 0.255854 1.5 0.255854C1.71094 0.255854 1.88672 0.326166 2.02734 0.466791L6 4.43945L9.97266 0.466791C10.1133 0.326166 10.2891 0.255854 10.5 0.255854C10.7109 0.255854 10.8867 0.326166 11.0273 0.466791C11.1797 0.619135 11.2559 0.800776 11.2559 1.01171C11.2559 1.21093 11.1797 1.38085 11.0273 1.52148L7.05469 5.49413L11.0273 9.46679C11.1797 9.61913 11.2559 9.80078 11.2559 10.0117C11.2559 10.2109 11.1797 10.3809 11.0273 10.5215C10.8867 10.6738 10.7109 10.75 10.5 10.75C10.2891 10.75 10.1133 10.6738 9.97266 10.5215L6 6.5664L2.02734 10.5215C1.88672 10.6738 1.71094 10.75 1.5 10.75C1.28906 10.75 1.11328 10.6738 0.972656 10.5215C0.820312 10.3809 0.744141 10.2109 0.744141 10.0117C0.744141 9.80078 0.820312 9.61913 0.972656 9.46679L4.94531 5.49413L0.972656 1.52148Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
                 </div>
                 <ul class="menu-list">
                   <li>
@@ -219,14 +273,14 @@
               </div>
             </div>
           </div>
-          <div class="divider d-xl-block d-none fade-in"></div>
+          <div class="divider d-lg-block d-none fade-in"></div>
           <!-- <hr class="container d-xl-block d-none" /> -->
-          <hr class="hrMenuTop d-block d-xl-none fade-in" />
+          <!-- <hr class="hrMenuTop d-block d-xl-none fade-in" /> -->
 
           <!-- header menu -->
           <div class="headerMenuBot fade-in">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
-              <div class=" d-lg-flex d-none">
+              <div class="d-lg-flex d-none">
                 <a class="navbar-brand" href="loadingPage.html"
                   ><svg
                     width="20"
@@ -260,7 +314,7 @@
                   class="collapse navbar-collapse"
                   id="navbarSupportedContent"
                 >
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <ul class="navMenu navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                       <a
                         class="nav-link dropdown-toggle"
@@ -270,6 +324,18 @@
                         aria-expanded="false"
                       >
                         Home
+                        <svg
+                          width="10"
+                          height="5"
+                          viewBox="0 0 10 5"
+                          fill="currentColor"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.08984 1.32227C0.971354 1.21289 0.912109 1.08073 0.912109 0.925781C0.912109 0.761719 0.971354 0.620443 1.08984 0.501953C1.19922 0.392578 1.33594 0.337891 1.5 0.337891C1.66406 0.337891 1.80078 0.392578 1.91016 0.501953L5 3.5918L8.08984 0.501953C8.19922 0.392578 8.33594 0.337891 8.5 0.337891C8.66406 0.337891 8.80078 0.392578 8.91016 0.501953C9.02865 0.620443 9.08789 0.761719 9.08789 0.925781C9.08789 1.08073 9.02865 1.21289 8.91016 1.32227L5.41016 4.82227C5.30078 4.94076 5.16406 5 5 5C4.83594 5 4.69922 4.94076 4.58984 4.82227L1.08984 1.32227Z"
+                            fill="currentColor"
+                          />
+                        </svg>
                       </a>
                       <ul class="dropdown-menu">
                         <li>
@@ -292,13 +358,25 @@
                     </li>
                     <li class="nav-item dropdown">
                       <a
-                        class="nav-link dropdown-toggle"
+                        class="dropMenu nav-link dropdown-toggle"
                         href="#"
                         role="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
                         Shop
+                        <svg
+                          width="10"
+                          height="5"
+                          viewBox="0 0 10 5"
+                          fill="currentColor"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.08984 1.32227C0.971354 1.21289 0.912109 1.08073 0.912109 0.925781C0.912109 0.761719 0.971354 0.620443 1.08984 0.501953C1.19922 0.392578 1.33594 0.337891 1.5 0.337891C1.66406 0.337891 1.80078 0.392578 1.91016 0.501953L5 3.5918L8.08984 0.501953C8.19922 0.392578 8.33594 0.337891 8.5 0.337891C8.66406 0.337891 8.80078 0.392578 8.91016 0.501953C9.02865 0.620443 9.08789 0.761719 9.08789 0.925781C9.08789 1.08073 9.02865 1.21289 8.91016 1.32227L5.41016 4.82227C5.30078 4.94076 5.16406 5 5 5C4.83594 5 4.69922 4.94076 4.58984 4.82227L1.08984 1.32227Z"
+                            fill="currentColor"
+                          />
+                        </svg>
                       </a>
                       <ul class="dropdown-menu">
                         <li>
@@ -321,13 +399,25 @@
                     </li>
                     <li class="nav-item dropdown">
                       <a
-                        class="nav-link dropdown-toggle"
+                        class="dropMenu nav-link dropdown-toggle"
                         href="#"
                         role="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
                         Product
+                        <svg
+                          width="10"
+                          height="5"
+                          viewBox="0 0 10 5"
+                          fill="currentColor"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.08984 1.32227C0.971354 1.21289 0.912109 1.08073 0.912109 0.925781C0.912109 0.761719 0.971354 0.620443 1.08984 0.501953C1.19922 0.392578 1.33594 0.337891 1.5 0.337891C1.66406 0.337891 1.80078 0.392578 1.91016 0.501953L5 3.5918L8.08984 0.501953C8.19922 0.392578 8.33594 0.337891 8.5 0.337891C8.66406 0.337891 8.80078 0.392578 8.91016 0.501953C9.02865 0.620443 9.08789 0.761719 9.08789 0.925781C9.08789 1.08073 9.02865 1.21289 8.91016 1.32227L5.41016 4.82227C5.30078 4.94076 5.16406 5 5 5C4.83594 5 4.69922 4.94076 4.58984 4.82227L1.08984 1.32227Z"
+                            fill="currentColor"
+                          />
+                        </svg>
                       </a>
                       <ul class="dropdown-menu">
                         <li>
@@ -350,13 +440,25 @@
                     </li>
                     <li class="nav-item dropdown">
                       <a
-                        class="nav-link dropdown-toggle"
+                        class="dropMenu nav-link dropdown-toggle"
                         href="#"
                         role="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
                         Page
+                        <svg
+                          width="10"
+                          height="5"
+                          viewBox="0 0 10 5"
+                          fill="currentColor"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.08984 1.32227C0.971354 1.21289 0.912109 1.08073 0.912109 0.925781C0.912109 0.761719 0.971354 0.620443 1.08984 0.501953C1.19922 0.392578 1.33594 0.337891 1.5 0.337891C1.66406 0.337891 1.80078 0.392578 1.91016 0.501953L5 3.5918L8.08984 0.501953C8.19922 0.392578 8.33594 0.337891 8.5 0.337891C8.66406 0.337891 8.80078 0.392578 8.91016 0.501953C9.02865 0.620443 9.08789 0.761719 9.08789 0.925781C9.08789 1.08073 9.02865 1.21289 8.91016 1.32227L5.41016 4.82227C5.30078 4.94076 5.16406 5 5 5C4.83594 5 4.69922 4.94076 4.58984 4.82227L1.08984 1.32227Z"
+                            fill="currentColor"
+                          />
+                        </svg>
                       </a>
                       <ul class="dropdown-menu">
                         <li>
@@ -379,13 +481,25 @@
                     </li>
                     <li class="nav-item dropdown">
                       <a
-                        class="nav-link dropdown-toggle"
+                        class="dropMenu nav-link dropdown-toggle"
                         href="loadingPage.html"
                         role="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
                         Blog
+                        <svg
+                          width="10"
+                          height="5"
+                          viewBox="0 0 10 5"
+                          fill="currentColor"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.08984 1.32227C0.971354 1.21289 0.912109 1.08073 0.912109 0.925781C0.912109 0.761719 0.971354 0.620443 1.08984 0.501953C1.19922 0.392578 1.33594 0.337891 1.5 0.337891C1.66406 0.337891 1.80078 0.392578 1.91016 0.501953L5 3.5918L8.08984 0.501953C8.19922 0.392578 8.33594 0.337891 8.5 0.337891C8.66406 0.337891 8.80078 0.392578 8.91016 0.501953C9.02865 0.620443 9.08789 0.761719 9.08789 0.925781C9.08789 1.08073 9.02865 1.21289 8.91016 1.32227L5.41016 4.82227C5.30078 4.94076 5.16406 5 5 5C4.83594 5 4.69922 4.94076 4.58984 4.82227L1.08984 1.32227Z"
+                            fill="currentColor"
+                          />
+                        </svg>
                       </a>
                       <ul class="dropdown-menu">
                         <li>
@@ -407,10 +521,12 @@
                       </ul>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" aria-disabled="true">Sale</a>
+                      <a class="dropMenu nav-link" aria-disabled="true">Sale</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" aria-disabled="true">Buy Umino!</a>
+                      <a class="dropMenu nav-link" aria-disabled="true"
+                        >Buy Umino!</a
+                      >
                     </li>
                   </ul>
                   <div>
@@ -1049,7 +1165,7 @@
                     alt="Slider Image 1"
                   />
                 </div>
-                <div class="silderTitle">
+                <div class="silderTitle fade-in">
                   <p>BEST SELLING</p>
                   <h1>Top Quality</h1>
                   <h1>Of Entertainment Devices</h1>
@@ -1067,7 +1183,7 @@
                     alt="Slider Image 2"
                   />
                 </div>
-                <div class="silderTitle">
+                <div class="silderTitle fade-in">
                   <p>BEST SELLING</p>
                   <h1>Top Quality</h1>
                   <h1>Of Entertainment Devices</h1>
@@ -1085,7 +1201,7 @@
                     alt="Slider Image 3"
                   />
                 </div>
-                <div class="silderTitle">
+                <div class="silderTitle fade-in">
                   <p>BEST SELLING</p>
                   <h1>Top Quality</h1>
                   <h1>Of Entertainment Devices</h1>
@@ -1171,11 +1287,18 @@
           <div class="trendingProduct">
             <!-- product 1 -->
             <div class="trendingItem fade-in">
-              <img
-                class="lazyload"
-                data-srcset="./assets/product/Trending1.png"
-                alt=""
-              />
+              <div class="trendingImg">
+                <img
+                  class="lazyload"
+                  data-srcset="./assets/product/Trending1.png"
+                  alt=""
+                />
+                <div class="trendingIcon">
+                  <i class="fas fa-heart wishlist-icon"></i>
+                  <i class="fas fa-shopping-cart cart-icon"></i>
+                </div>
+              </div>
+
               <div class="trendingIn">
                 <span>TOSHIBA</span>
                 <a href="loadingPage.html"
@@ -1193,11 +1316,17 @@
             </div>
             <!-- product 2 -->
             <div class="trendingItem fade-in">
-              <img
-                class="lazyload"
-                data-srcset="./assets/product/Trending2.png"
-                alt=""
-              />
+              <div class="trendingImg">
+                <img
+                  class="lazyload"
+                  data-srcset="./assets/product/Trending2.png"
+                  alt=""
+                />
+                <div class="trendingIcon">
+                  <i class="fas fa-heart wishlist-icon"></i>
+                  <i class="fas fa-shopping-cart cart-icon"></i>
+                </div>
+              </div>
               <div class="trendingIn">
                 <span>TOSHIBA</span>
                 <a href="loadingPage.html"
@@ -1218,11 +1347,17 @@
             </div>
             <!-- product 3 -->
             <div class="trendingItem fade-in">
-              <img
-                class="lazyload"
-                data-srcset="./assets/product/Trending3.png"
-                alt=""
-              />
+              <div class="trendingImg">
+                <img
+                  class="lazyload"
+                  data-srcset="./assets/product/Trending3.png"
+                  alt=""
+                />
+                <div class="trendingIcon">
+                  <i class="fas fa-heart wishlist-icon"></i>
+                  <i class="fas fa-shopping-cart cart-icon"></i>
+                </div>
+              </div>
               <div class="trendingIn">
                 <span>TOSHIBA</span>
                 <a href="loadingPage.html"
@@ -1240,11 +1375,17 @@
             </div>
             <!-- product 4 -->
             <div class="trendingItem fade-in">
-              <img
-                class="lazyload"
-                data-srcset="./assets/product/Trending4.png"
-                alt=""
-              />
+              <div class="trendingImg">
+                <img
+                  class="lazyload"
+                  data-srcset="./assets/product/Trending4.png"
+                  alt=""
+                />
+                <div class="trendingIcon">
+                  <i class="fas fa-heart wishlist-icon"></i>
+                  <i class="fas fa-shopping-cart cart-icon"></i>
+                </div>
+              </div>
               <div class="trendingIn">
                 <span>TOSHIBA</span>
                 <a href="loadingPage.html"
@@ -1265,11 +1406,17 @@
             </div>
             <!-- product 5 -->
             <div class="trendingItem fade-in">
-              <img
-                class="lazyload"
-                data-srcset="./assets/product/Trending5.png"
-                alt=""
-              />
+              <div class="trendingImg">
+                <img
+                  class="lazyload"
+                  data-srcset="./assets/product/Trending5.png"
+                  alt=""
+                />
+                <div class="trendingIcon">
+                  <i class="fas fa-heart wishlist-icon"></i>
+                  <i class="fas fa-shopping-cart cart-icon"></i>
+                </div>
+              </div>
               <div class="trendingIn">
                 <span>TOSHIBA</span>
                 <a href="loadingPage.html"
@@ -1341,11 +1488,17 @@
                     <div class="sale">
                       <p>-50%</p>
                     </div>
-                    <img
-                      class="lazyload"
-                      data-srcset="./assets/product/selling1.png"
-                      alt=""
-                    />
+                    <div class="sellingImgItem">
+                      <img
+                        class="lazyload"
+                        data-srcset="./assets/product/selling1.png"
+                        alt=""
+                      />
+                      <div class="sellingSaleIcon">
+                        <i class="fas fa-heart wishlist-icon"></i>
+                        <i class="fas fa-shopping-cart cart-icon"></i>
+                      </div>
+                    </div>
                   </div>
                   <div class="sellingIn">
                     <span>TOSHIBA</span>
@@ -1368,11 +1521,17 @@
                 <!-- product 2 -->
                 <div class="sellingItem noSale fade-in">
                   <div class="sellingProductImg">
-                    <img
-                      class="lazyload"
-                      data-srcset="./assets/product/selling2.png"
-                      alt=""
-                    />
+                    <div class="sellingImgItem">
+                      <img
+                        class="lazyload"
+                        data-srcset="./assets/product/selling2.png"
+                        alt=""
+                      />
+                      <div class="sellingIcon">
+                        <i class="fas fa-heart wishlist-icon"></i>
+                        <i class="fas fa-shopping-cart cart-icon"></i>
+                      </div>
+                    </div>
                   </div>
                   <div class="sellingIn">
                     <span>TOSHIBA</span>
@@ -1396,11 +1555,17 @@
                       <p>-50%</p>
                     </div>
                     <div class="Img">
-                      <img
-                        class="lazyload"
-                        data-srcset="./assets/product/sellin3.png"
-                        alt=""
-                      />
+                      <div class="sellingImgItem">
+                        <img
+                          class="lazyload"
+                          data-srcset="./assets/product/sellin3.png"
+                          alt=""
+                        />
+                        <div class="sellingSaleIcon">
+                          <i class="fas fa-heart wishlist-icon"></i>
+                          <i class="fas fa-shopping-cart cart-icon"></i>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="sellingIn">
@@ -1473,11 +1638,17 @@
           <div class="ratedProduct">
             <!-- product 1 -->
             <div class="ratedItem noSale fade-in">
-              <img
-                class="lazyload"
-                data-srcset="./assets/product/rate1.png"
-                alt=""
-              />
+              <div class="ratedImgItem">
+                <img
+                  class="lazyload"
+                  data-srcset="./assets/product/rate1.png"
+                  alt=""
+                />
+                <div class="ratedIcon">
+                  <i class="fas fa-heart wishlist-icon"></i>
+                  <i class="fas fa-shopping-cart cart-icon"></i>
+                </div>
+              </div>
               <div class="ratedIn">
                 <span>TOSHIBA</span>
                 <a href="loadingPage.html"
@@ -1499,11 +1670,17 @@
                 <div class="sale">
                   <p>-50%</p>
                 </div>
-                <img
-                  class="lazyload"
-                  data-srcset="./assets/product/selling1.png"
-                  alt=""
-                />
+                <div class="ratedImgItem">
+                  <img
+                    class="lazyload"
+                    data-srcset="./assets/product/selling1.png"
+                    alt=""
+                  />
+                  <div class="ratedSaleIcon">
+                    <i class="fas fa-heart wishlist-icon"></i>
+                    <i class="fas fa-shopping-cart cart-icon"></i>
+                  </div>
+                </div>
               </div>
               <div class="ratedIn">
                 <span>TOSHIBA</span>
@@ -1525,11 +1702,17 @@
             </div>
             <!-- product 3 -->
             <div class="ratedItem noSale fade-in">
-              <img
-                class="lazyload"
-                data-srcset="./assets/product/rate2.png"
-                alt=""
-              />
+              <div class="ratedImgItem">
+                <img
+                  class="lazyload"
+                  data-srcset="./assets/product/rate2.png"
+                  alt=""
+                />
+                <div class="ratedIcon">
+                  <i class="fas fa-heart wishlist-icon"></i>
+                  <i class="fas fa-shopping-cart cart-icon"></i>
+                </div>
+              </div>
               <div class="ratedIn">
                 <span>TOSHIBA</span>
                 <a href="loadingPage.html"
@@ -1551,12 +1734,19 @@
                 <div class="sale">
                   <p>-50%</p>
                 </div>
-                <img
-                  class="lazyload"
-                  data-srcset="./assets/product/sellin3.png"
-                  alt=""
-                />
+                <div class="ratedImgItem">
+                  <img
+                    class="lazyload"
+                    data-srcset="./assets/product/sellin3.png"
+                    alt=""
+                  />
+                  <div class="ratedSaleIcon">
+                    <i class="fas fa-heart wishlist-icon"></i>
+                    <i class="fas fa-shopping-cart cart-icon"></i>
+                  </div>
+                </div>
               </div>
+              <div class="ratedItemIn"></div>
               <div class="ratedIn">
                 <span>TOSHIBA</span>
                 <a href="loadingPage.html"
@@ -1577,11 +1767,17 @@
             </div>
             <!-- product 5 -->
             <div class="ratedItem noSale fade-in">
-              <img
-                class="lazyload"
-                data-srcset="./assets/product/rate3.png"
-                alt=""
-              />
+              <div class="ratedImgItem">
+                <img
+                  class="lazyload"
+                  data-srcset="./assets/product/rate3.png"
+                  alt=""
+                />
+                <div class="ratedIcon">
+                  <i class="fas fa-heart wishlist-icon"></i>
+                  <i class="fas fa-shopping-cart cart-icon"></i>
+                </div>
+              </div>
               <div class="ratedIn">
                 <span>TOSHIBA</span>
                 <a href="loadingPage.html"
@@ -2083,7 +2279,7 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body fade-in">
-              <div class="about">
+              <div class="aboutMobile">
                 <p>Got Question? Call us 24/7</p>
                 <h3>+555-1900-2628</h3>
                 <p>268 St, South New York/NY 98944, United States</p>

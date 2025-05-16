@@ -27,61 +27,172 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 5000);
 });
 // menu-slider
+// document.addEventListener("DOMContentLoaded", function () {
+//     const mainCategories = document.querySelectorAll(".main-category");
+//     const allSubCategories = document.querySelectorAll(".sub-categories");
+
+//     const allCategory = document.getElementById("allCategory");
+//     const allCategoryContent = document.getElementById(
+//         "allCategoryContent"
+//     );
+
+//     function hideAllSubCategories() {
+//         allSubCategories.forEach((subCategory) => {
+//             subCategory.classList.remove("active");
+//         });
+
+//         mainCategories.forEach((category) => {
+//             category.classList.remove("active");
+//         });
+//     }
+
+//     mainCategories.forEach((category) => {
+//         category.addEventListener("mouseenter", function () {
+//             const categoryType = this.getAttribute("data-category");
+
+//             hideAllSubCategories();
+
+//             const targetContent = document.querySelector(
+//                 `.sub-categories[data-category-content="${categoryType}"]`
+//             );
+//             if (targetContent) {
+//                 targetContent.classList.add("active");
+//                 this.classList.add("active");
+//             }
+//         });
+//     });
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const mainCategories = document.querySelectorAll(".main-category");
+    const subCategoriesContainer = document.querySelector(".sub-categories-container");
     const allSubCategories = document.querySelectorAll(".sub-categories");
 
-    const allCategory = document.getElementById("allCategory");
-    const allCategoryContent = document.getElementById(
-        "allCategoryContent"
-    );
+    function hideAllSubCategories() {
+        allSubCategories.forEach(sub => sub.classList.remove("active"));
+    }
+
+    if (window.innerWidth > 991) {
+        if (mainCategories && subCategoriesContainer) {
+            mainCategories.forEach(category => {
+                category.addEventListener("mouseenter", function () {
+                    const type = this.getAttribute("data-category");
+                    hideAllSubCategories();
+
+                    if (type) {
+                        const target = document.querySelector(`.sub-categories[data-category-content="${type}"]`);
+                        if (target) {
+                            subCategoriesContainer.style.display = "block";
+                            target.classList.add("active");
+                        } else {
+                            subCategoriesContainer.style.display = "none";
+                        }
+                    } else {
+                        subCategoriesContainer.style.display = "none";
+                    }
+                });
+            });
+
+            const menuContainer = document.querySelector(".menu-container");
+            if (menuContainer) {
+                menuContainer.addEventListener("mouseleave", () => {
+                    hideAllSubCategories();
+                    subCategoriesContainer.style.display = "none";
+                });
+            }
+        }
+    }
+
+    try {
+        const allCategory = document.getElementById("allCategory");
+        const allCategoryContent = document.getElementById("allCategoryContent");
+
+        if (allCategory && allCategoryContent) {
+            allCategory.classList.add("collapsed");
+            allCategoryContent.style.display = "none";
+            const icon = allCategory.querySelector("i");
+            if (icon) icon.className = "fas fa-plus";
+
+            allCategory.addEventListener("click", function () {
+                this.classList.toggle("collapsed");
+                const icon = this.querySelector("i");
+                if (this.classList.contains("collapsed")) {
+                    icon.className = "fas fa-plus";
+                    allCategoryContent.style.display = "none";
+                } else {
+                    icon.className = "fas fa-minus";
+                    allCategoryContent.style.display = "block";
+                }
+            });
+        }
+    } catch (e) {
+        console.warn("Lỗi allCategory:", e);
+    }
+
+    hideAllSubCategories();
+});
+
+
+
+let menuHoverInitialized = false;
+
+function initDesktopMenu() {
+    if (menuHoverInitialized || window.innerWidth <= 991) return;
+
+    const mainCategories = document.querySelectorAll(".main-category");
+    const subCategoriesContainer = document.querySelector(".sub-categories-container");
+    const allSubCategories = document.querySelectorAll(".sub-categories");
 
     function hideAllSubCategories() {
-        allSubCategories.forEach((subCategory) => {
-            subCategory.classList.remove("active");
-        });
-
-        mainCategories.forEach((category) => {
-            category.classList.remove("active");
-        });
+        allSubCategories.forEach((sub) => sub.classList.remove("active"));
     }
 
     mainCategories.forEach((category) => {
         category.addEventListener("mouseenter", function () {
-            const categoryType = this.getAttribute("data-category");
-
+            const type = this.getAttribute("data-category");
             hideAllSubCategories();
 
-            const targetContent = document.querySelector(
-                `.sub-categories[data-category-content="${categoryType}"]`
-            );
-            if (targetContent) {
-                targetContent.classList.add("active");
-                this.classList.add("active");
+            if (type) {
+                const target = document.querySelector(`.sub-categories[data-category-content="${type}"]`);
+                if (target) {
+                    subCategoriesContainer.style.display = "block";
+                    target.classList.add("active");
+                } else {
+                    subCategoriesContainer.style.display = "none";
+                }
+            } else {
+                subCategoriesContainer.style.display = "none";
             }
         });
     });
 
-    // Toggle all category content
-    allCategory.classList.add("collapsed");
-    allCategoryContent.style.display = "none";
-    allCategory.querySelector("i").className = "fas fa-plus";
+    const menuContainer = document.querySelector(".menu-container");
+    if (menuContainer) {
+        menuContainer.addEventListener("mouseleave", () => {
+            hideAllSubCategories();
+            subCategoriesContainer.style.display = "none";
+        });
+    }
 
-    allCategory.addEventListener("click", function () {
-        this.classList.toggle("collapsed");
-        const icon = this.querySelector("i");
+    menuHoverInitialized = true;
+}
 
-        if (this.classList.contains("collapsed")) {
-            icon.className = "fas fa-plus";
-            allCategoryContent.style.display = "none";
-        } else {
-            icon.className = "fas fa-minus";
-            allCategoryContent.style.display = "block";
-        }
-    });
-
-    hideAllSubCategories();
+document.addEventListener("DOMContentLoaded", () => {
+    initDesktopMenu();
 });
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 991 && !menuHoverInitialized) {
+        initDesktopMenu();
+    }
+});
+
+
+
+
+
+
+
 
 // slider
 const imgContainer = document.querySelector(".aspect-ratio-169");
@@ -194,7 +305,7 @@ function getProductWidth() {
 }
 
 function getProductsPerView() {
-    const containerWidth = document.querySelector('collectionsItemIn').offsetWidth;
+    const containerWidth = document.querySelector('.collectionsItemIn').offsetWidth;
     const itemWidth = getProductWidth();
     return Math.floor(containerWidth / itemWidth);
 }
@@ -257,11 +368,68 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Fade-in effect on scroll
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     const faders = document.querySelectorAll(".fade-in");
+
+//     if ("IntersectionObserver" in window) {
+//         const appearOptions = {
+//             threshold: 0.2,
+//             rootMargin: "0px 0px -50px 0px"
+//         };
+
+//         const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+//             entries.forEach(entry => {
+//                 if (!entry.isIntersecting) return;
+//                 entry.target.classList.add("visible");
+//                 observer.unobserve(entry.target);
+//             });
+//         }, appearOptions);
+
+//         faders.forEach(fader => {
+//             appearOnScroll.observe(fader);
+//         });
+
+//         setTimeout(() => {
+//             faders.forEach(fader => {
+//                 if (!fader.classList.contains('visible')) {
+//                     fader.classList.add('visible');
+//                 }
+//             });
+//         }, 1000);
+//     } else {
+
+//         faders.forEach(fader => {
+//             fader.classList.add("visible");
+//         });
+//     }
+// });
+// document.addEventListener("DOMContentLoaded", function () {
+//   const faders = document.querySelectorAll(".fade-in");
+
+//   const appearOptions = {
+//     threshold: 0.1,
+//     rootMargin: "0px 0px -50px 0px"
+//   };
+
+//   const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+//     entries.forEach(entry => {
+//       if (!entry.isIntersecting) return;
+//       entry.target.classList.add("visible");
+//       observer.unobserve(entry.target);
+//     });
+//   }, appearOptions);
+
+//   faders.forEach(fader => {
+//     appearOnScroll.observe(fader);
+//   });
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
     const faders = document.querySelectorAll(".fade-in");
 
     const appearOptions = {
-        threshold: 0.2,
+        threshold: 0.1,
         rootMargin: "0px 0px -50px 0px"
     };
 
@@ -277,6 +445,8 @@ document.addEventListener("DOMContentLoaded", function () {
         appearOnScroll.observe(fader);
     });
 });
+
+
 
 // lazy img
 
@@ -306,3 +476,5 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(img);
     });
 });
+
+

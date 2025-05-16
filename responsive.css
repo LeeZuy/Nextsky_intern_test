@@ -27,10 +27,10 @@ html {
   }
 
   .gamepad img {
-    width: 14%;
-    height: 62%;
+    width: 15%;
+    height: 72%;
     left: 50%;
-    margin-top: 2%;
+    margin-top: 1%;
   }
 
   .camera img {
@@ -87,6 +87,35 @@ html {
   }
 
   /* banner */
+
+  .surfaceTitle {
+    margin-top: 8%;
+    margin-left: 6%;
+    position: relative;
+  }
+
+  .surface img {
+    margin-top: 2%;
+    width: 220px;
+    height: 130px;
+    transition: transform 0.3s ease;
+    position: absolute;
+    left: 14%;
+  }
+
+  .gamepad img {
+    width: 210px;
+    height: 160px;
+  }
+
+  .camera img {
+    margin-top: 2%;
+    width: 200px;
+    height: 136px;
+    transition: transform 0.3s ease;
+    position: absolute;
+    left: 82%;
+  }
 
   .surface {
     width: 32%;
@@ -241,7 +270,7 @@ html {
 
   /* menuSlider */
 
-  .main-categories {
+  /* .main-categories {
     width: 365px;
   }
 
@@ -249,7 +278,7 @@ html {
     position: absolute;
     left: 9%;
     top: 28px;
-  }
+  } */
 
   /* @media (max-width: 1038px) {
     .sub-categories-container {
@@ -286,15 +315,15 @@ html {
 
   .gamepad img {
     width: 14%;
-    height: 56%;
+    height: 61%;
     left: 51%;
-    margin-top: 3%;
+    margin-top: 2%;
   }
 
   .camera img {
-    margin-top: 2%;
-    width: 14%;
-    height: 62%;
+    margin-top: 3%;
+    width: 13%;
+    height: 60%;
     left: 85%;
     position: absolute;
   }
@@ -305,6 +334,8 @@ html {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    overflow-y: hidden;
+    scrollbar-width: none;
   }
   .trendingProduct {
     display: flex;
@@ -321,11 +352,17 @@ html {
     margin-left: 3%;
   }
 
+  .promotionIn {
+    margin-left: 36%;
+  }
+
   .sellingItemProduct {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     margin-left: 3%;
+    overflow-y: hidden;
+    scrollbar-width: none;
   }
 
   .sellingItemProductIn {
@@ -378,6 +415,8 @@ html {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    overflow-y: hidden;
   }
   .ratedProduct {
     display: flex;
@@ -407,10 +446,12 @@ html {
   .collectionsItemIn {
     overflow: hidden;
     width: 100%;
+    scrollbar-width: none;
   }
 
   .collectionsProduct {
-    --collectionsProduct-width: calc((100% - 16px) / 2);
+    --collectionsProduct-width: calc((100% - 8px) / 1.5);
+    min-width: 48%;
   }
 
   .nav {
@@ -442,6 +483,7 @@ html {
   .collectionsProduct img {
     width: 155px;
     height: 133px;
+    padding-left: 5%;
   }
 
   .productInfo p {
@@ -453,7 +495,7 @@ html {
   }
 
   .moreInfo a {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .moreInfo {
@@ -502,6 +544,12 @@ html {
   .newsletter {
     grid-column-start: 3;
     grid-row-start: 1;
+  }
+}
+
+@media (max-width: 991px) {
+  .sub-categories-container {
+    display: none !important;
   }
 }
 /* Tablet ngang / Laptop nhỏ */
@@ -763,32 +811,37 @@ html {
     gap: 16px;
   }
   .sellingItem {
-    min-width: 42%;
+    min-width: 32%;
     flex-shrink: 0;
     scroll-snap-align: start;
     height: fit-content;
   }
 
   .sellingItemProduct {
-    margin-left: 0%;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .sellingItemProductIn {
+    gap: 0px;
   }
 
   .sellingIn span {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .sellingIn a {
-    font-size: 22px;
+    font-size: 16px;
   }
 
   .sellingIn .voteIcon img {
-    font-size: 22px;
-    margin-top: 2%;
+    width: 18px;
+    height: 18px;
   }
 
   .sellingIn p {
-    font-size: 18px;
-    margin-bottom: 0 !important;
+    font-size: 22px;
+    margin-top: 2%;
   }
 
   .sellingProductIn .noSale .sellingIn {
@@ -1009,6 +1062,79 @@ html {
 
 /* Tablet nhỏ: từ 576px đến 767px */
 @media (min-width: 576px) and (max-width: 767px) {
+  .mainBody,
+  .menuSlider,
+  .banner,
+  .Trending,
+  .selling,
+  .bannerIntroduction,
+  .rated,
+  .collections,
+  .deals,
+  .shipping,
+  .contact,
+  .footerBot {
+    display: block !important;
+    height: auto !important;
+    min-height: 300px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+  }
+
+  /* .d-none {
+    display: block !important;
+  } */
+
+  .menuSlider,
+  .banner,
+  .collections,
+  .selling,
+  .rated {
+    padding: 20px 0;
+  }
+
+  .search input[type="text"] {
+    width: 100%;
+  }
+
+  .collectionsItemIn {
+    overflow-x: auto;
+  }
+
+  .collectionsItem {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+  }
+
+  .collectionsProduct {
+    min-width: 45%;
+    flex-shrink: 0;
+  }
+
+  .sellingItemProductIn {
+    display: flex;
+    gap: 16px;
+  }
+
+  .sellingItem {
+    min-width: 45%;
+    flex-shrink: 0;
+  }
+
+  .ratedProductIn,
+  .sellingItemProduct,
+  .trendingProductIn {
+    overflow-x: auto;
+  }
+
+  body,
+  html {
+    overflow-x: hidden;
+    width: 100%;
+    background-color: #fff;
+  }
   /* header menu */
   .headerMenuTop {
     display: grid;
@@ -1059,6 +1185,7 @@ html {
   }
   .slider {
     margin-left: 0px;
+    width: 100%;
   }
   .sliderTitle h1 {
     font-size: 24px;
@@ -1275,11 +1402,18 @@ html {
     margin-left: 0%;
   }
 
+  .sellingSaleIcon {
+    right: -95px;
+  }
+
+  .sellingItem:hover .sellingSaleIcon {
+    right: -47px;
+  }
+
   /* banner introduction */
   .bannerIntroduction {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    margin: 3% 0px 15% 0%;
     max-width: 100% !important;
   }
   .bannerIntroduction h4 {
@@ -1292,9 +1426,9 @@ html {
 
   .superSale {
     grid-column: span 2 / span 2;
-    width: 248%;
+    width: 100%;
     margin-bottom: 18%;
-    height: 112%;
+    height: 195px;
   }
 
   .superSaleTitle,
@@ -1305,10 +1439,9 @@ html {
   .dealsGood {
     grid-column: span 2 / span 2;
     grid-row-start: 2;
-    width: 252%;
-    margin-top: 16%;
-    height: 112%;
-    width: 248%;
+    width: 100% !important;
+    margin-top: -5%;
+    height: 195px;
   }
 
   /* Top Rated Products */
@@ -1357,6 +1490,14 @@ html {
   .ratedIn p {
     font-size: 23px;
     margin-top: 3px;
+  }
+
+  .ratedSaleIcon {
+    right: -95px;
+  }
+
+  .ratedItem:hover .ratedSaleIcon {
+    right: -47px;
   }
 
   /* Our Collections */
@@ -1409,8 +1550,8 @@ html {
   }
 
   .collectionsProduct img {
-    width: 135px;
-    height: 120px;
+    width: 175px;
+    height: 137px;
   }
 
   /* Deals & Promotions */
@@ -1509,7 +1650,7 @@ html {
   }
 
   .shipping img {
-    width: 15%;
+    width: 8%;
   }
 
   .about h6,
@@ -1703,7 +1844,7 @@ html {
     gap: 16px;
   }
   .trendingItem {
-    min-width: 80%;
+    min-width: 46%;
     flex-shrink: 0;
     scroll-snap-align: start;
   }
@@ -1724,7 +1865,7 @@ html {
     gap: 16px;
   }
   .sellingItem {
-    min-width: 80%;
+    min-width: 46%;
     flex-shrink: 0;
     scroll-snap-align: start;
   }
@@ -1779,7 +1920,7 @@ html {
     gap: 16px;
   }
   .ratedItem {
-    min-width: 80%;
+    min-width: 46%;
     flex-shrink: 0;
     scroll-snap-align: start;
   }
@@ -1808,7 +1949,8 @@ html {
     flex-shrink: 0;
     scroll-snap-align: start; */
     padding-top: 6%;
-    --collectionsProduct-width: 100%; /* 1 sản phẩm */
+    --collectionsProduct-width: 100%;
+    min-width: 100%;
   }
 
   /* Deals & Promotions */
