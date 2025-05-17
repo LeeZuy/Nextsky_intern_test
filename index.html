@@ -8,15 +8,19 @@
     <link rel="stylesheet" href="./responsive.css" />
     <link
       rel="stylesheet"
-      href="./GeneralSans_Complete 2/Fonts/WEB/css/general-sans.css"
+      href="./GeneralSans_Complete/Fonts/WEB/css/general-sans.css"
     />
     <!-- font awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://via.placeholder.com">
     <link rel="icon" type="image/svg+xml" href="./assets/Logo.svg" />
     <title>UMILUX</title>
+    <meta name="description" content="UMILUX">
   </head>
   <body>
     <!-- header -->
@@ -27,7 +31,20 @@
         style="position: relative"
       >
         <div class="alert-carousel fade-in">
-          <button class="carousel-btn prev-btn"><</button>
+          <button class="carousel-btn prev-btn">
+            <svg
+              width="7"
+              height="10"
+              viewBox="0 0 7 10"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.96875 8.85938C6.10417 8.99479 6.17188 9.15625 6.17188 9.34375C6.17188 9.52083 6.10417 9.67188 5.96875 9.79688C5.84375 9.93229 5.6875 10 5.5 10C5.3125 10 5.15625 9.93229 5.03125 9.79688L1.03125 5.79688C0.895833 5.67188 0.828125 5.52083 0.828125 5.34375C0.828125 5.15625 0.895833 4.99479 1.03125 4.85938L5.03125 0.859375C5.15625 0.734375 5.3125 0.671875 5.5 0.671875C5.6875 0.671875 5.84375 0.734375 5.96875 0.859375C6.10417 0.994792 6.17188 1.15625 6.17188 1.34375C6.17188 1.52083 6.10417 1.67188 5.96875 1.79688L2.4375 5.32812L5.96875 8.85938Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
           <div class="alert-content">
             <div class="alert-slide active">
               <p class="alertP">
@@ -38,7 +55,20 @@
               <p class="alertP">Free Ship — Orders Now !</p>
             </div>
           </div>
-          <button class="carousel-btn next-btn">></button>
+          <button class="carousel-btn next-btn">
+            <svg
+              width="6"
+              height="9"
+              viewBox="0 0 6 9"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.66016 8.07227C1.55078 8.19076 1.41406 8.25 1.25 8.25C1.08594 8.25 0.949219 8.19076 0.839844 8.07227C0.721354 7.96289 0.662109 7.83073 0.662109 7.67578C0.662109 7.51172 0.721354 7.37044 0.839844 7.25195L3.92969 4.16211L0.839844 1.07227C0.721354 0.962891 0.662109 0.830729 0.662109 0.675781C0.662109 0.511719 0.721354 0.370443 0.839844 0.251953C0.949219 0.142578 1.08594 0.0878906 1.25 0.0878906C1.41406 0.0878906 1.55078 0.142578 1.66016 0.251953L5.16016 3.75195C5.27865 3.87044 5.33789 4.01172 5.33789 4.17578C5.33789 4.33073 5.27865 4.46289 5.16016 4.57227L1.66016 8.07227Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
           <button
             type="button"
             class="alertBtn btn-close"
@@ -75,8 +105,8 @@
                   <div class="menu-title">
                     <span>MENU</span>
                     <span class="categories-btn" onclick="toggleSubMenu()"
-                      >CATEGORIES</span
-                    >
+                      >CATEGORIES
+                    </span>
                   </div>
                   <span class="close-btn" onclick="toggleMenu()"
                     ><svg
@@ -158,29 +188,45 @@
                 </div>
                 <ul class="menu-list">
                   <li>
-                    <img src="./assets/computer.svg" alt="" /> Computer & Laptop
+                    <img src="./assets/computer.svg" alt="Computer & Laptop" />
+                    Computer & Laptop
                   </li>
                   <li>
-                    <img src="./assets/tablets.svg" alt="" /> Tablets & iPad
+                    <img src="./assets/tablets.svg" alt="Tablets & iPad" />
+                    Tablets & iPad
                   </li>
                   <li>
-                    <img src="./assets/printer.svg" alt="" /> Printer & Cameras
-                  </li>
-                  <li><img src="./assets/phone.svg" alt="" /> Smart Phones</li>
-                  <li>
-                    <img src="./assets/keyboard .svg" alt="" /> Keyboard & Mouse
-                  </li>
-                  <li><img src="./assets/video.svg" alt="" /> Video Games</li>
-                  <li>
-                    <img src="./assets/Sports.svg" alt="" /> Sports & Outdoors
+                    <img src="./assets/printer.svg" alt="Printer & Cameras" />
+                    Printer & Cameras
                   </li>
                   <li>
-                    <img src="./assets/Headphone.svg" alt="" /> Smart Watch
+                    <img src="./assets/phone.svg" alt="Smart Phones" /> Smart
+                    Phones
                   </li>
                   <li>
-                    <img src="./assets/Smart.svg" alt="" /> Headphone & Audios
+                    <img src="./assets/keyboard.svg" alt="Keyboard & Mouse" />
+                    Keyboard & Mouse
                   </li>
-                  <li><img src="./assets/all.svg" alt="" /> All Categories</li>
+                  <li>
+                    <img src="./assets/video.svg" alt="Video Games" /> Video
+                    Games
+                  </li>
+                  <li>
+                    <img src="./assets/Sports.svg" alt="Sports & Outdoors" />
+                    Sports & Outdoors
+                  </li>
+                  <li>
+                    <img src="./assets/Headphone.svg" alt="Smart Watch" /> Smart
+                    Watch
+                  </li>
+                  <li>
+                    <img src="./assets/Smart.svg" alt="Headphone & Audios" />
+                    Headphone & Audios
+                  </li>
+                  <li>
+                    <img src="./assets/all.svg" alt="All Categories" /> All
+                    Categories
+                  </li>
                 </ul>
               </div>
 
@@ -190,10 +236,10 @@
 
             <!-- header logo -->
             <div class="headerLogo fade-in">
-              <img src="./assets/Logo.svg" alt="" />
+              <img src="./assets/Logo.svg" alt="logo" />
             </div>
             <div class="search fade-in">
-              <img src="./assets/icon.svg" alt="" />
+              <img src="./assets/icon.svg" alt="icon" />
               <input placeholder="I'm looking for…" type="text" />
               <button type="submit">Search</button>
             </div>
@@ -302,9 +348,9 @@
                   aria-expanded="false"
                   aria-label="Toggle navigation"
                 >
-                  <span class="navbar-toggler-icon d-flex"
-                    ><img src="./assets/menu.svg" alt=""
-                  /></span>
+                  <span class="navbar-toggler-icon d-flex">
+                    <img src="./assets/menu.svg" alt="icon" />
+                  </span>
                 </button>
                 <div class="vertical-line d-lg-block d-none"></div>
                 <div
@@ -518,16 +564,16 @@
                       </ul>
                     </li>
                     <li class="nav-item">
-                      <a class="dropMenu nav-link" aria-disabled="true">Sale</a>
+                      <a class="dropMenu nav-link" aria-disabled="true" href="loadingPage.html">Sale</a>
                     </li>
                     <li class="nav-item">
-                      <a class="dropMenu nav-link" aria-disabled="true"
+                      <a class="dropMenu nav-link" aria-disabled="true" href="loadingPage.html"
                         >Buy Umino!</a
                       >
                     </li>
                   </ul>
                   <div>
-                    <a class="nav-link" aria-disabled="true"
+                    <a class="nav-link" aria-disabled="true" href="loadingPage.html"
                       ><svg
                         width="18"
                         height="19"
@@ -552,12 +598,12 @@
     </div>
 
     <!-- body -->
-    <div class="mainBody container-fluid fade-in">
+    <div class="mainBody container-fluid">
       <!-- menu-slider -->
       <div class="menuSlider container d-flex">
         <div class="menu-container d-lg-flex d-none">
-          <div class="main-categories">
-            <div class="main-category" data-category="computer">
+          <div class="main-categories fade-in">
+            <div class="main-category fade-in" data-category="computer">
               <div class="main-title">
                 <svg
                   width="20"
@@ -615,7 +661,7 @@
             </div>
             <hr />
 
-            <div class="main-category" data-category="tablet">
+            <div class="main-category fade-in" data-category="tablet">
               <div class="main-title">
                 <svg
                   width="20"
@@ -643,7 +689,7 @@
             </div>
             <hr />
 
-            <div class="main-category" data-category="printer">
+            <div class="main-category fade-in" data-category="printer">
               <div class="main-title">
                 <svg
                   width="20"
@@ -699,7 +745,7 @@
             </div>
             <hr />
 
-            <div class="main-category" data-category="phone">
+            <div class="main-category fade-in" data-category="phone">
               <div class="main-title">
                 <svg
                   width="20"
@@ -739,7 +785,7 @@
             </div>
             <hr />
 
-            <div class="main-category" data-category="keyboard">
+            <div class="main-category fade-in" data-category="keyboard">
               <div class="main-title">
                 <svg
                   width="20"
@@ -790,7 +836,7 @@
             </div>
             <hr />
 
-            <div class="main-category" data-category="game">
+            <div class="main-category fade-in" data-category="game">
               <div class="main-title">
                 <svg
                   width="20"
@@ -867,7 +913,7 @@
             </div>
             <hr />
 
-            <div class="main-category" data-category="sports">
+            <div class="main-category fade-in" data-category="sports">
               <div class="main-title">
                 <svg
                   width="20"
@@ -910,7 +956,7 @@
             </div>
             <hr />
 
-            <div class="main-category" data-category="watch">
+            <div class="main-category fade-in" data-category="watch">
               <div class="main-title">
                 <svg
                   width="20"
@@ -957,7 +1003,7 @@
             </div>
             <hr />
 
-            <div class="main-category" data-category="audio">
+            <div class="main-category fade-in" data-category="audio">
               <div class="main-title">
                 <svg
                   width="20"
@@ -976,7 +1022,7 @@
             </div>
             <hr />
 
-            <div class="allCategory accordion-item">
+            <div class="allCategory accordion-item fade-in">
               <h2 class="accordion-header">
                 <button
                   class="accordion-button collapsed"
@@ -1158,14 +1204,15 @@
                 <div class="sliderImg">
                   <img
                     class="lazyload"
-                    data-srcset="./assets/slider.jpg"
+                    data-srcset="./assets/slider/slider.jpg"
+                    src="./assets/slider/slider.jpg"
                     alt="Slider Image 1"
                   />
                 </div>
                 <div class="silderTitle fade-in">
                   <p>BEST SELLING</p>
-                  <h1>Top Quality</h1>
-                  <h1>Of Entertainment Devices</h1>
+                  <h2>Top Quality</h2>
+                  <h2>Of Entertainment Devices</h2>
                   <button class="salient-button">
                     <span>Shop Now</span>
                   </button>
@@ -1176,14 +1223,15 @@
                 <div class="sliderImg">
                   <img
                     class="lazyload"
-                    data-srcset="./assets/slider.jpg"
+                    data-srcset="./assets/slider/slider.jpg"
+                    src="./assets/slider/slider.jpg"
                     alt="Slider Image 2"
                   />
                 </div>
                 <div class="silderTitle fade-in">
                   <p>BEST SELLING</p>
-                  <h1>Top Quality</h1>
-                  <h1>Of Entertainment Devices</h1>
+                  <h2>Top Quality</h2>
+                  <h2>Of Entertainment Devices</h2>
                   <button class="salient-button">
                     <span>Shop Now</span>
                   </button>
@@ -1194,14 +1242,15 @@
                 <div class="sliderImg">
                   <img
                     class="lazyload"
-                    data-srcset="./assets/slider.jpg"
+                    data-srcset="./assets/slider/slider.jpg"
+                    src="./assets/slider/slider.jpg"
                     alt="Slider Image 3"
                   />
                 </div>
                 <div class="silderTitle fade-in">
                   <p>BEST SELLING</p>
-                  <h1>Top Quality</h1>
-                  <h1>Of Entertainment Devices</h1>
+                  <h2>Top Quality</h2>
+                  <h2>Of Entertainment Devices</h2>
                   <button class="salient-button">
                     <span>Shop Now</span>
                   </button>
@@ -1229,7 +1278,8 @@
           <img
             class="lazyload"
             data-srcset="./assets/slider/surface.png"
-            alt=""
+            src="./assets/slider/surface.png"
+            alt="banner"
           />
         </div>
         <div class="gamepad">
@@ -1240,7 +1290,12 @@
               >Shop Deals</a
             >
           </div>
-          <img class="lazyload" data-srcset="./assets/slider/game.png" alt="" />
+          <img
+            class="lazyload"
+            data-srcset="./assets/slider/game.png"
+            src="./assets/slider/game.png"
+            alt="banner"
+          />
         </div>
         <div class="camera">
           <div class="cameraTitle fade-in">
@@ -1253,7 +1308,8 @@
           <img
             class="lazyload"
             data-srcset="./assets/slider/camera.png"
-            alt=""
+            src="./assets/slider/camera.png"
+            alt="banner"
           />
         </div>
       </div>
@@ -1288,7 +1344,8 @@
                 <img
                   class="lazyload"
                   data-srcset="./assets/product/Trending1.png"
-                  alt=""
+                  src="./assets/product/Trending1.png"
+                  alt="Trending This Week"
                 />
                 <div class="trendingIcon">
                   <i class="fas fa-heart wishlist-icon"></i>
@@ -1302,11 +1359,11 @@
                   >Skytech Blaze Gaming PC Intel Core i5 15700F 5.1 GHz</a
                 >
                 <div class="voteIcon">
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
                 </div>
                 <p>$569.00</p>
               </div>
@@ -1317,7 +1374,8 @@
                 <img
                   class="lazyload"
                   data-srcset="./assets/product/Trending2.png"
-                  alt=""
+                  src="./assets/product/Trending2.png"
+                  alt="Trending This Week"
                 />
                 <div class="trendingIcon">
                   <i class="fas fa-heart wishlist-icon"></i>
@@ -1330,11 +1388,11 @@
                   >Skytech Blaze Gaming PC Intel Core i5 15700F 5.1 GHz</a
                 >
                 <div class="voteIcon">
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
                 </div>
                 <div class="price">
                   <p class="newPrice">$569.00</p>
@@ -1348,7 +1406,8 @@
                 <img
                   class="lazyload"
                   data-srcset="./assets/product/Trending3.png"
-                  alt=""
+                  src="./assets/product/Trending3.png"
+                  alt="Trending This Week"
                 />
                 <div class="trendingIcon">
                   <i class="fas fa-heart wishlist-icon"></i>
@@ -1361,11 +1420,11 @@
                   >Skytech Blaze Gaming PC Intel Core i5 15700F 5.1 GHz</a
                 >
                 <div class="voteIcon">
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
                 </div>
                 <p>$569.00</p>
               </div>
@@ -1376,7 +1435,8 @@
                 <img
                   class="lazyload"
                   data-srcset="./assets/product/Trending4.png"
-                  alt=""
+                  src="./assets/product/Trending4.png"
+                  alt="Trending This Week"
                 />
                 <div class="trendingIcon">
                   <i class="fas fa-heart wishlist-icon"></i>
@@ -1389,11 +1449,11 @@
                   >Skytech Blaze Gaming PC Intel Core i5 15700F 5.1 GHz</a
                 >
                 <div class="voteIcon">
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
                 </div>
                 <div class="price">
                   <p class="newPrice">$569.00</p>
@@ -1407,7 +1467,8 @@
                 <img
                   class="lazyload"
                   data-srcset="./assets/product/Trending5.png"
-                  alt=""
+                  src="./assets/product/Trending5.png"
+                  alt="Trending This Week"
                 />
                 <div class="trendingIcon">
                   <i class="fas fa-heart wishlist-icon"></i>
@@ -1420,11 +1481,11 @@
                   >Skytech Blaze Gaming PC Intel Core i5 15700F 5.1 GHz</a
                 >
                 <div class="voteIcon">
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
                 </div>
                 <p>$569.00</p>
               </div>
@@ -1461,7 +1522,8 @@
               <img
                 class="lazyload"
                 data-srcset="./assets/slider/bannerProduct.png"
-                alt=""
+                src="./assets/slider/bannerProduct.png"
+                alt="promotion"
               />
 
               <div class="promotionIn">
@@ -1489,7 +1551,8 @@
                       <img
                         class="lazyload"
                         data-srcset="./assets/product/selling1.png"
-                        alt=""
+                        src="./assets/product/selling1.png"
+                        alt="Top Selling Products"
                       />
                       <div class="sellingSaleIcon">
                         <i class="fas fa-heart wishlist-icon"></i>
@@ -1503,11 +1566,11 @@
                       >Skytech Blaze Gaming PC Intel Core i5 15700F 5.1 GHz</a
                     >
                     <div class="voteIcon">
-                      <img src="./assets/sgv/start.svg" alt="" />
-                      <img src="./assets/sgv/start.svg" alt="" />
-                      <img src="./assets/sgv/start.svg" alt="" />
-                      <img src="./assets/sgv/start.svg" alt="" />
-                      <img src="./assets/sgv/start.svg" alt="" />
+                      <img src="./assets/sgv/start.svg" alt="vote" />
+                      <img src="./assets/sgv/start.svg" alt="vote" />
+                      <img src="./assets/sgv/start.svg" alt="vote" />
+                      <img src="./assets/sgv/start.svg" alt="vote" />
+                      <img src="./assets/sgv/start.svg" alt="vote" />
                     </div>
                     <div class="price">
                       <p class="newPrice">$569.00</p>
@@ -1522,7 +1585,8 @@
                       <img
                         class="lazyload"
                         data-srcset="./assets/product/selling2.png"
-                        alt=""
+                        src="./assets/product/selling2.png"
+                        alt="Top Selling Products"
                       />
                       <div class="sellingIcon">
                         <i class="fas fa-heart wishlist-icon"></i>
@@ -1536,11 +1600,11 @@
                       >Skytech Blaze Gaming PC Intel Core i5 15700F 5.1 GHz</a
                     >
                     <div class="voteIcon">
-                      <img src="./assets/sgv/start.svg" alt="" />
-                      <img src="./assets/sgv/start.svg" alt="" />
-                      <img src="./assets/sgv/start.svg" alt="" />
-                      <img src="./assets/sgv/start.svg" alt="" />
-                      <img src="./assets/sgv/start.svg" alt="" />
+                      <img src="./assets/sgv/start.svg" alt="vote" />
+                      <img src="./assets/sgv/start.svg" alt="vote" />
+                      <img src="./assets/sgv/start.svg" alt="vote" />
+                      <img src="./assets/sgv/start.svg" alt="vote" />
+                      <img src="./assets/sgv/start.svg" alt="vote" />
                     </div>
                     <p class="newPrice">$569.00</p>
                   </div>
@@ -1556,7 +1620,8 @@
                         <img
                           class="lazyload"
                           data-srcset="./assets/product/sellin3.png"
-                          alt=""
+                          src="./assets/product/sellin3.png"
+                          alt="Top Selling Products"
                         />
                         <div class="sellingSaleIcon">
                           <i class="fas fa-heart wishlist-icon"></i>
@@ -1571,11 +1636,11 @@
                       >Skytech Blaze Gaming PC Intel Core i5 15700F 5.1 GHz</a
                     >
                     <div class="voteIcon">
-                      <img src="./assets/sgv/start.svg" alt="" />
-                      <img src="./assets/sgv/start.svg" alt="" />
-                      <img src="./assets/sgv/start.svg" alt="" />
-                      <img src="./assets/sgv/start.svg" alt="" />
-                      <img src="./assets/sgv/start.svg" alt="" />
+                      <img src="./assets/sgv/start.svg" alt="vote" />
+                      <img src="./assets/sgv/start.svg" alt="vote" />
+                      <img src="./assets/sgv/start.svg" alt="vote" />
+                      <img src="./assets/sgv/start.svg" alt="vote" />
+                      <img src="./assets/sgv/start.svg" alt="vote" />
                     </div>
                     <div class="price">
                       <p class="newPrice">$569.00</p>
@@ -1639,7 +1704,8 @@
                 <img
                   class="lazyload"
                   data-srcset="./assets/product/rate1.png"
-                  alt=""
+                  src="./assets/product/rate1.png"
+                  alt="Top Rated Products"
                 />
                 <div class="ratedIcon">
                   <i class="fas fa-heart wishlist-icon"></i>
@@ -1652,11 +1718,11 @@
                   >Skytech Blaze Gaming PC Intel Core i5 15700F 5.1 GHz</a
                 >
                 <div class="voteIcon">
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
                 </div>
                 <p>$569.00</p>
               </div>
@@ -1671,7 +1737,8 @@
                   <img
                     class="lazyload"
                     data-srcset="./assets/product/selling1.png"
-                    alt=""
+                    src="./assets/product/selling1.png"
+                    alt="Top Rated Products"
                   />
                   <div class="ratedSaleIcon">
                     <i class="fas fa-heart wishlist-icon"></i>
@@ -1685,11 +1752,11 @@
                   >Skytech Blaze Gaming PC Intel Core i5 15700F 5.1 GHz</a
                 >
                 <div class="voteIcon">
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
                 </div>
                 <div class="price">
                   <p class="newPrice">$569.00</p>
@@ -1703,7 +1770,8 @@
                 <img
                   class="lazyload"
                   data-srcset="./assets/product/rate2.png"
-                  alt=""
+                  src="./assets/product/rate2.png"
+                  alt="Top Rated Products"
                 />
                 <div class="ratedIcon">
                   <i class="fas fa-heart wishlist-icon"></i>
@@ -1716,11 +1784,11 @@
                   >Skytech Blaze Gaming PC Intel Core i5 15700F 5.1 GHz</a
                 >
                 <div class="voteIcon">
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
                 </div>
                 <p>$569.00</p>
               </div>
@@ -1735,7 +1803,8 @@
                   <img
                     class="lazyload"
                     data-srcset="./assets/product/sellin3.png"
-                    alt=""
+                    src="./assets/product/sellin3.png"
+                    alt="Top Rated Products"
                   />
                   <div class="ratedSaleIcon">
                     <i class="fas fa-heart wishlist-icon"></i>
@@ -1750,11 +1819,11 @@
                   >Skytech Blaze Gaming PC Intel Core i5 15700F 5.1 GHz</a
                 >
                 <div class="voteIcon">
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
                 </div>
                 <div class="price">
                   <p class="newPrice">$569.00</p>
@@ -1768,7 +1837,8 @@
                 <img
                   class="lazyload"
                   data-srcset="./assets/product/rate3.png"
-                  alt=""
+                  src="./assets/product/rate3.png"
+                  alt="Top Rated Products"
                 />
                 <div class="ratedIcon">
                   <i class="fas fa-heart wishlist-icon"></i>
@@ -1781,11 +1851,11 @@
                   >Skytech Blaze Gaming PC Intel Core i5 15700F 5.1 GHz</a
                 >
                 <div class="voteIcon">
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
-                  <img src="./assets/sgv/start.svg" alt="" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
+                  <img src="./assets/sgv/start.svg" alt="vote" />
                 </div>
                 <p>$569.00</p>
               </div>
@@ -1826,7 +1896,8 @@
                 <img
                   class="lazyload"
                   data-srcset="./assets/product/collections1.png"
-                  alt=""
+                  src="./assets/product/collections1.png"
+                  alt="Smart Phones"
                 />
                 <div class="collectionsProductTitle">
                   <div class="productInfo">
@@ -1862,7 +1933,8 @@
                 <img
                   class="lazyload"
                   data-srcset="./assets/product/collections2.png"
-                  alt=""
+                  src="./assets/product/collections2.png"
+                  alt="Tablets & iPads"
                 />
                 <div class="collectionsProductTitle">
                   <div class="productInfo">
@@ -1898,7 +1970,8 @@
                 <img
                   class="lazyload"
                   data-srcset="./assets/product/collections3.png"
-                  alt=""
+                  src="./assets/product/collections3.png"
+                  alt="Smart Watch"
                 />
                 <div class="collectionsProductTitle">
                   <div class="productInfo">
@@ -1934,7 +2007,8 @@
                 <img
                   class="lazyload"
                   data-srcset="./assets/product/collections4.png"
-                  alt=""
+                  src="./assets/product/collections4.png"
+                  alt="Accessories"
                 />
                 <div class="collectionsProductTitle">
                   <div class="productInfo">
@@ -2001,7 +2075,8 @@
               <img
                 class="lazyload"
                 data-srcset="./assets/product/deal1.png"
-                alt=""
+                src="./assets/product/deal1.png"
+                alt="cyber"
               />
               <div class="dealsIn">
                 <a href="loadingPage.html" class="underline-animate"
@@ -2020,7 +2095,8 @@
               <img
                 class="lazyload"
                 data-srcset="./assets/product/deal2.png"
-                alt=""
+                src="./assets/product/deal2.png"
+                alt="saleOff"
               />
               <div class="dealsIn">
                 <a href="loadingPage.html" class="underline-animate"
@@ -2039,7 +2115,8 @@
               <img
                 class="lazyload"
                 data-srcset="./assets/product/deal3.png"
-                alt=""
+                src="./assets/product/deal3.png"
+                alt="hurry"
               />
               <div class="dealsIn">
                 <a href="loadingPage.html" class="underline-animate"
@@ -2060,7 +2137,11 @@
       <div class="shipping container fade-in">
         <!-- Fast Delivery -->
         <div class="fast fade-in">
-          <img class="lazyload" src="./assets/sgv/shipping1.svg" alt="" />
+          <img
+            class="lazyload"
+            src="./assets/sgv/shipping1.svg"
+            alt="Fast Delivery"
+          />
           <p>Fast Delivery</p>
           <span>Deliver in 24 hours max!</span>
         </div>
@@ -2068,7 +2149,7 @@
         <div class="hrFooter container d-block d-md-none"></div>
         <!-- Safe Payment -->
         <div class="safe fade-in">
-          <img src="./assets/sgv/shipping2.svg" alt="" />
+          <img class="lazyload" src="./assets/sgv/shipping2.svg" alt="safe" />
           <p>Safe Payment</p>
           <span>Visa, Mastercard, PayPal...</span>
         </div>
@@ -2076,7 +2157,11 @@
         <div class="hrFooter container d-block d-md-none"></div>
         <!-- Free Returns -->
         <div class="returns fade-in">
-          <img src="./assets/sgv/shipping3.svg" alt="" />
+          <img
+            class="lazyload"
+            src="./assets/sgv/shipping3.svg"
+            alt="returns"
+          />
           <p>Free Returns</p>
           <span>Free returns within 15 days</span>
         </div>
@@ -2084,7 +2169,7 @@
         <div class="hrFooter container d-block d-md-none"></div>
         <!-- Help Center -->
         <div class="help fade-in">
-          <img src="./assets/sgv/shipping4.svg" alt="" />
+          <img class="lazyload" src="./assets/sgv/shipping4.svg" alt="help" />
           <p>Help Center</p>
           <span>Dedicated 24/7 support</span>
         </div>
@@ -2581,19 +2666,19 @@
         </div>
         <!-- payment -->
         <div class="payment">
-          <img src="./assets/sgv/payment1.svg" alt="" />
-          <img src="./assets/sgv/payment2.svg" alt="" />
-          <img src="./assets/sgv/payment3.svg" alt="" />
-          <img src="./assets/sgv/payment4.svg" alt="" />
-          <img src="./assets/sgv/payment5.svg" alt="" />
-          <img src="./assets/sgv/payment6.svg" alt="" />
-          <img src="./assets/sgv/payment7.svg" alt="" />
+          <img class="lazyload" src="./assets/sgv/payment1.svg" alt="payment" />
+          <img class="lazyload" src="./assets/sgv/payment2.svg" alt="payment" />
+          <img class="lazyload" src="./assets/sgv/payment3.svg" alt="payment" />
+          <img class="lazyload" src="./assets/sgv/payment4.svg" alt="payment" />
+          <img class="lazyload" src="./assets/sgv/payment5.svg" alt="payment" />
+          <img class="lazyload" src="./assets/sgv/payment6.svg" alt="payment" />
+          <img class="lazyload" src="./assets/sgv/payment7.svg" alt="payment" />
         </div>
       </div>
     </footer>
 
     <!-- js -->
-    <script src="./boostrap/bootstrap.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="./boostrap/bootstrap.min.js" defer></script>
+    <script src="./script.js" defer></script>
   </body>
 </html>

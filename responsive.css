@@ -640,7 +640,7 @@ html {
   .gamepad img {
     margin-left: 3%;
     margin-top: 4%;
-    width: 44%;
+    width: 40%;
     height: 25%;
   }
 
@@ -1436,7 +1436,7 @@ html {
   }
 
   .ratedSaleIcon {
-    right: -95px;
+    right: -106px;
   }
 
   .ratedItem:hover .ratedSaleIcon {
@@ -1903,7 +1903,7 @@ html {
     width: 31%;
     height: auto;
   }
-  
+
   /* footer bot */
   .footerBot.container {
     display: grid;

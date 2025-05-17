@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // menu-slider
+
 document.addEventListener("DOMContentLoaded", function () {
     const mainCategories = document.querySelectorAll(".main-category");
     const subCategoriesContainer = document.querySelector(".sub-categories-container");
@@ -56,42 +57,19 @@ document.addEventListener("DOMContentLoaded", function () {
                         subCategoriesContainer.style.display = "none";
                     }
                 });
+
+                category.addEventListener("mouseleave", () => {
+                    hideAllSubCategories();
+                    subCategoriesContainer.style.display = "none";
+                });
             });
 
             const menuContainer = document.querySelector(".menu-container");
             if (menuContainer) {
-                menuContainer.addEventListener("mouseleave", () => {
-                    hideAllSubCategories();
-                    subCategoriesContainer.style.display = "none";
-                });
+                menuContainer.removeEventListener("mouseenter", () => { });
+                menuContainer.removeEventListener("mouseleave", () => { });
             }
         }
-    }
-
-    try {
-        const allCategory = document.getElementById("allCategory");
-        const allCategoryContent = document.getElementById("allCategoryContent");
-
-        if (allCategory && allCategoryContent) {
-            allCategory.classList.add("collapsed");
-            allCategoryContent.style.display = "none";
-            const icon = allCategory.querySelector("i");
-            if (icon) icon.className = "fas fa-plus";
-
-            allCategory.addEventListener("click", function () {
-                this.classList.toggle("collapsed");
-                const icon = this.querySelector("i");
-                if (this.classList.contains("collapsed")) {
-                    icon.className = "fas fa-plus";
-                    allCategoryContent.style.display = "none";
-                } else {
-                    icon.className = "fas fa-minus";
-                    allCategoryContent.style.display = "block";
-                }
-            });
-        }
-    } catch (e) {
-        console.warn("Lỗi allCategory:", e);
     }
 
     hideAllSubCategories();
@@ -258,10 +236,6 @@ window.addEventListener('resize', () => {
     slider.style.transform = `translateX(-${current * productWidth}px)`;
 });
 
-
-
-
-
 // footer bot
 // lenguage & currency
 function setupSelector(selectorId) {
@@ -296,9 +270,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Fade-in effect on scroll
+// Fade -in effect on scroll
 document.addEventListener("DOMContentLoaded", function () {
     const faders = document.querySelectorAll(".fade-in");
+
+    //(min-width 575px)
+    if (window.innerWidth < 575) {
+        faders.forEach(fader => {
+            fader.classList.remove("fade-in");
+            fader.classList.add("visible");
+        });
+        return;
+    }
 
     const appearOptions = {
         threshold: 0.1,
@@ -318,9 +301,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-
 // lazy img
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const lazyImages = document.querySelectorAll('img.lazyload');
@@ -329,9 +311,9 @@ document.addEventListener("DOMContentLoaded", function () {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const img = entry.target;
-                const srcset = img.getAttribute('data-srcset');
-                if (srcset) {
-                    img.setAttribute('src', srcset);
+                const src = img.getAttribute('data-src'); // lấy từ data-src
+                if (src) {
+                    img.setAttribute('src', src); // gán vào src
                 }
                 img.classList.remove('lazyload');
                 observer.unobserve(img);
