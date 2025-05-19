@@ -1977,3 +1977,13 @@ img:not(.lazyload) {
 img.lazyload {
   object-fit: contain;
 }
+#main-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: top 0.3s ease-in-out;
+  background-color: #fff ;
+}
+#main-header.hide {
+  top: -100px;
+}

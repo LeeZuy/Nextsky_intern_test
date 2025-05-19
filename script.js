@@ -45,3 +45,17 @@ setupSelector("lang-select"); setupSelector("cur-select"); document.addEventList
         })
     }; const observer = new IntersectionObserver(lazyLoad, { rootMargin: '100px', threshold: 0.1 }); lazyImages.forEach(img => { observer.observe(img) })
 })
+let lastScrollY = window.scrollY;
+const header = document.getElementById("main-header");
+
+window.addEventListener("scroll", () => {
+    if (!header) return;
+    if (window.scrollY > lastScrollY) {
+        // Cuộn xuống
+        header.classList.add("hide");
+    } else {
+        // Cuộn lên
+        header.classList.remove("hide");
+    }
+    lastScrollY = window.scrollY;
+});
