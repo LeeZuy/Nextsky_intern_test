@@ -15,12 +15,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://via.placeholder.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://via.placeholder.com" />
     <link rel="icon" type="image/svg+xml" href="./assets/Logo.svg" />
     <title>UMILUX</title>
-    <meta name="description" content="UMILUX">
+    <meta name="description" content="UMILUX" />
   </head>
   <body>
     <!-- header -->
@@ -30,8 +30,8 @@
         role="alert"
         style="position: relative"
       >
-        <div class="alert-carousel fade-in">
-          <button class="carousel-btn prev-btn">
+        <div class="alert-carousel">
+          <button class="carousel-btn prev-btn" aria-label="Previous slide">
             <svg
               width="7"
               height="10"
@@ -55,7 +55,7 @@
               <p class="alertP">Free Ship — Orders Now !</p>
             </div>
           </div>
-          <button class="carousel-btn next-btn">
+          <button class="carousel-btn next-btn" aria-label="Next slide">
             <svg
               width="6"
               height="9"
@@ -564,16 +564,27 @@
                       </ul>
                     </li>
                     <li class="nav-item">
-                      <a class="dropMenu nav-link" aria-disabled="true" href="loadingPage.html">Sale</a>
+                      <a
+                        class="dropMenu nav-link"
+                        aria-disabled="true"
+                        href="loadingPage.html"
+                        >Sale</a
+                      >
                     </li>
                     <li class="nav-item">
-                      <a class="dropMenu nav-link" aria-disabled="true" href="loadingPage.html"
+                      <a
+                        class="dropMenu nav-link"
+                        aria-disabled="true"
+                        href="loadingPage.html"
                         >Buy Umino!</a
                       >
                     </li>
                   </ul>
                   <div>
-                    <a class="nav-link" aria-disabled="true" href="loadingPage.html"
+                    <a
+                      class="nav-link"
+                      aria-disabled="true"
+                      href="loadingPage.html"
                       ><svg
                         width="18"
                         height="19"
@@ -1276,7 +1287,6 @@
             >
           </div>
           <img
-            class="lazyload"
             data-srcset="./assets/slider/surface.png"
             src="./assets/slider/surface.png"
             alt="banner"
@@ -1291,7 +1301,6 @@
             >
           </div>
           <img
-            class="lazyload"
             data-srcset="./assets/slider/game.png"
             src="./assets/slider/game.png"
             alt="banner"
@@ -1306,7 +1315,6 @@
             >
           </div>
           <img
-            class="lazyload"
             data-srcset="./assets/slider/camera.png"
             src="./assets/slider/camera.png"
             alt="banner"
@@ -1317,7 +1325,7 @@
       <!-- Trending This Week -->
       <div class="Trending container fade-in">
         <div class="trendingTitle fade-in">
-          <h5>Trending This Week</h5>
+          <h2>Trending This Week</h2>
           <a href="loadingPage.html"
             >View All
             <svg
@@ -1496,7 +1504,7 @@
       <!-- Top Selling Products -->
       <div class="selling container fade-in">
         <div class="sellingTitle">
-          <h5>Top Selling Products</h5>
+          <h2>Top Selling Products</h2>
           <a href="loadingPage.html"
             >View All
             <svg
@@ -1677,7 +1685,7 @@
       <!-- Top Rated Products -->
       <div class="rated container fade-in">
         <div class="ratedTitle">
-          <h5>Top Rated Products</h5>
+          <h2>Top Rated Products</h2>
           <a href="loadingPage.html"
             >View All
             <svg
@@ -1866,7 +1874,7 @@
       <!-- Our Collections -->
       <div class="collections container fade-in">
         <div class="collectionsTitle">
-          <h5>Our Collections</h5>
+          <h2>Our Collections</h2>
           <a href="loadingPage.html"
             >View All
             <svg
@@ -2049,7 +2057,7 @@
       <!-- Deals & Promotions -->
       <div class="deals container fade-in">
         <div class="dealsTitle">
-          <h5>Deals & Promotions</h5>
+          <h2>Deals & Promotions</h2>
           <a href="loadingPage.html"
             >View All
             <svg
@@ -2180,7 +2188,7 @@
       <div class="contact container d-lg-flex d-none">
         <!-- About The Store -->
         <div class="about fade-in">
-          <h6>About The Store</h6>
+          <h2>About The Store</h2>
           <p>Got Question? Call us 24/7</p>
           <h3>+555-1900-2628</h3>
           <p>268 St, South New York/NY 98944, United States</p>
@@ -2265,7 +2273,7 @@
         </div>
         <!-- about store more -->
         <div class="service fade-in">
-          <h6>Customer Service</h6>
+          <h4>Customer Service</h4>
           <div class="serviceIn fade-in">
             <a href="loadingPage.html" class="underline-animate"
               >Privacy Policy</a
@@ -2289,7 +2297,7 @@
         </div>
         <!-- Shop By Categories -->
         <div class="shopByCategory fade-in">
-          <h6>Shop By Categories</h6>
+          <h4>Shop By Categories</h4>
           <div class="shopByCategoryIn fade-in">
             <a href="loadingPage.html" class="underline-animate">Smartphone </a>
             <a href="loadingPage.html" class="underline-animate">Headphones</a>
@@ -2306,7 +2314,7 @@
         </div>
         <!-- Sign Up to Newsletter -->
         <div class="newsletter fade-in">
-          <h6>Sign Up to Newsletter</h6>
+          <h4>Sign Up to Newsletter</h4>
           <p>
             Enter your email address to get $10 off your first order and free
             shipping. Updates information on Sales and Offers.
