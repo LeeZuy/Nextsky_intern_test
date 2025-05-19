@@ -162,6 +162,17 @@
 .menuBtn {
   margin-left: -100% !important;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 .meunBtn svg {
   color: #fff;
 }
@@ -1195,7 +1206,7 @@
   justify-content: space-between;
   padding: 4% 0 0;
 }
-.bannerIntroduction h4 {
+.bannerIntroduction h2 {
   font-size: 18px;
   font-weight: 600;
   line-height: 100%;
@@ -1457,7 +1468,7 @@
   font-weight: 500px;
   display: inline-block;
   transition: margin-left 0.3s ease;
-  padding-bottom: 1%;
+  padding-bottom: 3%;
   white-space: nowrap;
 }
 .productInfo a:hover {
