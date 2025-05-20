@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let current = 0;
 
     function getProductWidth() {
-        return products[0].getBoundingClientRect().width + 16; // 16px gap giữa các item
+        return products[0].getBoundingClientRect().width + 16;
     }
 
     function getProductsPerView() {
@@ -87,15 +87,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     slideToCurrent();
 });
-
-
 window.addEventListener('resize', () => {
-    const productWidth = getProductWidth();
+    if (!products || products.length === 0) return;
     const perView = getProductsPerView();
-    const maxIndex = Math.max(0, Math.ceil(total / perView) - 1);
+    const maxIndex = Math.max(0, Math.ceil(products.length / perView) - 1);
     if (current > maxIndex) current = maxIndex;
-    slider.style.transform = `translateX(-${current * productWidth}px)`;
-}); function setupSelector(selectorId) { const select = document.getElementById(selectorId); const labelSpan = select.querySelector(".label"); const radios = select.querySelectorAll('input[type="radio"]'); radios.forEach((radio) => { radio.addEventListener("change", () => { const lbl = select.querySelector(`label[for="${radio.id}"]`); labelSpan.textContent = lbl.getAttribute("data-txt") }) }) }
+    slideToCurrent();
+});
+function setupSelector(selectorId) { const select = document.getElementById(selectorId); const labelSpan = select.querySelector(".label"); const radios = select.querySelectorAll('input[type="radio"]'); radios.forEach((radio) => { radio.addEventListener("change", () => { const lbl = select.querySelector(`label[for="${radio.id}"]`); labelSpan.textContent = lbl.getAttribute("data-txt") }) }) }
 setupSelector("lang-select"); setupSelector("cur-select"); document.addEventListener("DOMContentLoaded", function () { const links = document.querySelectorAll('a[href^="#"]'); links.forEach(link => { link.addEventListener("click", function (e) { const target = document.querySelector(this.getAttribute("href")); if (target) { e.preventDefault(); target.scrollIntoView({ behavior: "smooth" }) } }) }) }); document.addEventListener("DOMContentLoaded", function () { const faders = document.querySelectorAll(".fade-in"); const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }; const appearOnScroll = new IntersectionObserver(function (entries, observer) { entries.forEach(entry => { if (!entry.isIntersecting) return; entry.target.classList.add("visible"); observer.unobserve(entry.target) }) }, appearOptions); faders.forEach(fader => { appearOnScroll.observe(fader) }) }); document.addEventListener("DOMContentLoaded", function () {
     const lazyImages = document.querySelectorAll('img.lazyload'); const lazyLoad = (entries, observer) => {
         entries.forEach(entry => {
@@ -112,15 +111,12 @@ const header = document.getElementById("main-header");
 window.addEventListener("scroll", () => {
     if (!header) return;
     if (window.scrollY > lastScrollY) {
-        // Cuộn xuống
         header.classList.add("hide");
     } else {
-        // Cuộn lên
         header.classList.remove("hide");
     }
     lastScrollY = window.scrollY;
 });
-// Cho phép gọi từ HTML: <button onclick="slideImages('left')">
 window.slideImages = (function () {
     const slider = document.querySelector(".collectionsItem");
     const container = document.querySelector(".collectionsItemIn");
@@ -148,13 +144,11 @@ window.slideImages = (function () {
     return function (direction) {
         const perView = getProductsPerView();
         const maxIndex = Math.max(0, Math.ceil(products.length / perView) - 1);
-
         if (direction === "next") {
             current = current >= maxIndex ? 0 : current + 1;
         } else {
             current = current <= 0 ? maxIndex : current - 1;
         }
-
         slideToCurrent();
     };
 })();

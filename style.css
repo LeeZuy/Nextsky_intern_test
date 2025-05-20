@@ -243,7 +243,7 @@
   border: none;
   color: #fff;
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 9px 20px;
   border-radius: 0 50px 50px 0;
   box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
   position: absolute;
@@ -697,6 +697,10 @@
 .silderTitle .salient-button:hover i {
   transform: translateX(5px);
 }
+.silderTitle .salient-button:active{
+  width: 160px;
+  height: 45px;
+}
 .aspect-ratio-169 {
   display: flex;
   width: 300%;
@@ -1073,6 +1077,10 @@
 }
 .promotionIn .salient-button:hover {
   color: #000;
+}
+.promotionIn .salient-button:active{
+  width: 155px;
+  height: 40px;
 }
 .promotionIn .salient-button i {
   transition: transform 0.3s ease;
