@@ -917,6 +917,7 @@
   height: 206px;
   transition: transform 0.3s ease;
   cursor: pointer;
+  aspect-ratio: 1 / 1;
 }
 .trendingItem:hover img {
   transform: scale(1.1);
