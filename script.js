@@ -1,3 +1,11 @@
+let products, slider, container;
+let current = 0;
+
+function initCollectionSlider() {
+    slider = document.querySelector(".collectionsItem");
+    container = document.querySelector(".collectionsItemIn");
+    products = document.querySelectorAll(".collectionsProduct");
+}
 document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll(".alert-slide"); const prevBtn = document.querySelector(".prev-btn"); const nextBtn = document.querySelector(".next-btn"); let currentSlide = 0; function showSlide(index) { slides.forEach((slide) => slide.classList.remove("active")); slides[index].classList.add("active") }
     prevBtn.addEventListener("click", function () { currentSlide = (currentSlide - 1 + slides.length) % slides.length; showSlide(currentSlide) }); nextBtn.addEventListener("click", function () { currentSlide = (currentSlide + 1) % slides.length; showSlide(currentSlide) }); setInterval(function () { currentSlide = (currentSlide + 1) % slides.length; showSlide(currentSlide) }, 5000)
