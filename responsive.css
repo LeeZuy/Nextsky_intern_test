@@ -345,7 +345,7 @@ html {
   }
   .collectionsProduct {
     --collectionsProduct-width: calc((100% - 8px) / 1.5);
-    min-width: 48%;
+    min-width: 49%;
   }
   .nav {
     position: absolute;
@@ -730,6 +730,7 @@ html {
   }
   .collectionsProduct {
     --collectionsProduct-width: calc((100% - 16px) / 2);
+    
   }
   .deals {
     max-width: 100% !important;
@@ -1106,7 +1107,7 @@ html {
     margin-left: 0%;
   }
   .sellingSaleIcon {
-    right: -95px;
+    right: -105px;
   }
   .sellingItem:hover .sellingSaleIcon {
     right: -47px;
@@ -1193,12 +1194,13 @@ html {
   .productInfo p {
     font-size: 18px;
     font-weight: 600;
+    margin-bottom: 9px;
   }
   .productInfo a {
     font-size: 16px;
   }
   .moreInfo {
-    padding-top: 10%;
+    padding-top: 6%;
   }
   .moreInfo a {
     font-size: 18px;
@@ -1509,6 +1511,12 @@ html {
     padding-top: 6%;
     --collectionsProduct-width: 100%;
     min-width: 100%;
+  }
+  .moreInfo {
+    padding-top: 6%;
+  }
+  .moreInfo a {
+    font-size: 14px;
   }
   .dealsProduct {
     display: grid;

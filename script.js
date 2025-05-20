@@ -8,12 +8,22 @@ document.addEventListener("DOMContentLoaded", function () {
 }); document.addEventListener("DOMContentLoaded", () => {
     const slider = document.querySelector('.collectionsItem'); const products = document.querySelectorAll('.collectionsProduct'); const container = document.querySelector('.collectionsItemIn'); const total = products.length; let current = 0; function getProductWidth() { return products[0].offsetWidth + 16 }
     function getProductsPerView() { const containerWidth = container.offsetWidth; const itemWidth = getProductWidth(); return Math.max(1, Math.floor(containerWidth / itemWidth)) }
-    function slideToCurrent() { const productWidth = getProductWidth(); const perView = getProductsPerView(); const maxIndex = Math.max(0, total - perView); current = Math.min(current, maxIndex); slider.style.transform = `translateX(-${current * productWidth}px)` }
-    function slide(direction) {
-        const productWidth = getProductWidth(); const perView = getProductsPerView(); const maxIndex = Math.max(0, total - perView); if (direction === 'next') { current = current >= maxIndex ? 0 : current + 1 } else { current = current <= 0 ? maxIndex : current - 1 }
-        slider.style.transform = `translateX(-${current * productWidth}px)`
+    function slideCurrent() {
+        const productWidth = getProductWidth();
+        slider.style.transform = `translateX(-${current * productWidth}px)`;
     }
-    window.addEventListener('resize', slideToCurrent); window.addEventListener('load', slideToCurrent)
+    function slide(direction) {
+        const productWidth = getProductWidth();
+        const perView = getProductsPerView();
+        const maxIndex = Math.max(0, Math.ceil(total - perView));
+        if (direction === 'next') {
+            current = current >= maxIndex ? 0 : current + 1;
+        } else {
+            current = current <= 0 ? maxIndex : current - 1;
+        }
+        slider.style.transform = `translateX(-${current * productWidth}px)`;
+    }
+    window.addEventListener('resize', slideCurrent); window.addEventListener('load', slideCurrent)
 }); let menuHoverInitialized = !1; function initDesktopMenu() {
     if (menuHoverInitialized || window.innerWidth <= 991) return; const mainCategories = document.querySelectorAll(".main-category"); const subCategoriesContainer = document.querySelector(".sub-categories-container"); const allSubCategories = document.querySelectorAll(".sub-categories"); function hideAllSubCategories() { allSubCategories.forEach((sub) => sub.classList.remove("active")) }
     mainCategories.forEach((category) => { category.addEventListener("mouseenter", function () { const type = this.getAttribute("data-category"); hideAllSubCategories(); if (type) { const target = document.querySelector(`.sub-categories[data-category-content="${type}"]`); if (target) { subCategoriesContainer.style.display = "block"; target.classList.add("active") } else { subCategoriesContainer.style.display = "none" } } else { subCategoriesContainer.style.display = "none" } }) }); const menuContainer = document.querySelector(".menu-container"); if (menuContainer) { menuContainer.addEventListener("mouseleave", () => { hideAllSubCategories(); subCategoriesContainer.style.display = "none" }) }
@@ -28,13 +38,64 @@ function resetTimer() { clearInterval(slideTimer); slideTimer = setInterval(next
 dots.forEach((dot) => { dot.addEventListener("click", function () { const index = parseInt(this.getAttribute("data-index")); goToSlide(index) }) }); resetTimer(); imgContainer.parentElement.addEventListener("mouseenter", () => { clearInterval(slideTimer) }); imgContainer.parentElement.addEventListener("mouseleave", resetTimer); function toggleMenu() { const menuOverlay = document.getElementById("menuOverlay"); const backdrop = document.getElementById("backdrop"); menuOverlay.classList.toggle("active"); backdrop.classList.toggle("active") }
 function toggleSubMenu() { const subMenu = document.getElementById("subMenu"); subMenu.classList.toggle("active") }
 function closeAll() { const menuOverlay = document.getElementById("menuOverlay"); const subMenu = document.getElementById("subMenu"); const backdrop = document.getElementById("backdrop"); menuOverlay.classList.remove("active"); subMenu.classList.remove("active"); backdrop.classList.remove("active") }
-const slider = document.querySelector('.collectionsItem'); const products = document.querySelectorAll('.collectionsProduct'); const total = products.length; let current = 0; function getProductWidth() { return products[0].offsetWidth + 16 }
-function getProductsPerView() { const containerWidth = document.querySelector('.collectionsItemIn').offsetWidth; const itemWidth = getProductWidth(); return Math.floor(containerWidth / itemWidth) }
-function slide(direction) {
-    const productWidth = getProductWidth(); const perView = getProductsPerView(); const maxIndex = total - perView; if (direction === 'next') { current = current >= maxIndex ? 0 : current + 1 } else { current = current <= 0 ? maxIndex : current - 1 }
-    slider.style.transform = `translateX(-${current * productWidth}px)`
-}
-window.addEventListener('resize', () => { const productWidth = getProductWidth(); slider.style.transform = `translateX(-${current * productWidth}px)` }); function setupSelector(selectorId) { const select = document.getElementById(selectorId); const labelSpan = select.querySelector(".label"); const radios = select.querySelectorAll('input[type="radio"]'); radios.forEach((radio) => { radio.addEventListener("change", () => { const lbl = select.querySelector(`label[for="${radio.id}"]`); labelSpan.textContent = lbl.getAttribute("data-txt") }) }) }
+document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".collectionsItem");
+    const container = document.querySelector(".collectionsItemIn");
+    const products = document.querySelectorAll(".collectionsProduct");
+
+    let current = 0;
+
+    function getProductWidth() {
+        return products[0].getBoundingClientRect().width + 16; // 16px gap giữa các item
+    }
+
+    function getProductsPerView() {
+        const containerWidth = container.getBoundingClientRect().width;
+        const itemWidth = getProductWidth();
+        return Math.max(1, Math.floor(containerWidth / itemWidth));
+    }
+
+    function slideToCurrent() {
+        const productWidth = getProductWidth();
+        slider.style.transform = `translateX(-${current * productWidth}px)`;
+    }
+
+    function slide(direction) {
+        const perView = getProductsPerView();
+        const maxIndex = Math.max(0, Math.ceil(products.length / perView) - 1);
+
+        if (direction === "next") {
+            current = current >= maxIndex ? 0 : current + 1;
+        } else {
+            current = current <= 0 ? maxIndex : current - 1;
+        }
+
+        slideToCurrent();
+    }
+
+    const nextBtn = document.querySelector(".next");
+    const prevBtn = document.querySelector(".prev");
+    if (nextBtn) nextBtn.addEventListener("click", () => slide("next"));
+    if (prevBtn) prevBtn.addEventListener("click", () => slide("prev"));
+
+    window.addEventListener("resize", () => {
+        const perView = getProductsPerView();
+        const maxIndex = Math.max(0, Math.ceil(products.length / perView) - 1);
+        current = Math.min(current, maxIndex);
+        slideToCurrent();
+    });
+
+    slideToCurrent();
+});
+
+
+window.addEventListener('resize', () => {
+    const productWidth = getProductWidth();
+    const perView = getProductsPerView();
+    const maxIndex = Math.max(0, Math.ceil(total / perView) - 1);
+    if (current > maxIndex) current = maxIndex;
+    slider.style.transform = `translateX(-${current * productWidth}px)`;
+}); function setupSelector(selectorId) { const select = document.getElementById(selectorId); const labelSpan = select.querySelector(".label"); const radios = select.querySelectorAll('input[type="radio"]'); radios.forEach((radio) => { radio.addEventListener("change", () => { const lbl = select.querySelector(`label[for="${radio.id}"]`); labelSpan.textContent = lbl.getAttribute("data-txt") }) }) }
 setupSelector("lang-select"); setupSelector("cur-select"); document.addEventListener("DOMContentLoaded", function () { const links = document.querySelectorAll('a[href^="#"]'); links.forEach(link => { link.addEventListener("click", function (e) { const target = document.querySelector(this.getAttribute("href")); if (target) { e.preventDefault(); target.scrollIntoView({ behavior: "smooth" }) } }) }) }); document.addEventListener("DOMContentLoaded", function () { const faders = document.querySelectorAll(".fade-in"); const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }; const appearOnScroll = new IntersectionObserver(function (entries, observer) { entries.forEach(entry => { if (!entry.isIntersecting) return; entry.target.classList.add("visible"); observer.unobserve(entry.target) }) }, appearOptions); faders.forEach(fader => { appearOnScroll.observe(fader) }) }); document.addEventListener("DOMContentLoaded", function () {
     const lazyImages = document.querySelectorAll('img.lazyload'); const lazyLoad = (entries, observer) => {
         entries.forEach(entry => {
@@ -59,3 +120,41 @@ window.addEventListener("scroll", () => {
     }
     lastScrollY = window.scrollY;
 });
+// Cho phép gọi từ HTML: <button onclick="slideImages('left')">
+window.slideImages = (function () {
+    const slider = document.querySelector(".collectionsItem");
+    const container = document.querySelector(".collectionsItemIn");
+    const products = document.querySelectorAll(".collectionsProduct");
+
+    let current = 0;
+
+    function getProductWidth() {
+        return products[0]?.getBoundingClientRect().width + 16 || 0;
+    }
+
+    function getProductsPerView() {
+        const containerWidth = container?.getBoundingClientRect().width || 0;
+        const itemWidth = getProductWidth();
+        return itemWidth ? Math.max(1, Math.floor(containerWidth / itemWidth)) : 1;
+    }
+
+    function slideToCurrent() {
+        const productWidth = getProductWidth();
+        if (slider) {
+            slider.style.transform = `translateX(-${current * productWidth}px)`;
+        }
+    }
+
+    return function (direction) {
+        const perView = getProductsPerView();
+        const maxIndex = Math.max(0, Math.ceil(products.length / perView) - 1);
+
+        if (direction === "next") {
+            current = current >= maxIndex ? 0 : current + 1;
+        } else {
+            current = current <= 0 ? maxIndex : current - 1;
+        }
+
+        slideToCurrent();
+    };
+})();

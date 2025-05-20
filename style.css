@@ -755,7 +755,7 @@
 .camera {
   width: 407px;
   height: 180px;
-  background-color: #2ca586;
+  background-color: #22715e;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -772,6 +772,7 @@
   height: 130px;
   transition: transform 0.3s ease;
   position: static;
+  object-fit: contain;
 }
 .gamepad img {
   width: 225px;
@@ -779,10 +780,11 @@
   transition: transform 0.3s ease;
   position: absolute;
   left: 48%;
+  object-fit: contain;
 }
 .camera p,
 .camera a {
-  color: #efefef !important;
+  color: #ffffff !important;
 }
 .camera img {
   margin-top: 4%;
@@ -791,6 +793,7 @@
   transition: transform 0.3s ease;
   position: static;
   left: 76%;
+  object-fit: contain;
 }
 .surface:hover img,
 .gamepad:hover img,
@@ -860,7 +863,7 @@
 }
 .trendingTitle a {
   text-decoration: none;
-  color: #999;
+  color: #6c6c6c;
   font-size: 14px;
 }
 .trendingTitle svg {
@@ -910,7 +913,7 @@
 }
 .trendingItem img {
   margin-top: 4%;
-  width: 80%;
+  width: 70%;
   height: 206px;
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -930,7 +933,7 @@
 }
 .trendingIn span {
   font-size: 12px;
-  color: #999;
+  color: #6c6c6c;
 }
 .trendingIn p {
   font-size: 18px;
@@ -949,7 +952,7 @@
   color: #0d53bb;
 }
 .oldPrice {
-  color: #8d979e;
+  color: #6c6c6c;
   text-decoration: line-through;
   font-size: 14px !important;
   padding-left: 2%;
@@ -966,7 +969,7 @@
 }
 .sellingTitle a {
   text-decoration: none;
-  color: #999;
+  color: #6c6c6c;
   font-size: 14px;
 }
 .sellingTitle svg {
@@ -1116,7 +1119,7 @@
 .sellingSaleIcon {
   position: absolute;
   top: 55px;
-  right: -60px;
+  right: -80px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1189,7 +1192,7 @@
 }
 .sellingIn span {
   font-size: 12px;
-  color: #999;
+  color: #6c6c6c;
 }
 .sellingIn p {
   font-size: 18px;
@@ -1275,7 +1278,7 @@
 }
 .ratedTitle a {
   text-decoration: none;
-  color: #999;
+  color: #6c6c6c;
   font-size: 14px;
 }
 .ratedTitle svg {
@@ -1322,7 +1325,7 @@
 .ratedSaleIcon {
   position: absolute;
   top: 55px;
-  right: -60px;
+  right: -80px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1397,7 +1400,7 @@
 }
 .ratedIn span {
   font-size: 12px;
-  color: #999;
+  color: #6c6c6c;
 }
 .ratedIn p {
   font-size: 18px;
@@ -1420,7 +1423,7 @@
 }
 .collectionsTitle a {
   text-decoration: none;
-  color: #999;
+  color: #6c6c6c;
   font-size: 14px;
 }
 .collectionsTitle svg {
@@ -1517,7 +1520,7 @@
 }
 .dealsTitle a {
   text-decoration: none;
-  color: #999;
+  color: #6c6c6c;
   font-size: 14px;
 }
 .dealsTitle svg {
