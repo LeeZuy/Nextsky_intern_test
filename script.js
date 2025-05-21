@@ -11,7 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
     prevBtn.addEventListener("click", function () { currentSlide = (currentSlide - 1 + slides.length) % slides.length; showSlide(currentSlide) }); nextBtn.addEventListener("click", function () { currentSlide = (currentSlide + 1) % slides.length; showSlide(currentSlide) }); setInterval(function () { currentSlide = (currentSlide + 1) % slides.length; showSlide(currentSlide) }, 5000)
 }); document.addEventListener("DOMContentLoaded", function () {
     const mainCategories = document.querySelectorAll(".main-category"); const subCategoriesContainer = document.querySelector(".sub-categories-container"); const allSubCategories = document.querySelectorAll(".sub-categories"); function hideAllSubCategories() { allSubCategories.forEach(sub => sub.classList.remove("active")) }
-    if (window.innerWidth > 991) { if (mainCategories && subCategoriesContainer) { mainCategories.forEach(category => { category.addEventListener("mouseenter", function () { const type = this.getAttribute("data-category"); hideAllSubCategories(); if (type) { const target = document.querySelector(`.sub-categories[data-category-content="${type}"]`); if (target) { subCategoriesContainer.style.display = "block"; target.classList.add("active") } else { subCategoriesContainer.style.display = "none" } } else { subCategoriesContainer.style.display = "none" } }); category.addEventListener("mouseleave", () => { hideAllSubCategories(); subCategoriesContainer.style.display = "none" }) }); const menuContainer = document.querySelector(".menu-container"); if (menuContainer) { menuContainer.removeEventListener("mouseenter", () => { }); menuContainer.removeEventListener("mouseleave", () => { }) } } }
+    if (window.innerWidth > 991) {
+        if (mainCategories && subCategoriesContainer) {
+            mainCategories.forEach(category => {
+                category.addEventListener("mouseenter", function () { const type = this.getAttribute("data-category"); hideAllSubCategories(); if (type) { const target = document.querySelector(`.sub-categories[data-category-content="${type}"]`); if (target) { subCategoriesContainer.style.display = "block"; target.classList.add("active") } else { subCategoriesContainer.style.display = "none" } } else { subCategoriesContainer.style.display = "none" } });
+                // category.addEventListener("mouseleave", () => { hideAllSubCategories(); subCategoriesContainer.style.display = "none" })
+            }); const menuContainer = document.querySelector(".menu-container"); if (menuContainer) { menuContainer.removeEventListener("mouseenter", () => { }); menuContainer.removeEventListener("mouseleave", () => { }) }
+        }
+    }
     hideAllSubCategories()
 }); document.addEventListener("DOMContentLoaded", () => {
     const slider = document.querySelector('.collectionsItem'); const products = document.querySelectorAll('.collectionsProduct'); const container = document.querySelector('.collectionsItemIn'); const total = products.length; let current = 0; function getProductWidth() { return products[0].offsetWidth + 16 }

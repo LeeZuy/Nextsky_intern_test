@@ -1,3 +1,10 @@
+:root {
+  --white: #fff;
+  --primary-color: #0d53bb;
+  --hover-bg: #000;
+  --nav-bg: #b1b0b0;
+  --transition-default: 0.3s ease;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -90,7 +97,7 @@ html {
     margin-top: 2%;
     width: 220px;
     height: 130px;
-    transition: transform 0.3s ease;
+    transition: var(--transition-default);
     position: absolute;
     left: 14%;
   }
@@ -102,7 +109,7 @@ html {
     margin-top: 2%;
     width: 200px;
     height: 136px;
-    transition: transform 0.3s ease;
+    transition: var(--transition-default);
     position: absolute;
     left: 82%;
   }
@@ -351,8 +358,8 @@ html {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #b1b0b0;
-    color: #fff;
+    background: var(--nav-bg);
+    color: var(--white);
     border: none;
     font-size: 2rem;
     padding: 3px 15px;
@@ -361,7 +368,7 @@ html {
     border-radius: 50%;
   }
   .nav:hover {
-    background-color: #000;
+    background-color: var(--hover-bg);
   }
   .prev {
     left: 10px;
@@ -730,7 +737,6 @@ html {
   }
   .collectionsProduct {
     --collectionsProduct-width: calc((100% - 16px) / 2);
-    
   }
   .deals {
     max-width: 100% !important;
@@ -794,6 +800,9 @@ html {
   .about {
     margin-top: 2%;
     margin-bottom: -5%;
+  }
+  .aboutMobile h3 {
+    color: var(--primary-color);
   }
   .about h2 {
     font-size: 20px;
@@ -885,7 +894,7 @@ html {
   html {
     overflow-x: hidden;
     width: 100%;
-    background-color: #fff;
+    background-color: var(--white);
   }
   .headerMenuTop {
     display: grid;
@@ -1552,6 +1561,9 @@ html {
   .about {
     margin-top: 2%;
     margin-bottom: -5%;
+  }
+  .aboutMobile h3 {
+    color: var(--primary-color);
   }
   .accordion {
     padding-top: 5%;
