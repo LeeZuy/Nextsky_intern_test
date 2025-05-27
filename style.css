@@ -724,8 +724,9 @@
 }
 .no-fade {
   opacity: 1 !important;
-  transform: none !important;
   transition: none !important;
+  animation: none !important;
+  transform: none !important;
 }
 #Slider {
   width: 100%;
