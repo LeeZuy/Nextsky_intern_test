@@ -20,6 +20,18 @@
   box-sizing: border-box;
   font-family: var(--font-main);
 }
+.headerMenu {
+  min-height: 80px;
+}
+.menu-overlay {
+  position: fixed;
+  left: -100%;
+  transition: left 0.3s ease-in-out;
+}
+.menu-overlay.active {
+  left: 0;
+}
+
 .alert {
   background: var(--secondary-color);
   color: var(--white);
