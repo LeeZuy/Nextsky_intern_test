@@ -67,7 +67,7 @@ html {
   }
 
   .aspect-ratio-169 {
-    /* transform: translateX(0) !important; */
+    transform: translateX(0) !important;
     opacity: 1 !important;
     transition: none !important;
   }
