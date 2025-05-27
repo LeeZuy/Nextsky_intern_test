@@ -58,6 +58,24 @@ html {
   .menuSlider{
     margin: 0;
   }
+  .slide.no-fade {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+    will-change: auto !important;
+  }
+
+  .aspect-ratio-169 {
+    /* transform: translateX(0) !important; */
+    opacity: 1 !important;
+    transition: none !important;
+  }
+
+  .slider-container, .aspect-ratio-169 img {
+    animation: none !important;
+    transition: none !important;
+  }
   .silderTitle h2 {
     font-size: 24px;
   }
