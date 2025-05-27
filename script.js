@@ -45,29 +45,11 @@ document.addEventListener("DOMContentLoaded", function () {
     menuHoverInitialized = !0
 }
 document.addEventListener("DOMContentLoaded", () => { initDesktopMenu() }); window.addEventListener("resize", () => { if (window.innerWidth > 991 && !menuHoverInitialized) { initDesktopMenu() } }); const imgContainer = document.querySelector(".aspect-ratio-169"); const dots = document.querySelectorAll(".dot"); let currentIndex = 0; const slideCount = document.querySelectorAll(".aspect-ratio-169 img").length; const slideInterval = 5000; let slideTimer; function goToSlide(index) {
-    if (index < 0) index = slideCount - 1; if (index >= slideCount) index = 0; currentIndex = index;
-    // imgContainer.style.transform = `translateX(-${currentIndex * 33.3333}%)`; 
-    if (window.innerWidth > 575) {
-        imgContainer.style.transform = `translateX(-${currentIndex * 33.3333}%)`;
-    } else {
-        imgContainer.style.transform = `translateX(0)`; // Đừng animate trên mobile
-    }
-    dots.forEach((dot, i) => { dot.classList.toggle("active", i === currentIndex) }); resetTimer()
+    if (index < 0) index = slideCount - 1; if (index >= slideCount) index = 0; currentIndex = index; imgContainer.style.transform = `translateX(-${currentIndex * 33.3333
+        }%)`; dots.forEach((dot, i) => { dot.classList.toggle("active", i === currentIndex) }); resetTimer()
 }
-// document.addEventListener("DOMContentLoaded", () => {
-//     if (window.innerWidth <= 575) {
-//         const slider = document.querySelector('.aspect-ratio-169');
-//         if (slider) {
-//             slider.style.transform = 'translateX(0)';
-//         }
-//     }
-// });
 function nextSlide() { goToSlide(currentIndex + 1) }
-function resetTimer() {
-    clearInterval(slideTimer); if (window.innerWidth > 575) {
-        slideTimer = setInterval(nextSlide, slideInterval);
-    }
-}
+function resetTimer() { clearInterval(slideTimer); slideTimer = setInterval(nextSlide, slideInterval) }
 dots.forEach((dot) => { dot.addEventListener("click", function () { const index = parseInt(this.getAttribute("data-index")); goToSlide(index) }) }); resetTimer(); imgContainer.parentElement.addEventListener("mouseenter", () => { clearInterval(slideTimer) }); imgContainer.parentElement.addEventListener("mouseleave", resetTimer); function toggleMenu() { const menuOverlay = document.getElementById("menuOverlay"); const backdrop = document.getElementById("backdrop"); menuOverlay.classList.toggle("active"); backdrop.classList.toggle("active") }
 function toggleSubMenu() { const subMenu = document.getElementById("subMenu"); subMenu.classList.toggle("active") }
 function closeAll() { const menuOverlay = document.getElementById("menuOverlay"); const subMenu = document.getElementById("subMenu"); const backdrop = document.getElementById("backdrop"); menuOverlay.classList.remove("active"); subMenu.classList.remove("active"); backdrop.classList.remove("active") }

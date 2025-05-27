@@ -14,27 +14,12 @@
   --size: 16px;
   --font-size-price:14px;
 }
-@font-face {
-  font-display: swap;
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: var(--font-main);
 }
-.headerMenu {
-  min-height: 80px;
-}
-.menu-overlay {
-  position: fixed;
-  left: -100%;
-  transition: left 0.3s ease-in-out;
-}
-.menu-overlay.active {
-  left: 0;
-}
-
 .alert {
   background: var(--secondary-color);
   color: var(--white);
@@ -714,27 +699,6 @@
   overflow: hidden;
   border-radius: 15px;
   margin-left: 1%;
-}
-.slider img:first-child {
-  opacity: 1 !important;
-  transform: none !important;
-  transition: none !important;
-}
-.slide {
-  contain: content; 
-  will-change: transform, opacity; 
-  display: block;
-}
-.no-animation {
-  opacity: 1 !important;
-  transform: none !important;
-  transition: none !important;
-}
-.no-fade {
-  opacity: 1 !important;
-  transition: none !important;
-  animation: none !important;
-  transform: none !important;
 }
 #Slider {
   width: 100%;
