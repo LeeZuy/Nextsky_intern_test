@@ -991,18 +991,39 @@
   gap: 10px;
   transition: right 0.4s ease;
 }
-.trendingIcon i {
+.trendingIcon .wishlist-icon,
+.trendingIcon .cart-icon,
+.sellingSaleIcon .wishlist-icon,
+.sellingSaleIcon .cart-icon,
+.sellingIcon .wishlist-icon,
+.sellingIcon .cart-icon,
+.ratedSaleIcon .wishlist-icon,
+.ratedSaleIcon .cart-icon,
+.ratedIcon .wishlist-icon,
+.ratedIcon .cart-icon  {
   background-color: var(--white);
-  border: 1px solid #efefef;
-  color: var(--primary-color);
+  border: 1px solid black;
+  color: var(--dark-text);
   padding: var(--border-radius);
   border-radius: 50%;
   cursor: pointer;
   transition: transform 0.3s ease;
+  width: 37px;
+  height: 37px;
 }
-.trendingIcon i:hover {
+.trendingIcon .wishlist-icon:hover,
+.trendingIcon .cart-icon:hover,
+.sellingSaleIcon .wishlist-icon:hover,
+.sellingSaleIcon .cart-icon:hover,
+.sellingIcon .wishlist-icon:hover,
+.sellingIcon .cart-icon:hover,
+.ratedSaleIcon .wishlist-icon:hover,
+.ratedSaleIcon .cart-icon:hover,
+.ratedIcon .wishlist-icon:hover,
+.ratedIcon .cart-icon:hover {
   transform: scale(1.1);
-  color: #dd3327;
+  color: #e50914;
+  border: 1px solid #e50914;
 }
 .trendingItem:hover .trendingIcon {
   right: 10px;
@@ -1228,19 +1249,6 @@
   gap: 10px;
   transition: right 0.4s ease;
 }
-.sellingSaleIcon i {
-  background-color: var(--white);
-  border: 1px solid #efefef;
-  color: var(--primary-color);
-  padding: var(--border-radius);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.sellingSaleIcon i:hover {
-  transform: scale(1.1);
-  color: #dd3327;
-}
 .sellingItem:hover .sellingSaleIcon {
   right: -6px;
 }
@@ -1456,19 +1464,6 @@
   gap: 10px;
   transition: right 0.4s ease;
 }
-.ratedIcon i {
-  background-color: var(--white);
-  border: 1px solid #efefef;
-  color: var(--primary-color);
-  padding: var(--border-radius);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.ratedIcon i:hover {
-  transform: scale(1.1);
-  color: #dd3327;
-}
 .ratedSaleIcon {
   position: absolute;
   top: 55px;
@@ -1477,19 +1472,6 @@
   flex-direction: column;
   gap: 10px;
   transition: right 0.4s ease;
-}
-.ratedSaleIcon i {
-  background-color: var(--white);
-  border: 1px solid #efefef;
-  color: var(--primary-color);
-  padding: var(--border-radius);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.ratedSaleIcon i:hover {
-  transform: scale(1.1);
-  color: #dd3327;
 }
 .ratedItem:hover .ratedIcon {
   right: 10px;
@@ -2180,3 +2162,4 @@ img.lazyload {
   opacity: 1;
   transform: scale(1);
 }
+wi
