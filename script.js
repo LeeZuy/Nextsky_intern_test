@@ -48,6 +48,14 @@ document.addEventListener("DOMContentLoaded", () => { initDesktopMenu() }); wind
     if (index < 0) index = slideCount - 1; if (index >= slideCount) index = 0; currentIndex = index; imgContainer.style.transform = `translateX(-${currentIndex * 33.3333
         }%)`; dots.forEach((dot, i) => { dot.classList.toggle("active", i === currentIndex) }); resetTimer()
 }
+document.addEventListener("DOMContentLoaded", () => {
+    if (window.innerWidth <= 575) {
+        const slider = document.querySelector('.aspect-ratio-169');
+        if (slider) {
+            slider.style.transform = 'translateX(0)';
+        }
+    }
+});
 function nextSlide() { goToSlide(currentIndex + 1) }
 function resetTimer() { clearInterval(slideTimer); slideTimer = setInterval(nextSlide, slideInterval) }
 dots.forEach((dot) => { dot.addEventListener("click", function () { const index = parseInt(this.getAttribute("data-index")); goToSlide(index) }) }); resetTimer(); imgContainer.parentElement.addEventListener("mouseenter", () => { clearInterval(slideTimer) }); imgContainer.parentElement.addEventListener("mouseleave", resetTimer); function toggleMenu() { const menuOverlay = document.getElementById("menuOverlay"); const backdrop = document.getElementById("backdrop"); menuOverlay.classList.toggle("active"); backdrop.classList.toggle("active") }
