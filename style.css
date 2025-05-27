@@ -222,12 +222,6 @@
   padding-top: 20px;
   margin: 0% 13%;
 }
-/* .headerLogo {
-  width: 144px;
-  height: 36.92px;
-  margin-right: 7%;
-  margin-left: 1%;
-} */
 .headerLogo img {
   width: 130px;
   height: 100%;
@@ -499,7 +493,7 @@
   content: '<i class="fa-solid fa-minus"></i>';
 }
 .accordion-button .icon-toggle {
-  margin-left: 10px; /* Khoảng cách giữa text và icon */
+  margin-left: 10px;
   font-weight: bold;
   font-size: 18px;
 }
@@ -815,8 +809,6 @@
 .banner {
   display: flex;
   justify-content: space-between;
-  /* width: 1410px;
-  height: 200px; */
   margin: 0 13%;
 }
 .banner p {
@@ -1223,19 +1215,6 @@
   flex-direction: column;
   gap: 10px;
   transition: right 0.4s ease;
-}
-.sellingIcon i {
-  background-color: var(--white);
-  border: 1px solid #efefef;
-  color: var(--primary-color);
-  padding: var(--border-radius);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.sellingIcon i:hover {
-  transform: scale(1.1);
-  color: #dd3327;
 }
 .sellingItem:hover .sellingIcon {
   right: 10px;
@@ -2157,9 +2136,7 @@ img.lazyload {
   transform: scale(0.9);
   transition: transform 0.6s ease, opacity 0.6s ease;
 }
-
 .zoom-in.visible {
   opacity: 1;
   transform: scale(1);
 }
-wi
