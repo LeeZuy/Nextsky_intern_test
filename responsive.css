@@ -72,8 +72,7 @@ html {
     display: block !important;
     visibility: visible !important;
   }
-  .slide,
-  .slide.active {
+  .slide, .slide.active {
     opacity: 1 !important;
     transition: none !important;
     animation: none !important;

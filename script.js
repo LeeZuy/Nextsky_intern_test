@@ -54,14 +54,14 @@ document.addEventListener("DOMContentLoaded", () => { initDesktopMenu() }); wind
     }
     dots.forEach((dot, i) => { dot.classList.toggle("active", i === currentIndex) }); resetTimer()
 }
-document.addEventListener("DOMContentLoaded", () => {
-    if (window.innerWidth <= 575) {
-        const slider = document.querySelector('.aspect-ratio-169');
-        if (slider) {
-            slider.style.transform = 'translateX(0)';
-        }
-    }
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//     if (window.innerWidth <= 575) {
+//         const slider = document.querySelector('.aspect-ratio-169');
+//         if (slider) {
+//             slider.style.transform = 'translateX(0)';
+//         }
+//     }
+// });
 function nextSlide() { goToSlide(currentIndex + 1) }
 function resetTimer() {
     clearInterval(slideTimer); if (window.innerWidth > 575) {

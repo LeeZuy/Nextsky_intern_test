@@ -720,6 +720,11 @@
   transform: none !important;
   transition: none !important;
 }
+.slide {
+  contain: content; 
+  will-change: transform, opacity; 
+  display: block;
+}
 .no-animation {
   opacity: 1 !important;
   transform: none !important;
