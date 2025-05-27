@@ -56,9 +56,9 @@ document.addEventListener("DOMContentLoaded", () => { initDesktopMenu() }); wind
 }
 document.addEventListener("DOMContentLoaded", () => {
     if (window.innerWidth <= 575) {
-        const heroImg = document.querySelector('img[alt="Slider Image 1"]');
-        if (heroImg) {
-            heroImg.setAttribute("loading", "auto");
+        const slider = document.querySelector('.aspect-ratio-169');
+        if (slider) {
+            slider.style.transform = 'translateX(0)';
         }
     }
 });
