@@ -705,6 +705,11 @@
   transform: none !important;
   transition: none !important;
 }
+.no-animation {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
 #Slider {
   width: 100%;
   height: 100%;
