@@ -4,28 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <link rel="preload" href="./boostrap/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="./boostrap/bootstrap.min.css"></noscript>
+    <link rel="stylesheet" href="./boostrap/bootstrap.min.css">
     <link rel="stylesheet" href="./responsive.css">
     <link
       rel="stylesheet"
       href="./GeneralSans_Complete/Fonts/WEB/css/general-sans.css"
     >
     <!-- font awesome -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/webfonts/fa-solid-900.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    >
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin >
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
     <link rel="preconnect" href="https://via.placeholder.com" >
     <link rel="icon" type="image/svg+xml" href="./assets/Logo.svg" >
-    <link
-      rel="preload"
-      as="image"
-      href="./assets/slider/slider-360.avif"
-      type="image/avif"
-      imagesrcset="./assets/slider/slider-360.avif"
-      media="(max-width: 575px)"
-    >
+    <link rel="preload" as="image" href="./assets/slider/slider.avif" type="image/avif" imagesrcset="./assets/slider/slider.avif" fetchpriority="high">
     <title>UMILUX</title>
     <meta name="description" content="UMILUX" >
   </head>
@@ -1267,22 +1264,16 @@
           <section id="Slider">
             <div class="aspect-ratio-169">
               <!-- Slide 1 -->
-              <div class="sliderIn ">
+              <div class="sliderIn fade-in">
                 <div class="sliderImg">
                   <img
-                    src="./assets/slider/slider-360.avif"
-                    srcset="
-                      ./assets/slider/slider-180.avif 180w,
-                      ./assets/slider/slider-360.avif 360w,
-                      ./assets/slider/slider-720.avif 720w,
-                      ./assets/slider/slider.avif 1440w"
-                    sizes="(max-width: 575px) 100vw, (max-width: 991px) 720px, 1440px"
+                    src="./assets/slider/slider.avif"
+                    alt="Slider Image 1"
                     width="1440"
                     height="600"
-                    loading="eager"
                     fetchpriority="high"
-                    alt="Slider Image 1"
-                    class="slide active no-fade"
+                    decoding="async"
+                    loading="eager"
                   />
                 </div>
                 <div class="silderTitle fade-in">
@@ -1298,19 +1289,13 @@
               <div class="sliderIn fade-in">
                 <div class="sliderImg">
                   <img
-                    src="./assets/slider/slider-360.avif"
-                    srcset="
-                      ./assets/slider/slider-180.avif 180w,
-                      ./assets/slider/slider-360.avif 360w,
-                      ./assets/slider/slider-720.avif 720w,
-                      ./assets/slider/slider.avif 1440w"
-                    sizes="(max-width: 575px) 100vw, (max-width: 991px) 720px, 1440px"
+                    src="./assets/slider/slider.avif"
+                    alt="Slider Image 1"
                     width="1440"
                     height="600"
-                    loading="eager"
                     fetchpriority="high"
-                    alt="Slider Image 1"
-                    class="slide active no-fade"
+                    decoding="async"
+                    loading="eager"
                   />
                 </div>
                 <div class="silderTitle fade-in">
@@ -1326,19 +1311,13 @@
               <div class="sliderIn fade-in">
                 <div class="sliderImg">
                   <img
-                    src="./assets/slider/slider-360.avif"
-                    srcset="
-                      ./assets/slider/slider-180.avif 180w,
-                      ./assets/slider/slider-360.avif 360w,
-                      ./assets/slider/slider-720.avif 720w,
-                      ./assets/slider/slider.avif 1440w"
-                    sizes="(max-width: 575px) 100vw, (max-width: 991px) 720px, 1440px"
+                    src="./assets/slider/slider.avif"
+                    alt="Slider Image 1"
                     width="1440"
                     height="600"
-                    loading="eager"
                     fetchpriority="high"
-                    alt="Slider Image 1"
-                    class="slide active no-fade"
+                    decoding="async"
+                    loading="eager"
                   />
                 </div>
                 <div class="silderTitle fade-in">
