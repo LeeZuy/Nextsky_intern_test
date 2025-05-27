@@ -75,9 +75,7 @@ html {
   .slide,
   .slide.active {
     opacity: 1 !important;
-    transform: none !important;
     transition: none !important;
-    animation: none !important;
   }
   .silderTitle h2 {
     font-size: 24px;
