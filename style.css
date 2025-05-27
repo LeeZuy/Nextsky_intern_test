@@ -464,7 +464,7 @@
   width: 235px;
   background: var(--white);
   z-index: 1;
-  height: fit-content;
+  height: auto;
 }
 .main-category {
   padding: 7px 25px 7px 25px;
@@ -722,7 +722,7 @@
 }
 .silderTitle {
   position: absolute;
-  bottom: 25%;
+  bottom: 28%;
   transform: translateX(-50%);
   text-align: center;
   color: var(--white);
@@ -737,7 +737,8 @@
   margin: 0px 0;
 }
 .silderTitle .salient-button {
-  margin-top: 20px;
+  margin-bottom: -2%;
+  margin-top: 33px;
   width: 158px;
   height: 48px;
   position: relative;
