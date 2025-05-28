@@ -1820,7 +1820,7 @@ footer {
 .xIcon svg,
 .fbIcon svg {
   transition: color 0.3s ease, transform 0.3s ease;
-  margin-top: 2%;
+  margin-bottom: 5%;
 }
 .igIcon:hover {
   transform: scale(1.2);
