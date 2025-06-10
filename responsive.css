@@ -561,9 +561,6 @@ html {
   .oldPrice{
     margin-top: 7% !important;
   }
-  /* .oldPrice{
-    margin-top: 1% !important;
-  } */
   .voteIcon img {
     width: 18px;
     height: 18px;
@@ -1360,42 +1357,6 @@ html {
   .promotionIn {
     margin-left: 35%;
   }
-  /* .sellingFirst {
-    margin-left: 50%;
-  } */
-  /* @media (max-width: 1035px) {
-    .promotionIn {
-      margin-left: 75% !important;
-    }
-    .promotionValue{
-      margin-left: 25% !important;
-    }
-    .salient-button{
-      margin-left: 5%;
-    }
-  }
-  @media (min-width:1036px ) and (max-width: 1080px) {
-    .promotionIn {
-      margin-left: 75% !important;
-    }
-    .promotionValue{
-      margin-left: 25% !important;
-    }
-    .salient-button{
-      margin-left: 5%;
-    }
-  }
-  @media (min-width:1081px ) and (max-width: 1135px) {
-    .promotionIn {
-      margin-left: 40% !important;
-    }
-    .promotionValue{
-      margin-left: 57% !important;
-    }
-    .salient-button{
-      margin-left: 5%;
-    }
-  } */
   .sellingItemProduct {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -1403,10 +1364,6 @@ html {
     overflow-y: hidden;
     scrollbar-width: none;
   }
-  /* .sellingItemProductIn {
-    display: flex;
-    gap: 16px;
-  } */
   .sellingItem {
     width: 38%;
     flex-shrink: 0;
@@ -1415,27 +1372,6 @@ html {
   .sellingProduct{
     gap: 20px;
   }
-
-  /* @media (max-width: 1140px) {
-    .sellingItemProduct {
-      margin-left: 5%;
-    }
-  }
-  @media (max-width: 1120px) {
-    .sellingItemProduct {
-      margin-left: 7%;
-    }
-  }
-  @media (max-width: 1080px) {
-    .sellingItemProduct {
-      margin-left: 10%;
-    }
-  }
-  @media (max-width: 1020px) {
-    .sellingItemProduct {
-      margin-left: 13%;
-    }
-  } */
   .superSale,
   .dealsGood {
     width: 49%;
@@ -1635,47 +1571,6 @@ html {
   .promotionIn {
     margin-left: 33%;
   }
-  /* .trendingItem {
-    width: 19%;
-  }
-  .promotion {
-    width: 39%;
-  } */
-  /* @media (max-width: 1229px) {
-    .promotionIn {
-      margin-left: 33%;
-      margin-top: 19%;
-    }
-  } */
-  /* @media (max-width: 1350px) {
-    .sellingFirst {
-      margin-left: 3% !important;
-    }
-    .sellingItemProduct {
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      margin-left: 3% !important;
-    }
-    .sellingItemProductIn {
-      display: flex;
-      gap: 16px;
-    }
-    .sellingItem {
-      min-width: 24%;
-      flex-shrink: 0;
-      scroll-snap-align: start;
-    }
-  } */
-  /* @media (min-width: 1351px) and (max-width:1400px) {
-    .sellingItemProductIn .noSale {
-    margin: 0 4%;
-    }
-    .sellingItemProductIn {
-    display: flex;
-    margin-left: -11%;
-    }
-  } */
   .superSale,
   .dealsGood {
     width: 49%;
@@ -1762,9 +1657,6 @@ html {
     position: absolute;
     left: 83%;
   }
-  /* .surface, .gamepad, .camera {
-    width: 32%;
-  } */
   .promotionIn {
     margin-left: 33%;
   }
