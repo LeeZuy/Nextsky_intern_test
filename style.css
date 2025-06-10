@@ -2604,7 +2604,7 @@ footer {
 .language .arrow {
   width: 12px;
   height: 12px;
-  margin-left: 48px;
+  margin-left: 55px;
   flex-shrink: 0;
   fill: var(--text-muted);
   transition: transform 0.3s;
@@ -2613,7 +2613,7 @@ footer {
 .currency .arrow {
   width: 14px;
   height: 14px;
-  margin-left: 128px;
+  margin-left: 150px;
   flex-shrink: 0;
   fill: var(--text-muted);
   transition: transform 0.3s;
