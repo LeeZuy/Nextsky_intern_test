@@ -137,10 +137,10 @@ html {
   }
   .trendingProduct {
     display: flex;
-    gap: 16px;
+    gap: 20px;
   }
   .trendingItem {
-    min-width: 46%;
+    min-width: 60%;
     flex-shrink: 0;
     scroll-snap-align: start;
   }
@@ -157,15 +157,14 @@ html {
   }
   .sellingProduct {
     display: flex;
-    gap: 16px;
-    margin-left: -15%;
+    gap: 20px;
   }
   .sellingItemProductIn {
     display: flex;
-    gap: 3px !important;
+    gap: 20px !important;
   }
   .sellingItem {
-    min-width: 46%;
+    min-width: 60%;
     flex-shrink: 0;
     scroll-snap-align: start;
   }
@@ -216,10 +215,10 @@ html {
   }
   .ratedProduct {
     display: flex;
-    gap: 16px;
+    gap: 20px;
   }
   .ratedItem {
-    min-width: 46%;
+    min-width: 60%;
     flex-shrink: 0;
     scroll-snap-align: start;
   }
@@ -230,6 +229,9 @@ html {
     padding-top: 6%;
     --collectionsProduct-width: 100%;
     min-width: 100% !important;
+  }
+  .nav{
+    width: 11% !important;
   }
   .moreInfo {
     padding-top: 6%;
@@ -358,7 +360,7 @@ html {
   }
   .collectionsItem {
     display: flex;
-    gap: 16px;
+    gap: 20px;
     width: max-content;
   }
   .collectionsProduct {
@@ -368,7 +370,7 @@ html {
   .collectionsProduct
   .sellingItemProductIn {
     display: flex;
-    gap: 16px;
+    gap: 20px;
   }
   .sellingItem {
     min-width: 45%;
@@ -532,13 +534,14 @@ html {
   }
   .trendingProduct {
     display: flex;
-    gap: 16px;
+    gap: 20px;
   }
   .trendingItem {
     min-width: 40% !important;
     flex-shrink: 0;
     scroll-snap-align: start;
-    height: 460px;
+    height: fit-content;
+    width: 45% !important;
   }
   .trendingIn {
     margin: 8% 6%;
@@ -550,13 +553,24 @@ html {
     font-size: 20px;
     margin: 3% 0;
   }
+  .trendingIn p,
+  .sellingIn p,
+  .ratedIn p{
+    margin-top: 5%;
+  }
+  .oldPrice{
+    margin-top: 7% !important;
+  }
+  /* .oldPrice{
+    margin-top: 1% !important;
+  } */
   .voteIcon img {
     width: 18px;
     height: 18px;
   }
-  .trendingIn p {
+  .newPrice {
     font-size: 23px;
-    margin-top: 3px;
+    margin-top: 2px;
   }
   .selling {
     max-width: 100% !important;
@@ -568,17 +582,17 @@ html {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    margin-left: -14%;
   }
   .sellingProduct {
     display: flex;
-    gap: 16px;
+    gap: 20px;
   }
   .sellingItem {
     min-width: 40% !important;
     flex-shrink: 0;
     scroll-snap-align: start;
-    height: 460px;
+    height: fit-content;
+    width: 45% !important;
   }
   .sellingIn {
     margin: 8% 6%;
@@ -594,10 +608,6 @@ html {
     width: 18px;
     height: 18px;
   }
-  .sellingIn p {
-    font-size: 23px;
-    margin-top: 3px;
-  }
   .sellingItemProduct {
     margin-left: 0%;
   }
@@ -605,7 +615,7 @@ html {
     right: -105px;
   }
   .sellingItem:hover .sellingSaleIcon {
-    right: -47px;
+    right: -35px;
   }
   .bannerIntroduction {
     display: grid;
@@ -648,13 +658,14 @@ html {
   }
   .ratedProduct {
     display: flex;
-    gap: 16px;
+    gap: 20px;
   }
   .ratedItem {
     min-width: 40% !important;
     flex-shrink: 0;
     scroll-snap-align: start;
-    height: 460px;
+    height: fit-content;
+    width: 45% !important;
   }
   .ratedIn {
     margin: 6% 6%;
@@ -670,10 +681,6 @@ html {
     width: 18px;
     height: 18px;
   }
-  .ratedIn p {
-    font-size: 23px;
-    margin-top: 3px;
-  }
   .ratedSaleIcon {
     right: -106px;
   }
@@ -686,6 +693,9 @@ html {
   .collectionsProduct {
     --collectionsProduct-width: 66.666%;
     min-width: 35% !important;
+  }
+  .nav{
+    width: 8% !important;
   }
   .productInfo p {
     font-size: 18px;
@@ -973,7 +983,7 @@ html {
   }
   .trendingProduct {
     display: flex;
-    gap: 16px;
+    gap: 20px;
   }
   .trendingItem {
     min-width: 30% !important;
@@ -994,9 +1004,17 @@ html {
     width: 18px;
     height: 18px;
   }
-  .trendingIn p {
+  .newPrice {
     font-size: 22px;
     margin-top: 2%;
+  }
+  .trendingIn p,
+  .sellingIn p,
+  .ratedIn p{
+    margin-top: 5%;
+  }
+  .oldPrice{
+    margin-top: 5% !important;
   }
   .selling {
     max-width: 100% !important;
@@ -1008,22 +1026,25 @@ html {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    margin-left: -19%;
   }
   .sellingProduct {
     display: flex;
-    gap: 16px;
+    gap: 20px;
   }
   .sellingItem {
-    min-width: 29% !important;
+    min-width: 25% !important;
     height: fit-content;
+    width: 35% !important;
   }
   .sellingItemProduct {
     margin-left: 0;
     width: 100%;
   }
-  .sellingItemProductIn {
-    gap: 0;
+  .sellingItem:hover .sellingSaleIcon {
+    right: -52px;
+  }
+  .sellingSaleIcon {
+    right: -100px;
   }
   .sellingIn span {
     font-size: 12px;
@@ -1035,10 +1056,7 @@ html {
     width: 18px;
     height: 18px;
   }
-  .sellingIn p {
-    font-size: 22px;
-    margin-top: 2%;
-  }
+
   .sellingProductIn .noSale .sellingIn {
     margin: 3% 6% 6% 6%;
   }
@@ -1083,11 +1101,12 @@ html {
   }
   .ratedProduct {
     display: flex;
-    gap: 16px;
+    gap: 20px;
   }
   .ratedItem {
-    min-width: 29% !important;
     height: fit-content;
+    min-width: 30% !important;
+    width: 35% !important;
   }
   .ratedIn span {
     font-size: 12px;
@@ -1099,10 +1118,6 @@ html {
     font-size: 22px;
     margin-top: 2%;
   }
-  .ratedIn p {
-    font-size: 18px;
-    margin-bottom: 0 !important;
-  }
   .ratedProductIn .noSale .ratedIn {
     margin: 6% 6% 4% 6%;
   }
@@ -1111,6 +1126,9 @@ html {
   }
   .collectionsProduct {
     --collectionsProduct-width: calc((100% - 16px) / 2);
+  }
+  .nav{
+    width: 6% !important;
   }
   .deals {
     max-width: 100% !important;
@@ -1216,7 +1234,6 @@ html {
   }
   .copyright {
     margin-left: -10%;
-    margin-top: 5px;
   }
   .payment img {
     width: 30px;
@@ -1225,10 +1242,20 @@ html {
   .country {
     margin-left: 3%;
   }
+  .payment{
+    margin-top: 4px;
+  }
 }
 @media (max-width: 991px) {
   .sub-categories-container {
     display: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .recentlyViewedProducts {
+    position: relative !important;
+    margin-left: auto !important;
+    transform: none !important;
   }
 }
 @media (min-width: 992px) and (max-width: 1400px) {
@@ -1252,6 +1279,11 @@ html {
     justify-content: space-around;
     margin: 0;
   }
+  .wishlishAdd {
+    left: 52% !important;
+    width: 30% !important;
+    height: 42% !important;
+}
   .headerLogo {
     width: fit-content;
     height: 36.92px;
@@ -1266,7 +1298,7 @@ html {
     width: 284%;
   }
   .search button[type="submit"] {
-    left: 238%;
+    left: 244%;
   }
   .profile {
     margin-left: 36%;
@@ -1275,7 +1307,7 @@ html {
     padding: 2% 7%;
   }
   .vertical-line {
-    margin: 0 10px 0 25px;
+    margin: 0 10px 0 109px;
   }
   .headerMenuBot, .menuSlider, .banner, .Trending,
   .selling, .bannerIntroduction,.rated,
@@ -1292,7 +1324,7 @@ html {
     top: 10%;
     width: 50%;
     height: 58%;
-    left: 0%;
+    left: -3%;
     position: relative;
   }
   .gamepad img {
@@ -1318,17 +1350,20 @@ html {
   }
   .trendingProduct {
     display: flex;
-    gap: 16px;
+    gap: 20px;
   }
   .trendingItem {
-    min-width: 24%;
     flex-shrink: 0;
     scroll-snap-align: start;
+    width: 24%;
   }
-  .sellingFirst {
-    margin-left: 3%;
+  .promotionIn {
+    margin-left: 35%;
   }
-  @media (max-width: 1035px) {
+  /* .sellingFirst {
+    margin-left: 50%;
+  } */
+  /* @media (max-width: 1035px) {
     .promotionIn {
       margin-left: 75% !important;
     }
@@ -1360,25 +1395,28 @@ html {
     .salient-button{
       margin-left: 5%;
     }
-  }
+  } */
   .sellingItemProduct {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    margin-left: 3%;
     overflow-y: hidden;
     scrollbar-width: none;
   }
-  .sellingItemProductIn {
+  /* .sellingItemProductIn {
     display: flex;
     gap: 16px;
-  }
+  } */
   .sellingItem {
-    min-width: 24%;
+    width: 38%;
     flex-shrink: 0;
     scroll-snap-align: start;
   }
-  @media (max-width: 1140px) {
+  .sellingProduct{
+    gap: 20px;
+  }
+
+  /* @media (max-width: 1140px) {
     .sellingItemProduct {
       margin-left: 5%;
     }
@@ -1397,7 +1435,7 @@ html {
     .sellingItemProduct {
       margin-left: 13%;
     }
-  }
+  } */
   .superSale,
   .dealsGood {
     width: 49%;
@@ -1415,10 +1453,10 @@ html {
   }
   .ratedProduct {
     display: flex;
-    gap: 16px;
+    gap: 20px;
   }
   .ratedItem {
-    min-width: 24%;
+    width: 24%;
     flex-shrink: 0;
     scroll-snap-align: start;
   }
@@ -1431,7 +1469,7 @@ html {
   .collectionsItem {
     display: flex;
     transition: transform 0.4s ease-in-out;
-    gap: 16px;
+    gap: 20px;
   }
   .collectionsItemIn {
     overflow: hidden;
@@ -1450,10 +1488,11 @@ html {
     color: var(--white);
     border: none;
     font-size: 2rem;
-    padding: 3px 15px;
     cursor: pointer;
     z-index: 2;
     border-radius: 50%;
+    width: 5%;
+    height: 22%;
   }
   .nav:hover {
     background-color: var(--hover-bg);
@@ -1481,14 +1520,8 @@ html {
   .moreInfo {
     padding-top: 15%;
   }
-  .dealsItem {
-    width: 95%;
-  }
   .dealsItem img {
     width: 100%;
-  }
-  .dealsItem {
-    width: 95%;
   }
   .dealsItem img {
     width: 100%;
@@ -1503,6 +1536,7 @@ html {
   .service {
     grid-column-start: 2;
     grid-row-start: 2;
+    margin-left: 0%;
   }
   .shopByCategory {
     grid-column-start: 3;
@@ -1534,7 +1568,7 @@ html {
   }
   .headerMenuTop {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0;
   }
   .divider {
@@ -1548,10 +1582,10 @@ html {
     margin-left: 43%;
   }
   .search input[type="text"] {
-    width: 358%;
+    width: 333%;
   }
   .search button[type="submit"] {
-    left: 312%;
+    left: 292%;
   }
   .collectionsItem {
     transform: none !important;
@@ -1598,19 +1632,22 @@ html {
   .surface, .gamepad, .camera {
     width: 32%;
   }
-  .trendingItem {
+  .promotionIn {
+    margin-left: 33%;
+  }
+  /* .trendingItem {
     width: 19%;
   }
   .promotion {
     width: 39%;
-  }
-  @media (max-width: 1229px) {
+  } */
+  /* @media (max-width: 1229px) {
     .promotionIn {
       margin-left: 33%;
       margin-top: 19%;
     }
-  }
-  @media (max-width: 1350px) {
+  } */
+  /* @media (max-width: 1350px) {
     .sellingFirst {
       margin-left: 3% !important;
     }
@@ -1629,8 +1666,8 @@ html {
       flex-shrink: 0;
       scroll-snap-align: start;
     }
-  }
-  @media (min-width: 1351px) and (max-width:1400px) {
+  } */
+  /* @media (min-width: 1351px) and (max-width:1400px) {
     .sellingItemProductIn .noSale {
     margin: 0 4%;
     }
@@ -1638,7 +1675,7 @@ html {
     display: flex;
     margin-left: -11%;
     }
-  }
+  } */
   .superSale,
   .dealsGood {
     width: 49%;
@@ -1648,9 +1685,6 @@ html {
   }
   .collectionsProduct {
     width: 24%;
-  }
-  .dealsItem {
-    width: 95%;
   }
   .dealsItem img {
     width: 100%;
@@ -1674,6 +1708,7 @@ html {
   .service {
     grid-column-start: 2;
     grid-row-start: 2;
+    margin-left: 0%;
   }
   .shopByCategory {
     grid-column-start: 3;
@@ -1691,7 +1726,7 @@ html {
     margin: 0% 11%;
   }
   .divider {
-    max-width: 1210px;
+    max-width: 78%;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
@@ -1727,31 +1762,47 @@ html {
     position: absolute;
     left: 83%;
   }
-  .surface, .gamepad, .camera {
+  /* .surface, .gamepad, .camera {
     width: 32%;
+  } */
+  .promotionIn {
+    margin-left: 33%;
   }
-  .trendingItem {
-    width: 19%;
+  .sellingItem:hover .sellingSaleIcon {
+    right: 14px;
   }
   .sellingItemProduct {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    margin-left: 3% !important;
+  }
+  .search input[type="text"] {
+    width: 620px;
+  }
+  .sellingProduct{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
   }
 }
+
 @media (min-width: 1600px) {
   .divider {
-    max-width: 1210px;
+    max-width: 75%;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
   }
+  .promotion {
+    width: 544px;
+  }
+  .sellingItem:hover .sellingIconSale {
+    right: -15px;
+  }
   .surface,
   .gamepad,
   .camera {
-    width: 32%;
     height: 175px;
   }
   .surface img {
@@ -1776,5 +1827,11 @@ html {
   }
   .collectionsItem {
     transform: none !important;
+  }
+  .sellingItem{
+    width: 100%;
+  }
+  .promotionIn {
+    margin-left: 46%;
   }
 }
