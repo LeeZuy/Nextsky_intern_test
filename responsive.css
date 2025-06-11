@@ -1366,7 +1366,7 @@ html {
     scrollbar-width: none;
   }
   .sellingItem {
-    width: 38%;
+    width: 39%;
     flex-shrink: 0;
     scroll-snap-align: start;
   }
